@@ -12,9 +12,7 @@
         <li class="heading__bottom-item">Быстрое получение результата и назначения</li>
       </ul>
       <div class="heading__bottom-info">
-        <button class="heading__order-button order-button base-button">
-          <span class="order-button__caption">Записаться на консультацию</span>
-        </button>
+        <a href="#" class="heading__order-link order-link base-link">Записаться на консультацию</a>
         <span class="heading__bottom-description">
           Консультации ведутся в онлайн<br>
           форме по воскресеньям по<br>
@@ -74,6 +72,26 @@
     <form action="#" class="appointment__form">
       <div class="appointment__formset">
         <span class="appointment__formset-caption">Выберите вид консультации на которую вы хотите записаться</span>
+        <div class="appointment__radio-item">
+          <input type="radio" class="appointment__radio-hidden" name="appointment__radio" id="appointment__radio--one">
+          <span class="appointment__radio-shown"></span>
+          <label for="appointment__radio--one" class="appointment__radio-title">Первичный прием</label>
+          <span class="appointment__radio-price">4 000 ₽</span>
+        </div>
+        <div class="appointment__radio-item">
+          <input type="radio" class="appointment__radio-hidden" name="appointment__radio" id="appointment__radio--two">
+          <span class="appointment__radio-shown"></span>
+          <label for="appointment__radio--two" class="appointment__radio-title">Вторичный прием</label>
+          <span class="appointment__radio-price">3 000 ₽</span>
+        </div>
+        <div class="appointment__radio-item">
+          <input type="radio" class="appointment__radio-hidden" name="appointment__radio"
+            id="appointment__radio--three">
+          <span class="appointment__radio-shown"></span>
+          <label for="appointment__radio--three" class="appointment__radio-title">English speaking
+            patient<br>consultation</label>
+          <span class="appointment__radio-price">6 000 ₽</span>
+        </div>
       </div>
       <div class="appointment__formset">
         <div class="appointment__formset-item">
@@ -95,15 +113,109 @@
       <div class="appointment__formset">
         <span class="appointment__formset-caption">Прикрепите ваши анализы (не более 10)</span>
       </div>
-      <button class="appointment__order-button order-button base-button">
+      <button class="appointment__order-button order-button base-button" type="submit">
         <span class="order-button__caption">Выбрать дату и оплатить</span>
       </button>
       <div class="appointment__formset">
         <span class="appointment__user-caption">
-          Отправляя данную форму, вы принимаете условие <a class="appointment__user-link.base-link"
+          Отправляя данную форму, вы принимаете условие <a class="appointment__user-link base-link"
             href="#">пользовательского соглашения</a>
         </span>
       </div>
     </form>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about__container base-container">
+    <div class="about__slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure class="swiper-slide__image base-figure"><img src="#" alt="" class="swiper-slide__img"></figure>
+          <h3 class="swiper-slide__title base-title">О враче гематологе</h3>
+          <p class="swiper-slide__info base-par">
+            <span class="swiper-slide__info-part">
+              Гематология – это раздел медицины, изучающий работу кровеносной системы. Сегодня около 8% всех заболеваний
+              приходится на органы кроветворения.
+            </span>
+            <span class="swiper-slide__info-part">Гематолог – врач, занимающийся диагностикой, выявлением и лечением
+              заболеваний крови. Гематолог ведет как детский, так и взрослый прием.
+            </span>
+            <span class="swiper-slide__info-part">Современные методики и инновационные разработки позволяют
+              диагностировать заболевания на ранних этапах возникновения без явных клинических проявлений.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about__tabs">
+      <nav class="about__tabs-nav">
+        <a href="#tabs_item_01" class="about__tabs-link base-link">Образование</a>
+        <a href="#tabs_item_02" class="about__tabs-link base-link">Повышение квалификации</a>
+        <a href="#tabs_item_03" class="about__tabs-link base-link">Звания, членства, награды</a>
+        <a href="#tabs_item_04" class="about__tabs-link base-link">Опыт работы</a>
+      </nav>
+      <div class="about__tabs-body">
+        <div class="about__tabs-item" id="tabs_item_01">
+          <h4 class="about__tabs-title base-title">Образование</h4>
+          <ul class="about__tabs-list base-list">
+            <li class="about__tabs-value">
+              2012 г. – лечебное дело, Первый Московский Государственный<br>
+              Медицинский Университет им. И.М. Сеченова, Москва
+            </li>
+            <li class="about__tabs-value">
+              2013 г. – интернатура по терапии, Первый Московский<br>
+              Государственный Медицинский Университет им. И.М. Сеченова, Москва
+            </li>
+            <li class="about__tabs-value">
+              2015 г. – ординатура по специальности “Гематология”,<br>
+              Гематологический научный центр Российской академии медицинских наук, Москва
+            </li>
+            <li class="about__tabs-value">
+              2016 г. – повышение квалификации “Психосоматические<br>
+              расстройства”, ПМГМУ им. И.М. Сеченова
+            </li>
+            <li class="about__tabs-value">
+              2016 г. – сертификат “Основы клинической трансфузиологии”, ФГБУ<br>
+              дополнительного профессионального образования
+            </li>
+            <li class="about__tabs-value">
+              2018 г. – аспирантура “Гематология и переливание крови”,<br>
+              Гематологический научный центр Российской академии медицинских наук, Москва
+            </li>
+          </ul>
+        </div>
+        <div class="about__tabs-item" id="tabs_item_02"></div>
+        <div class="about__tabs-item" id="tabs_item_03"></div>
+        <div class="about__tabs-item" id="tabs_item_04"></div>
+      </div>
+    </div>
+    <div class="about__motto">
+      <h3 class="about__motto-title base-title">Врач – это не профессия, а образ жизни</h3>
+      <p class="about__motto-info base-par">Доктором может быть не каждый. Это действительно призвание. Эта профессия
+        подходит тем, кто искренне хочет помогать людям, кто умеет сопереживать. Если все эти качества соединены в одном
+        человеке, то у него есть шанс стать настоящим Врачом с большой буквы.</p>
+    </div>
+  </div>
+</section>
+
+<section class="required">
+  <div class="required__container base-container">
+    <div class="required__aside">
+      <figure class="required__image base-figure">
+        <img src="" alt="" class="required__img">
+      </figure>
+    </div>
+    <div class="required__main">
+      <h2 class="required__title section-title base-title">Что нужно для получения консультации</h2>
+      <span class="required__info">Для консультации врача гематолога необходимо иметь:</span>
+      <ul class="required__list base-list">
+        <li class="required__item">Данные предыдущих выписок;</li>
+        <li class="required__item">Данные «недавних» анализов крови;</li>
+        <li class="required__item">Четко сформулированная проблема;</li>
+        <li class="required__item">Согласие на онлайн консультацию;</li>
+        <li class="required__item">Оплаченная запись и ее подтверждение.</li>
+      </ul>
+      <a href="#" class="required__order-link order-link base-link">Записаться на консультацию</a>
+    </div>
   </div>
 </section>
