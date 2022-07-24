@@ -74,22 +74,22 @@
         <div class="appointment__formset">
           <span class="appointment__formset-caption">Выберите вид консультации на которую вы хотите записаться</span>
           <div class="appointment__radio-item">
-            <input type="radio" class="appointment__radio-hidden" name="appointment__radio"
-              id="appointment__radio--one">
+            <input type="radio" class="appointment__radio-hidden" name="appointment__radio" id="appointment__radio--one"
+              value="first_consult">
             <span class="appointment__radio-shown"></span>
             <label for="appointment__radio--one" class="appointment__radio-title">Первичный прием</label>
             <span class="appointment__radio-price">4 000 ₽</span>
           </div>
           <div class="appointment__radio-item">
-            <input type="radio" class="appointment__radio-hidden" name="appointment__radio"
-              id="appointment__radio--two">
+            <input type="radio" class="appointment__radio-hidden" name="appointment__radio" id="appointment__radio--two"
+              value="second_consult">
             <span class="appointment__radio-shown"></span>
             <label for="appointment__radio--two" class="appointment__radio-title">Вторичный прием</label>
             <span class="appointment__radio-price">3 000 ₽</span>
           </div>
           <div class="appointment__radio-item">
             <input type="radio" class="appointment__radio-hidden" name="appointment__radio"
-              id="appointment__radio--three">
+              id="appointment__radio--three" value="english_consult">
             <span class="appointment__radio-shown"></span>
             <label for="appointment__radio--three" class="appointment__radio-title">English speaking
               patient<br>consultation</label>
@@ -126,6 +126,59 @@
           </span>
         </div>
       </form>
+      <div class="modal">
+        <div class="modal__inner">
+          <button class="modal__close-button base-button"></button>
+          <h3 class="modal__title base-title">Запись на первичный прием</h3>
+          <span class="modal__info">Консультация ведется в онлайн форме<br> по воскресеньям по WhatsApp</span>
+          <div class="modal__calendar"></div>
+          <div class="modal__timepicker">
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="10:00">
+              <span class="modal__radio-shown">10:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="11:00">
+              <span class="modal__radio-shown">11:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="12:00">
+              <span class="modal__radio-shown">12:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="13:00">
+              <span class="modal__radio-shown">13:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="15:00">
+              <span class="modal__radio-shown">15:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="16:00">
+              <span class="modal__radio-shown">16:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="17:00">
+              <span class="modal__radio-shown">17:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="18:00">
+              <span class="modal__radio-shown">18:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="19:00">
+              <span class="modal__radio-shown">19:00</span>
+            </div>
+            <div class="modal__time-item">
+              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="20:00">
+              <span class="modal__radio-shown">20:00</span>
+            </div>
+          </div>
+          <span class="modal__pay">К оплате <span class="modal__money" id="modal__sum">6 000</span> ₽</span>
+          <button class="modal__submit-button base-button" type="submit">Оплатить</button>
+          <button class="modal__cancel button base-button" type="reset">Отменить</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

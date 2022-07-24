@@ -1,3 +1,11 @@
 @use "../mixins";
 
-@include mixins.font-face(Arial, normal, 400);
+@include mixins.font-face(Ubuntu, normal, 400);
+@include mixins.font-face(Ubuntu, normal, 500);
+@include mixins.font-face(Ubuntu, normal, 700);
+
+@include mixins.font-face(Poppins, normal, 600);
+
+@include mixins.font-face(Roboto, normal, 400);
+
+@include mixins.font-face(PFDinDisplayPro, normal, 400);
