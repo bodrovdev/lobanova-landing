@@ -20,6 +20,39 @@
         </span>
       </div>
     </div>
+    <figure class="heading__photo-image base-figure">
+      <picture>
+        <source srcset="img/image/content/heading-photo.webp 1x, img/image/content/X2-heading-photo.webp 2x"
+          type="image/webp">
+        <img srcset="img/image/content/heading-photo.png 1x, img/image/content/X2-heading-photo.png 2x"
+          class="heading__photo-img" alt="Фото врача">
+      </picture>
+    </figure>
+
+    <figure class="heading__years-image base-figure">
+      <picture>
+        <source srcset="img/image/content/heading-years.webp 1x, img/image/content/X2-heading-years.webp 2x"
+          type="image/webp">
+        <img srcset="img/image/content/heading-years.png 1x, img/image/content/X2-heading-years.png 2x"
+          class="heading__years-img" alt="Изображение с надписью 'Больше девяти лет стажа врача гематолога'">
+      </picture>
+    </figure>
+
+    <figure class="heading__patients-image base-figure">
+      <picture>
+        <source srcset="img/image/content/heading-patients.webp 1x, img/image/content/X2-heading-patients.webp 2x"
+          type="image/webp">
+        <img srcset="img/image/content/heading-patients.png 1x, img/image/content/X2-heading-patients.png 2x"
+          class="heading__patients-img" alt="Изображение с надписью 'Больше девяти тысяч счастливых пациентов'">
+      </picture>
+    </figure>
+
+    <a class="heading__whatsup-link base-link" href="#">
+      <svg class="heading__whatsup-icon" width="20" height="20">
+        <use href="img/icon/sprite.svg#whatsup-icon"></use>
+      </svg>
+    </a>
+
   </div>
 </section>
 
@@ -28,7 +61,12 @@
     <h2 class="guide__title section-title base-title">Как проходит консультация врача</h2>
     <div class="guide__inner">
       <div class="guide__inner-item">
-        <figure class="guide__item-image base-figure"><img src="" alt="" class="guide__item-img"></figure>
+        <figure class="guide__item-image base-figure">
+          <picture>
+            <img srcset="img/image/design/guide-item-1.png 1x, img/image/design/X2-guide-item-1.png 2x"
+              class="guide__item-img" alt="Изображение гаджетов и стетоскопа">
+          </picture>
+        </figure>
         <span class="guide__item-title">Изучение анализов</span>
         <span class="guide__item-info">
           Я предварительно изучаю<br>
@@ -37,7 +75,12 @@
         </span>
       </div>
       <div class="guide__inner-item">
-        <figure class="guide__item-image base-figure"><img src="" alt="" class="guide__item-img"></figure>
+        <figure class="guide__item-image base-figure">
+          <picture>
+            <img srcset="img/image/design/guide-item-2.png 1x, img/image/design/X2-guide-item-2.png 2x"
+              class="guide__item-img" alt="Изображение смартфона">
+          </picture>
+        </figure>
         <span class="guide__item-title">Созвон с пациентом</span>
         <span class="guide__item-info">
           Мы с вами созваниваемся в<br>
@@ -45,7 +88,12 @@
         </span>
       </div>
       <div class="guide__inner-item">
-        <figure class="guide__item-image base-figure"><img src="" alt="" class="guide__item-img"></figure>
+        <figure class="guide__item-image base-figure">
+          <picture>
+            <img srcset="img/image/design/guide-item-3.png 1x, img/image/design/X2-guide-item-3.png 2x"
+              class="guide__item-img" alt="Изображение бумажного планшета и стетоскопа">
+          </picture>
+        </figure>
         <span class="guide__item-title">План лечения</span>
         <span class="guide__item-info">
           На консультации я назначаю<br>
@@ -53,7 +101,12 @@
         </span>
       </div>
       <div class="guide__inner-item">
-        <figure class="guide__item-image base-figure"><img src="" alt="" class="guide__item-img"></figure>
+        <figure class="guide__item-image base-figure">
+          <picture>
+            <img srcset="img/image/design/guide-item-4.png 1x, img/image/design/X2-guide-item-4.png 2x"
+              class="guide__item-img" alt="Изображение символа электронной почты">
+          </picture>
+        </figure>
         <span class="guide__item-title">Рекомендации по email</span>
         <span class="guide__item-info">
           Через 1-2 дня вам на почту<br>
@@ -71,114 +124,134 @@
     <div class="appointment__inner">
       <h2 class="appointment__title section-title base-title">Запишись на консультацию сейчас</h2>
       <form action="#" class="appointment__form">
-        <div class="appointment__formset">
-          <span class="appointment__formset-caption">Выберите вид консультации на которую вы хотите записаться</span>
-          <div class="appointment__radio-item">
-            <input type="radio" class="appointment__radio-hidden" name="appointment__radio" id="appointment__radio--one"
-              value="first_consult">
-            <span class="appointment__radio-shown"></span>
-            <label for="appointment__radio--one" class="appointment__radio-title">Первичный прием</label>
-            <span class="appointment__radio-price">4 000 ₽</span>
-          </div>
-          <div class="appointment__radio-item">
-            <input type="radio" class="appointment__radio-hidden" name="appointment__radio" id="appointment__radio--two"
-              value="second_consult">
-            <span class="appointment__radio-shown"></span>
-            <label for="appointment__radio--two" class="appointment__radio-title">Вторичный прием</label>
-            <span class="appointment__radio-price">3 000 ₽</span>
-          </div>
-          <div class="appointment__radio-item">
-            <input type="radio" class="appointment__radio-hidden" name="appointment__radio"
-              id="appointment__radio--three" value="english_consult">
-            <span class="appointment__radio-shown"></span>
-            <label for="appointment__radio--three" class="appointment__radio-title">English speaking
-              patient<br>consultation</label>
-            <span class="appointment__radio-price">6 000 ₽</span>
-          </div>
-        </div>
-        <div class="appointment__formset">
-          <div class="appointment__formset-item">
-            <label for="appointment__name-input" class="appointment__formset-label">Ваше имя</label>
-            <input type="text" class="appointment__formset-input" id="appointment__name-input"
-              placeholder="Напишите ваше имя">
-          </div>
-          <div class="appointment__formset-item">
-            <label for="appointment__phone-input" class="appointment__formset-label">Ваш телефон</label>
-            <input type="tel" class="appointment__formset-input" id="appointment__phone-input"
-              placeholder="+7 (___) ___-__-__">
-          </div>
-          <div class="appointment__formset-item">
-            <label for="appointment__email-input" class="appointment__formset-label">Ваш email</label>
-            <input type="email" class="appointment__formset-input" id="appointment__email-input"
-              placeholder="info@mail.ru">
+
+        <div class="appointment__type">
+          <span class="appointment__type-caption">Выберите вид консультации на которую вы хотите записаться</span>
+          <div class="appointment__type-body">
+            <div class="appointment__type-item">
+              <input type="radio" class="visually-hidden" name="appointment-radio" id="appointment-radio-1"
+                value="consult-1">
+              <span class="appointment__type-radio"></span>
+              <label class="appointment__type-name" for="appointment-radio-1">Первичный прием</label>
+              <span class="appointment__type-price">4 000 ₽</span>
+            </div>
+            <div class="appointment__type-item">
+              <input type="radio" class="visually-hidden" name="appointment-radio" id="appointment-radio-2"
+                value="consult-2">
+              <span class="appointment__type-radio"></span>
+              <label class="appointment__type-name" for="appointment-radio-2">Вторичный прием</label>
+              <span class="appointment__type-price">3 000 ₽</span>
+            </div>
+            <div class="appointment__type-item">
+              <input type="radio" class="visually-hidden" name="appointment-radio" id="appointment-radio-3"
+                value="consult-3">
+              <span class="appointment__type-radio"></span>
+              <label class="appointment__type-name" for="appointment-radio-3">English speaking patient
+                consultation</label>
+              <span class="appointment__type-price">6 000 ₽</span>
+            </div>
           </div>
         </div>
-        <div class="appointment__formset">
-          <span class="appointment__formset-caption">Прикрепите ваши анализы (не более 10)</span>
+
+        <div class="appointment__info">
+          <div class="appointment__info-item">
+            <label class="appointment__info-name" for="appointment-name">Ваше имя</label>
+            <input type="text" class="appointment__info-input" id="appointment-name" placeholder="Напишите ваше имя">
+          </div>
+          <div class="appointment__info-item">
+            <label class="appointment__info-phone" for="appointment-phone">Ваш телефон</label>
+            <input type="tel" class="appointment__info-input" id="appointment-phone" placeholder="+7 (___) ___-__-__">
+          </div>
+          <div class="appointment__info-item">
+            <label class="appointment__info-email" for="appointment-email">Ваше имя</label>
+            <input type="email" class="appointment__info-input" id="appointment-email" placeholder="Напишите ваше имя">
+          </div>
         </div>
-        <button class="appointment__order-button order-button base-button" type="submit">
-          <span class="order-button__caption">Выбрать дату и оплатить</span>
+
+        <div class="appointment__attach">
+          <span class="appointment__attach-title">Прикрепите ваши анализы (не более 10)</span>
+          <div class="appointment__attach-area">
+            <input class="visually-hidden" type="file">
+            <button class="appointment__attach-upload base-button">
+              <svg class="appointment__attach-icon" width="28" height="24">
+                <use href="img/icon/sprite.svg#camera-icon"></use>
+              </svg>
+              <span class="appointment__attach-caption">Добавить фото</span>
+            </button>
+            <div class="appointment__attach-items"></div>
+          </div>
+        </div>
+
+        <button class="appointment__order-button base-button" type="submit" id="appointment-submit">
+          <span class="appointment__order-caption">Выбрать дату и оплатить</span>
         </button>
-        <div class="appointment__formset">
-          <span class="appointment__user-caption">
-            Отправляя данную форму, вы принимаете условие <a class="appointment__user-link base-link"
+
+        <div class="appointment__terms">
+          <input class="visually-hidden" type="checkbox" id="appointment-terms-of-use">
+          <span class="appointment__terms-checkbox"></span>
+          <span class="appointment__terms-caption">
+            Отправляя данную форму, вы принимаете условие <a class="appointment__terms-link base-link"
               href="#">пользовательского соглашения</a>
           </span>
         </div>
       </form>
-      <div class="modal">
-        <div class="modal__inner">
-          <button class="modal__close-button base-button"></button>
-          <h3 class="modal__title base-title">Запись на первичный прием</h3>
-          <span class="modal__info">Консультация ведется в онлайн форме<br> по воскресеньям по WhatsApp</span>
-          <div class="modal__calendar"></div>
-          <div class="modal__timepicker">
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="10:00">
-              <span class="modal__radio-shown">10:00</span>
+
+      <div class="appointment__modal">
+        <div class="appointment__modal-inner">
+          <span class="appointment__modal-title">Запись на первичный прием</span>
+          <span class="appointment__modal-info">
+            Консультация ведется в онлайн форме<br>
+            по воскресеньям по WhatsApp
+          </span>
+          <div class="appointment__modal-date"></div>
+          <div class="appointment__modal-time">
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="10">
+              <span class="appointment__time-radio">10:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="11:00">
-              <span class="modal__radio-shown">11:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="11">
+              <span class="appointment__time-radio">11:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="12:00">
-              <span class="modal__radio-shown">12:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="12">
+              <span class="appointment__time-radio">12:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="13:00">
-              <span class="modal__radio-shown">13:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="13">
+              <span class="appointment__time-radio">13:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="15:00">
-              <span class="modal__radio-shown">15:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="15">
+              <span class="appointment__time-radio">15:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="16:00">
-              <span class="modal__radio-shown">16:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="16">
+              <span class="appointment__time-radio">16:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="17:00">
-              <span class="modal__radio-shown">17:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="17">
+              <span class="appointment__time-radio">17:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="18:00">
-              <span class="modal__radio-shown">18:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="18">
+              <span class="appointment__time-radio">18:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="19:00">
-              <span class="modal__radio-shown">19:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="19">
+              <span class="appointment__time-radio">19:00</span>
             </div>
-            <div class="modal__time-item">
-              <input type="radio" class="modal__radio-hidden" name="modal__radio" value="20:00">
-              <span class="modal__radio-shown">20:00</span>
+            <div class="appointment__time-item">
+              <input class="visually-hidden" type="radio" name="appointment-modal-time" value="20">
+              <span class="appointment__time-radio">20:00</span>
             </div>
           </div>
-          <span class="modal__pay">К оплате <span class="modal__money" id="modal__sum">6 000</span> ₽</span>
-          <button class="modal__submit-button base-button" type="submit">Оплатить</button>
-          <button class="modal__cancel button base-button" type="reset">Отменить</button>
+          <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price">6000</span> ₽</span>
+          <button class="appointment__modal-submit base-button" type="submit">Оплатить</button>
+          <button class="appointment__modal-cancel base-button" type="reset">Отменить</button>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -188,7 +261,12 @@
     <div class="about__slider swiper">
       <div class="about__slider-wrapper swiper-wrapper">
         <div class="about__slider-item swiper-slide">
-          <figure class="about__item-image base-figure"><img src="#" alt="" class="about__item-img"></figure>
+          <figure class="about__item-image base-figure">
+            <picture>
+              <img srcset="img/image/design/about-slide-1.jpg 1x, img/image/design/X2-about-slide-1.jpg 2x"
+                class="about__item-img" alt="Изображение ампул">
+            </picture>
+          </figure>
           <h3 class="about__sitem-title base-title">О враче гематологе</h3>
           <p class="about__item-info base-par">
             <span class="about__info-part">
@@ -259,8 +337,24 @@
   <div class="required__container base-container">
     <div class="required__aside">
       <figure class="required__image base-figure">
-        <img src="" alt="" class="required__img">
+        <picture>
+          <img srcset="img/image/design/required-graphic.png 1x, img/image/design/X2-required-graphic.png 2x"
+            class="required__img" alt="Изображение эритроцитов">
+        </picture>
       </figure>
+
+      <a class="required__whatsup-link base-link" href="#">
+        <svg class="required__whatsup-icon" width="20" height="20">
+          <use href="img/icon/sprite.svg#whatsup-icon"></use>
+        </svg>
+      </a>
+
+      <a class="required__tel-link base-link" href="#">
+        <svg class="required__tel-icon" width="20" height="20">
+          <use href="img/icon/sprite.svg#phone-icon"></use>
+        </svg>
+      </a>
+
     </div>
     <div class="required__main">
       <h2 class="required__title section-title base-title">Что нужно для получения консультации</h2>
@@ -283,16 +377,44 @@
     <div class="diplomas__slider swiper">
       <div class="diplomas__slider-wrapper swiper-wrapper">
         <div class="diplomas__slider-item swiper-slide">
-          <figure class="diplomas__item-image base-figure"><img src="" alt="" class="diplomas__item-img"></figure>
+          <figure class="diplomas__item-image base-figure">
+            <picture>
+              <source srcset="img/image/content/diplomas-item-1.webp 1x, img/image/content/X2-diplomas-item-1.webp 2x"
+                type="image/webp">
+              <img srcset="img/image/content/diplomas-item-1.png 1x, img/image/content/X2-diplomas-item-1.png 2x"
+                class="diplomas__item-img" alt="Скан диплома об окончании аспирантуры">
+            </picture>
+          </figure>
         </div>
         <div class="diplomas__slider-item swiper-slide">
-          <figure class="diplomas__item-image base-figure"><img src="" alt="" class="diplomas__item-img"></figure>
+          <figure class="diplomas__item-image base-figure">
+            <picture>
+              <source srcset="img/image/content/diplomas-item-2.webp 1x, img/image/content/X2-diplomas-item-2.webp 2x"
+                type="image/webp">
+              <img srcset="img/image/content/diplomas-item-2.png 1x, img/image/content/X2-diplomas-item-2.png 2x"
+                class="diplomas__item-img" alt="Скан сертификата специалиста">
+            </picture>
+          </figure>
         </div>
         <div class="diplomas__slider-item swiper-slide">
-          <figure class="diplomas__item-image base-figure"><img src="" alt="" class="diplomas__item-img"></figure>
+          <figure class="diplomas__item-image base-figure">
+            <picture>
+              <source srcset="img/image/content/diplomas-item-3.webp 1x, img/image/content/X2-diplomas-item-3.webp 2x"
+                type="image/webp">
+              <img srcset="img/image/content/diplomas-item-3.png 1x, img/image/content/X2-diplomas-item-3.png 2x"
+                class="diplomas__item-img" alt="Скан диплома ординатуры">
+            </picture>
+          </figure>
         </div>
         <div class="diplomas__slider-item swiper-slide">
-          <figure class="diplomas__item-image base-figure"><img src="" alt="" class="diplomas__item-img"></figure>
+          <figure class="diplomas__item-image base-figure">
+            <picture>
+              <source srcset="img/image/content/diplomas-item-4.webp 1x, img/image/content/X2-diplomas-item-4.webp 2x"
+                type="image/webp">
+              <img srcset="img/image/content/diplomas-item-4.png 1x, img/image/content/X2-diplomas-item-4.png 2x"
+                class="diplomas__item-img" alt="Скан приложения к диплому">
+            </picture>
+          </figure>
         </div>
       </div>
     </div>
@@ -336,6 +458,27 @@
       </div>
       <a href="#" class="faq__order-link order-link base-link">Записаться на консультацию</a>
     </div>
+
+    <div class="faq__aside">
+      <figure class="faq__image base-figure">
+        <picture>
+          <img srcset="img/image/design/faq-graphic.png 1x, img/image/design/X2-faq-graphic.png 2x" class="faq__img"
+            alt="Изображение медицинской процедуры">
+        </picture>
+      </figure>
+
+      <a class="faq__whatsup-link base-link" href="#">
+        <svg class="faq__whatsup-icon" width="20" height="20">
+          <use href="img/icon/sprite.svg#whatsup-icon"></use>
+        </svg>
+      </a>
+
+      <a class="faq__tel-link base-link" href="#">
+        <svg class="faq__tel-icon" width="20" height="20">
+          <use href="img/icon/sprite.svg#phone-icon"></use>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -346,7 +489,14 @@
       <div class="reviews__slider-wrapper swiper-wrapper">
         <div class="reviews__slider-item swiper-slide">
           <div class="reviews__item-head">
-            <figure class="reviews__item-image base-figure"><img src="" alt="" class="reviews__item-img"></figure>
+            <figure class="reviews__item-image base-figure">
+              <picture>
+                <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
+                  type="image/webp">
+                <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1 2x"
+                  class="reviews__item-img" alt="Фото человека, оставившего отзыв">
+              </picture>
+            </figure>
             <span class="reviews__item-title">Елизавета
               Константинопольская</span>
           </div>
@@ -357,7 +507,14 @@
         </div>
         <div class="reviews__slider-item swiper-slide">
           <div class="reviews__item-head">
-            <figure class="reviews__item-image base-figure"><img src="" alt="" class="reviews__item-img"></figure>
+            <figure class="reviews__item-image base-figure">
+              <picture>
+                <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
+                  type="image/webp">
+                <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1 2x"
+                  class="reviews__item-img" alt="Фото человека, оставившего отзыв">
+              </picture>
+            </figure>
             <span class="reviews__item-title">Елизавета
               Константинопольская</span>
           </div>
@@ -368,7 +525,14 @@
         </div>
         <div class="reviews__slider-item swiper-slide">
           <div class="reviews__item-head">
-            <figure class="reviews__item-image base-figure"><img src="" alt="" class="reviews__item-img"></figure>
+            <figure class="reviews__item-image base-figure">
+              <picture>
+                <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
+                  type="image/webp">
+                <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1 2x"
+                  class="reviews__item-img" alt="Фото человека, оставившего отзыв">
+              </picture>
+            </figure>
             <span class="reviews__item-title">Елизавета
               Константинопольская</span>
           </div>
@@ -385,12 +549,38 @@
 <section class="questions">
   <div class="questions__container base-container">
     <div class="questions__inner">
-      <p class="questions__inner-headline">
-        Если у вас остались вопросы,
-        то вы можете написать администратору
-        в Whatsapp
-      </p>
-      <a href="#" class="questions__whatsup-link whatsup-link base-link">Перейти в WhatsApp</a>
+      <div class="questions__main">
+        <p class="questions__inner-headline base-par">
+          Если у вас остались вопросы,
+          то вы можете написать администратору
+          в Whatsapp
+        </p>
+        <a href="#" class="questions__whatsup-link whatsup-link base-link">
+          <svg class="whatsup-link__icon" width="19" height="19">
+            <use href="../img/icon/sprite.svg#whatsup-icon"></use>
+          </svg>
+          <span class="whatsup-link__caption">Перейти в WhatsApp</span>
+        </a>
+      </div>
+      <div class="questions__aside">
+        <figure class="questions__image base-figure">
+          <picture>
+            <img srcset="img/image/design/questions-graphic.png 1x, img/image/design/X2-questions-graphic.png 2x"
+              class="questions__img" alt="Изображение врача">
+          </picture>
+        </figure>
+      </div>
     </div>
+    <a class="questions__whatsup-link base-link" href="#">
+      <svg class="questions__whatsup-icon" width="20" height="20">
+        <use href="img/icon/sprite.svg#whatsup-icon"></use>
+      </svg>
+    </a>
+
+    <a class="questions__tel-link base-link" href="#">
+      <svg class="questions__tel-icon" width="20" height="20">
+        <use href="img/icon/sprite.svg#phone-icon"></use>
+      </svg>
+    </a>
   </div>
 </section>
