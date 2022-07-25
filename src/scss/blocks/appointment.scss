@@ -1,0 +1,16 @@
+@use "../mixins";
+
+.appointment {
+  margin-top: 50px;
+
+  &__inner {
+    background: var(--color-viking);
+    border: 5px solid var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 0 0 1px var(--color-spindle);
+  }
+
+  &__modal {
+    display: none;
+  }
+}
