@@ -1,0 +1,134 @@
+@use "../mixins";
+
+.headline {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 90px;
+
+  &__logo-block {
+    z-index: 4;
+  }
+
+  &__link-block {
+    display: flex;
+    flex-direction: row;
+
+    transition: left 0.3s;
+
+    z-index: 4;
+
+    @include mixins.respond-to(mobileOnly) {
+      position: absolute;
+      top: 250px;
+      left: -100%;
+
+      flex-direction: column;
+
+      &--opened {
+        left: 5%;
+
+        transition: left 0.4s;
+      }
+    }
+  }
+
+  &__order-link {
+    
+    @include mixins.respond-to(mobileOnly) {
+      width: 220px;
+      min-height: 50px;
+    }
+
+    transition: left 0.3s;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__whatsup-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 290px;
+    min-height: 50px;
+    background-color: var(--color-scooter);
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-white);
+
+    transition: left 0.3s;
+
+    & .whatsup-link__icon {
+      margin-right: 10px;
+    }
+  }
+
+
+  &__burger {
+    position: relative;
+    display: none;
+
+    z-index: 4;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+  
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: none;
+      outline: none;
+  
+      padding: 0;
+      margin: 0;
+
+      &--opened .headline__burger-line:nth-child(1) {
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%) rotate(45deg);
+
+        transition: top 0.1s;
+      }
+
+      &--opened .headline__burger-line:nth-child(3) {
+        position: absolute;
+        bottom: 50%;
+
+        transform: translateY(50%) rotate(-45deg);
+
+        transition: bottom 0.1s;
+      }
+
+      &--opened .headline__burger-line:nth-child(2) {
+        opacity: 0;
+
+        transition: opacity 0.1s;
+      }
+    }
+  }
+
+  &__burger-line {
+    @include mixins.respond-to(mobileOnly) {
+      width: 80%;
+      height: 3px;
+      background-color: var(--color-monza);
+      border-radius: 5px;
+
+      transition: 0.1s;
+  
+      margin: 0 auto;
+    }
+  }
+}

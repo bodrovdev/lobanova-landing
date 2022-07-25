@@ -1,0 +1,70 @@
+@use "../mixins";
+
+.main-nav {
+
+  z-index: 3;
+
+  @include mixins.respond-to(mobileOnly) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-viking);
+
+    transition-property: left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    &--opened {
+      left: 0;
+
+      transition-property: left;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  &__list {
+    @include mixins.respond-to(mobileOnly) {
+      position: absolute;
+      top: 100px;
+      left: 5%;
+
+      & .main-nav__list-item {
+        position: relative;
+
+        padding-left: 15px;
+
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          width: 9px;
+          height: 9px;
+          background-color: var(--color-monza);
+          border-radius: 50%;
+        }
+      }
+
+      & .main-nav__list-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        color: var(--color-black);
+      }
+    }
+  }
+  
+}

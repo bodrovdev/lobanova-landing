@@ -2,24 +2,29 @@
   <div class="page-header__container base-container">
     <section class="headline">
       <figure class="headline__logo-block logo-block base-figure">
-        <img class="logo-block__img" src="../img/image/logo.svg" width="207" height="63" alt="Логотип с сердцем">
+        <picture>
+          <source srcset="img/image/logo.svg" media="(min-width: 768px)">
+          <img srcset="img/image/logo-mobile.svg" class="headline__logo-img" alt="Логотип">
+        </picture>
       </figure>
-      <a href="#" class="headline__order-link order-link base-link">
-        <span class="order-link__caption">Консультация онлайн</span>
-      </a>
-      <a href="#" class="headline__whatsup-link whatsup-link base-link">
-        <svg class="whatsup-link__icon" width="19" height="19">
-          <use href="../img/icon/sprite.svg#whatsup-icon"></use>
-        </svg>
-        <span class="whatsup-link__caption">Перейти в WhatsApp</span>
-      </a>
-      <button class="headline__burger base-button">
+      <div class="headline__link-block" id="head-links">
+        <a href="#" class="headline__order-link order-link base-link" id="head-order">
+          <span class="order-link__caption">Консультация онлайн</span>
+        </a>
+        <a href="#" class="headline__whatsup-link whatsup-link base-link" id="head-whatsup">
+          <svg class="whatsup-link__icon" width="19" height="19">
+            <use href="../img/icon/sprite.svg#whatsup-icon"></use>
+          </svg>
+          <span class="whatsup-link__caption">Перейти в WhatsApp</span>
+        </a>
+      </div>
+      <button class="headline__burger" id="burger">
         <span class="headline__burger-line"></span>
         <span class="headline__burger-line"></span>
         <span class="headline__burger-line"></span>
       </button>
     </section>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <ul class="main-nav__list base-list">
         <li class="main-nav__list-item"><a href="#" class="main-nav__list-link base-link">О враче</a></li>
         <li class="main-nav__list-item"><a href="#" class="main-nav__list-link base-link">Как получить консультацию</a>

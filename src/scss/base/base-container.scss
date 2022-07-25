@@ -1,5 +1,11 @@
+@use "../mixins";
+
 .base-container {
-	width: 67%;
+	width: 90%;
 
 	margin: 0 auto;
+
+	@include mixins.respond-to(desktopS) {
+		width: 67%;
+	}
 }

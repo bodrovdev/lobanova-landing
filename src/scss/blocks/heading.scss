@@ -1,0 +1,268 @@
+@use "../mixins";
+
+.heading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  background-image: -webkit-image-set(
+    url('../img/image/design/X2-heading-background.jpg') 2x,
+    url('../img/image/design/heading-background.jpg') 1x
+);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    opacity: 80%;
+
+    z-index: 1;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2;
+  }
+
+  &__top {
+    position: relative;
+
+    order: 1;
+
+    z-index: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 2;
+    }
+
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    color: var(--color-mine-shaft);
+
+    margin: 30px 0 30px 0;
+
+    z-index: 2;
+
+    &-highlight {
+      color: var(--color-scooter);
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--color-mine-shaft);
+
+  }
+
+  &__profession {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-mine-shaft);
+  }
+
+  &__bottom {
+    position: relative;
+
+    order: 2;
+
+    background-color: var(--color-scooter);
+
+    z-index: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 3;
+    }
+  }
+
+  &__bottom-container {
+    padding: 20px 0 20px 0;
+  }
+
+  &__bottom-list {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+  }
+
+  &__bottom-item {
+    position: relative;
+
+    display: flex;
+
+    margin-bottom: 10px;
+  }
+
+  &__bottom-circle {
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    // width: 15px;
+    // height: 15px;
+    // border-radius: 50%;
+    // background-color: var(--color-monza);
+
+    // margin-right: 5px;
+  }
+
+  &__bottom-smallcircle {
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    // width: 5px;
+    // height: 5px;
+    // border-radius: 50%;
+    // background-color: var(--color-tangerine);
+  }
+
+  &__bottom-caption {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--color-white);
+  }
+
+  &__bottom-info {
+    text-align: center;
+    color: white;
+  }
+
+  &__order-link {
+    @include mixins.respond-to(mobileOnly) {
+      width: 260px;
+      height: 60px;
+    }
+    box-sizing: content-box;
+    border: 15px solid var(--color-white);
+
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__bottom-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-white);
+  }
+
+  &__image-block {
+    position: relative;
+
+    order: 3;
+
+    margin: 0 auto;
+
+    z-index: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 1;
+    }
+  }
+
+  &__photo-image {
+    @include mixins.respond-to(mobileOnly) {
+      align-self: center;
+      order: 1;
+
+      width: 290px;
+      height: auto;
+
+      margin: 0 auto;      
+    }
+  }
+
+  &__photo-img {
+    width: 290px;
+    vertical-align: top;
+  }
+
+  &__years-image {
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+  &__years-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &__patients-image {
+    @include mixins.respond-to(mobileOnly) {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__patients-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: 160px;
+      height: auto;
+    }
+  }
+
+  &__whatsup-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.2);
+
+    @include mixins.respond-to(mobileOnly) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
+
+  &__whatsup-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--color-scooter);
+  }
+
+
+}

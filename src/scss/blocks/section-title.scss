@@ -1,0 +1,7 @@
+@use "../mixins";
+
+.section-title {
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--color-mine-shaft);
+}
