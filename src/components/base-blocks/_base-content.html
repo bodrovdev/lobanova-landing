@@ -8,7 +8,6 @@
       </div>
     </div>
   </div>
-
   <div class="heading__bottom">
     <div class="heading__bottom-container base-container">
       <ul class="heading__bottom-list base-list">
@@ -52,23 +51,28 @@
       </picture>
     </figure>
 
-    <figure class="heading__years-image base-figure">
-      <picture>
-        <source srcset="img/image/content/heading-years.webp 1x, img/image/content/X2-heading-years.webp 2x"
-          type="image/webp">
-        <img srcset="img/image/content/heading-years.png 1x, img/image/content/X2-heading-years.png 2x"
-          class="heading__years-img" alt="Изображение с надписью 'Больше девяти лет стажа врача гематолога'">
-      </picture>
-    </figure>
+    <div class="heading__experience">
+      <div class="heading__experience-headline">
+        <span class="heading__experience-title">9+ лет</span>
+        <picture>
+          <img srcset="img/image/design/heading-fat-love.png 1x, img/image/design/X2-heading-fat-love.png 2x"
+            class="heading__experience-img" alt="Изображение сердечка">
+        </picture>
+      </div>
+      <span class="heading__experience-info">Стаж врача гематолога</span>
+    </div>
 
-    <figure class="heading__patients-image base-figure">
-      <picture>
-        <source srcset="img/image/content/heading-patients.webp 1x, img/image/content/X2-heading-patients.webp 2x"
-          type="image/webp">
-        <img srcset="img/image/content/heading-patients.png 1x, img/image/content/X2-heading-patients.png 2x"
-          class="heading__patients-img" alt="Изображение с надписью 'Больше девяти тысяч счастливых пациентов'">
-      </picture>
-    </figure>
+    <div class="heading__patients">
+      <div class="heading__patients-inner">
+        <img class="heading__patients-love" src="img/image/design/heading-love.svg" width="47" height="47" alt="">
+        <picture>
+          <img srcset="img/image/design/heading-patients.png 1x, img/image/design/X2-heading-patients.png 2x"
+            class="heading__patients-img" alt="Фотографии счастливых пациентов">
+        </picture>
+        <span class="heading__patients-title">10 000+</span>
+        <span class="heading__patients-info">Счастливых пациентов</span>
+      </div>
+    </div>
 
     <a class="heading__whatsup-link base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
       <span class="heading__whatsup-inner">
@@ -225,29 +229,34 @@
             </button>
             <div class="appointment__attach-items">
               <div class="appointment__attached-item">
-                <button class="appointment__attach-delete base-button" type="button"></button>
-              </div>
-              <div class="appointment__attached-item">
-                <button class="appointment__attach-delete base-button" type="button"></button>
-              </div>
-              <div class="appointment__attached-item">
-                <button class="appointment__attach-delete base-button" type="button"></button>
+                <button class="appointment__attach-delete base-button" type="button">
+                  <div class="appointment__delete-inner">
+                    <span class="appointment__delete-line"></span>
+                    <span class="appointment__delete-line"></span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        <button class="appointment__order-button base-button" type="submit" id="appointment-submit">
+        <button class="appointment__order-button base-button" type="button" id="appointment-submit">
           <span class="appointment__order-caption">Выбрать дату и оплатить</span>
         </button>
 
         <div class="appointment__terms">
-          <input class="visually-hidden" type="checkbox" id="appointment-terms-of-use">
-          <span class="appointment__terms-checkbox"></span>
-          <span class="appointment__terms-caption">
-            Отправляя данную форму, вы принимаете условие <a class="appointment__terms-link base-link"
-              href="#">пользовательского соглашения</a>
-          </span>
+          <input class="appointment__terms-hidden visually-hidden" type="checkbox" id="appointment-terms-of-use" value="terms-checked">
+          <label class="appointment__terms-label" for="appointment-terms-of-use">
+            <span class="appointment__terms-shown">
+              <svg class="appointment__terms-check" width="15" height="15">
+                <use href="img/icon/sprite.svg#check-icon"></use>
+              </svg>
+            </span>
+            <span class="appointment__terms-caption">
+              Отправляя данную форму, вы принимаете условие <a class="appointment__terms-link base-link"
+                href="#">пользовательского соглашения</a>
+            </span>
+          </label>
         </div>
       </form>
 
