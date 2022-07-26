@@ -81,8 +81,8 @@
 </section>
 
 <section class="guide">
-  <img class="guide__graphic guide__graphic--left" src="../../img/image/design/guide-graphic-left.png">
-  <img class="guide__graphic guide__graphic--right" src="../../img/image/design/guide-graphic-right.png">
+  <img class="guide__graphic guide__graphic--left" src="../../img/image/design/guide-graphic-left.png" loading="lazy">
+  <img class="guide__graphic guide__graphic--right" src="../../img/image/design/guide-graphic-right.png" loading="lazy">
 
   <div class="guide__container base-container">
     <h2 class="guide__title section-title base-title">Как проходит консультация врача</h2>
@@ -91,7 +91,7 @@
         <figure class="guide__item-image base-figure">
           <picture>
             <img srcset="img/image/design/guide-item-1.png 1x, img/image/design/X2-guide-item-1.png 2x"
-              class="guide__item-img" alt="Изображение гаджетов и стетоскопа">
+              class="guide__item-img" alt="Изображение гаджетов и стетоскопа" loading="lazy">
           </picture>
         </figure>
         <span class="guide__item-title">Изучение анализов</span>
@@ -105,7 +105,7 @@
         <figure class="guide__item-image base-figure">
           <picture>
             <img srcset="img/image/design/guide-item-2.png 1x, img/image/design/X2-guide-item-2.png 2x"
-              class="guide__item-img" alt="Изображение смартфона">
+              class="guide__item-img" alt="Изображение смартфона" loading="lazy">
           </picture>
         </figure>
         <span class="guide__item-title">Созвон с пациентом</span>
@@ -118,7 +118,7 @@
         <figure class="guide__item-image base-figure">
           <picture>
             <img srcset="img/image/design/guide-item-3.png 1x, img/image/design/X2-guide-item-3.png 2x"
-              class="guide__item-img" alt="Изображение бумажного планшета и стетоскопа">
+              class="guide__item-img" alt="Изображение бумажного планшета и стетоскопа" loading="lazy">
           </picture>
         </figure>
         <span class="guide__item-title">План лечения</span>
@@ -131,7 +131,7 @@
         <figure class="guide__item-image base-figure">
           <picture>
             <img srcset="img/image/design/guide-item-4.png 1x, img/image/design/X2-guide-item-4.png 2x"
-              class="guide__item-img" alt="Изображение символа электронной почты">
+              class="guide__item-img" alt="Изображение символа электронной почты" loading="lazy">
           </picture>
         </figure>
         <span class="guide__item-title">Рекомендации по email</span>
@@ -155,77 +155,85 @@
         <div class="appointment__type">
           <span class="appointment__type-caption">Выберите вид консультации на которую вы хотите записаться</span>
           <div class="appointment__type-body">
+
             <div class="appointment__type-item">
-              <div class="appointment__item-head">
-                <input class="appointment__hidden-radio visually-hidden" type="radio" name="appointment-radio" id="appointment-radio-1"
-                value="consult-1">
-                <span class="appointment__type-radio">
+              <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-1" value="appointment-1" name="appointment-radio">
+              <label class="appointment__type-label" for="appointment-radio-1">
+                <span class="appointment__shown-radio">
                   <svg class="appointment__check-icon" width="20" height="20">
                     <use href="img/icon/sprite.svg#check-icon"></use>
                   </svg>
                 </span>
-                <label class="appointment__type-name" for="appointment-radio-1">Первичный прием</label>
-              </div>
-              <span class="appointment__type-price">4 000 ₽</span>
+                <span class="appointment__item-caption">Первичный приём</span>
+                <span class="appointment__item-price">4 000 ₽</span>
+              </label>
             </div>
 
             <div class="appointment__type-item">
-              <div class="appointment__item-head">
-                <input class="appointment__hidden-radio visually-hidden" type="radio"name="appointment-radio" id="appointment-radio-2"
-                  value="consult-2">
-                <span class="appointment__type-radio">
+              <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-2" value="appointment-2" name="appointment-radio">
+              <label class="appointment__type-label" for="appointment-radio-2">
+                <span class="appointment__shown-radio">
                   <svg class="appointment__check-icon" width="20" height="20">
                     <use href="img/icon/sprite.svg#check-icon"></use>
                   </svg>
                 </span>
-                <label class="appointment__type-name" for="appointment-radio-2">Вторичный прием</label>
-              </div>
-              <span class="appointment__type-price">3 000 ₽</span>
+                <span class="appointment__item-caption">Вторичный прием</span>
+                <span class="appointment__item-price">3 000 ₽</span>
+              </label>
             </div>
 
             <div class="appointment__type-item">
-              <div class="appointment__item-head">
-                <input class="appointment__hidden-radio visually-hidden" type="radio" name="appointment-radio" id="appointment-radio-3"
-                  value="consult-3">
-                <span class="appointment__type-radio">
+              <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-3" value="appointment-3" name="appointment-radio">
+              <label class="appointment__type-label" for="appointment-radio-3">
+                <span class="appointment__shown-radio">
                   <svg class="appointment__check-icon" width="20" height="20">
                     <use href="img/icon/sprite.svg#check-icon"></use>
                   </svg>
                 </span>
-                <label class="appointment__type-name" for="appointment-radio-3">English speaking patient
-                  consultation</label>
-              </div>
-              <span class="appointment__type-price">6 000 ₽</span>
+                <span class="appointment__item-caption">English speaking patient consultation</span>
+                <span class="appointment__item-price">6 000 ₽</span>
+              </label>
             </div>
+
           </div>
         </div>
 
         <div class="appointment__info">
           <div class="appointment__info-item">
-            <label class="appointment__info-name" for="appointment-name">Ваше имя</label>
+            <label class="appointment__info-label" for="appointment-name">Ваше имя</label>
             <input class="appointment__info-input "type="text" id="appointment-name" placeholder="Напишите ваше имя">
           </div>
           <div class="appointment__info-item">
-            <label class="appointment__info-phone" for="appointment-phone">Ваш телефон</label>
+            <label class="appointment__info-label" for="appointment-phone">Ваш телефон</label>
             <input class="appointment__info-input" type="tel"  id="appointment-phone" placeholder="+7 (___) ___-__-__">
           </div>
           <div class="appointment__info-item">
-            <label class="appointment__info-email" for="appointment-email">Ваше имя</label>
+            <label class="appointment__info-label" for="appointment-email">Ваше имя</label>
             <input class="appointment__info-input" type="email" id="appointment-email" placeholder="Напишите ваше имя">
           </div>
         </div>
 
         <div class="appointment__attach">
-          <span class="appointment__attach-title">Прикрепите ваши анализы (не более 10)</span>
+          <span class="appointment__attach-caption">Прикрепите ваши анализы<br class="appointment__breakpoint--mobile"> (не более 10)</span>
           <div class="appointment__attach-area">
-            <input class="visually-hidden" type="file">
-            <button class="appointment__attach-upload base-button">
-              <svg class="appointment__attach-icon" width="28" height="24">
+            <input class="appointment__upload-hidden visually-hidden" type="file" id="upload-input">
+            <button class="appointment__upload-shown base-button" type="button" id="upload-button">
+              <svg class="appointment__upload-icon" width="28" height="24">
                 <use href="img/icon/sprite.svg#camera-icon"></use>
               </svg>
-              <span class="appointment__attach-caption">Добавить фото</span>
+              <span class="appointment__upload-caption">Добавить фото</span>
             </button>
-            <div class="appointment__attach-items"></div>
+            <div class="appointment__attach-items">
+              <div class="appointment__attached-item">
+                <button class="appointment__attach-delete base-button" type="button"></button>
+              </div>
+              <div class="appointment__attached-item">
+                <button class="appointment__attach-delete base-button" type="button"></button>
+              </div>
+              <div class="appointment__attached-item">
+                <button class="appointment__attach-delete base-button" type="button"></button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -311,7 +319,7 @@
           <figure class="about__item-image base-figure">
             <picture>
               <img srcset="img/image/design/about-slide-1.jpg 1x, img/image/design/X2-about-slide-1.jpg 2x"
-                class="about__item-img" alt="Изображение ампул">
+                class="about__item-img" alt="Изображение ампул" loading="lazy">
             </picture>
           </figure>
           <h3 class="about__sitem-title base-title">О враче гематологе</h3>
@@ -386,7 +394,7 @@
       <figure class="required__image base-figure">
         <picture>
           <img srcset="img/image/design/required-graphic.png 1x, img/image/design/X2-required-graphic.png 2x"
-            class="required__img" alt="Изображение эритроцитов">
+            class="required__img" alt="Изображение эритроцитов" loading="lazy">
         </picture>
       </figure>
 
@@ -429,7 +437,7 @@
               <source srcset="img/image/content/diplomas-item-1.webp 1x, img/image/content/X2-diplomas-item-1.webp 2x"
                 type="image/webp">
               <img srcset="img/image/content/diplomas-item-1.png 1x, img/image/content/X2-diplomas-item-1.png 2x"
-                class="diplomas__item-img" alt="Скан диплома об окончании аспирантуры">
+                class="diplomas__item-img" alt="Скан диплома об окончании аспирантуры" loading="lazy">
             </picture>
           </figure>
         </div>
@@ -439,7 +447,7 @@
               <source srcset="img/image/content/diplomas-item-2.webp 1x, img/image/content/X2-diplomas-item-2.webp 2x"
                 type="image/webp">
               <img srcset="img/image/content/diplomas-item-2.png 1x, img/image/content/X2-diplomas-item-2.png 2x"
-                class="diplomas__item-img" alt="Скан сертификата специалиста">
+                class="diplomas__item-img" alt="Скан сертификата специалиста" loading="lazy">
             </picture>
           </figure>
         </div>
@@ -449,7 +457,7 @@
               <source srcset="img/image/content/diplomas-item-3.webp 1x, img/image/content/X2-diplomas-item-3.webp 2x"
                 type="image/webp">
               <img srcset="img/image/content/diplomas-item-3.png 1x, img/image/content/X2-diplomas-item-3.png 2x"
-                class="diplomas__item-img" alt="Скан диплома ординатуры">
+                class="diplomas__item-img" alt="Скан диплома ординатуры" loading="lazy">
             </picture>
           </figure>
         </div>
@@ -459,7 +467,7 @@
               <source srcset="img/image/content/diplomas-item-4.webp 1x, img/image/content/X2-diplomas-item-4.webp 2x"
                 type="image/webp">
               <img srcset="img/image/content/diplomas-item-4.png 1x, img/image/content/X2-diplomas-item-4.png 2x"
-                class="diplomas__item-img" alt="Скан приложения к диплому">
+                class="diplomas__item-img" alt="Скан приложения к диплому" loading="lazy">
             </picture>
           </figure>
         </div>
@@ -510,7 +518,7 @@
       <figure class="faq__image base-figure">
         <picture>
           <img srcset="img/image/design/faq-graphic.png 1x, img/image/design/X2-faq-graphic.png 2x" class="faq__img"
-            alt="Изображение медицинской процедуры">
+            alt="Изображение медицинской процедуры" loading="lazy">
         </picture>
       </figure>
 
@@ -541,7 +549,7 @@
                 <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
                   type="image/webp">
                 <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1 2x"
-                  class="reviews__item-img" alt="Фото человека, оставившего отзыв">
+                  class="reviews__item-img" alt="Фото человека, оставившего отзыв" loading="lazy">
               </picture>
             </figure>
             <span class="reviews__item-title">Елизавета
@@ -559,7 +567,7 @@
                 <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
                   type="image/webp">
                 <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1 2x"
-                  class="reviews__item-img" alt="Фото человека, оставившего отзыв">
+                  class="reviews__item-img" alt="Фото человека, оставившего отзыв" loading="lazy">
               </picture>
             </figure>
             <span class="reviews__item-title">Елизавета
@@ -577,7 +585,7 @@
                 <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
                   type="image/webp">
                 <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1 2x"
-                  class="reviews__item-img" alt="Фото человека, оставившего отзыв">
+                  class="reviews__item-img" alt="Фото человека, оставившего отзыв" loading="lazy">
               </picture>
             </figure>
             <span class="reviews__item-title">Елизавета
@@ -613,7 +621,7 @@
         <figure class="questions__image base-figure">
           <picture>
             <img srcset="img/image/design/questions-graphic.png 1x, img/image/design/X2-questions-graphic.png 2x"
-              class="questions__img" alt="Изображение врача">
+              class="questions__img" alt="Фотография врача" loading="lazy">
           </picture>
         </figure>
       </div>

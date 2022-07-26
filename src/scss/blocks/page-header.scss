@@ -2,11 +2,8 @@
 
 .page-header {
   position: relative;
-  
-  flex-shrink: 0;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }

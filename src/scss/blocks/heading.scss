@@ -142,7 +142,7 @@
 
   &__bottom-caption {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 130%;
     color: var(--color-white);
   }
@@ -223,7 +223,7 @@
   &__patients-image {
     @include mixins.respond-to(mobileOnly) {
       position: absolute;
-      bottom: 0;
+      bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -231,7 +231,7 @@
 
   &__patients-img {
     @include mixins.respond-to(mobileOnly) {
-      width: 160px;
+      width: 200px;
       height: auto;
     }
   }

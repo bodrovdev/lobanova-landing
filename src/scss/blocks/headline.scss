@@ -2,11 +2,21 @@
 
 .headline {
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 90px;
 
-  min-height: 90px;
+  margin-bottom: 10px;
+
+  @include mixins.respond-to(mobileOnly) {
+    background-color: var(--color-viking);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+  }
 
   &__logo-block {
     z-index: 4;
@@ -90,6 +100,10 @@
       transition: 0.2s;
 
       z-index: 4;
+    }
+
+    &:focus::before {
+      border: 2px solid var(--color-monza);
     }
 
     @include mixins.respond-to(mobileOnly) {
