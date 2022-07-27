@@ -9,10 +9,3 @@ burger.addEventListener('click', () => {
 
   headLinks.classList.toggle('headline__link-block--opened')
 })
-
-let uploadInput = document.getElementById('upload-input');
-let uploadButton = document.getElementById('upload-button');
-
-uploadButton.addEventListener('click', () => {
-  uploadInput.click();
-})

@@ -12,21 +12,12 @@
     <div class="heading__bottom-container base-container">
       <ul class="heading__bottom-list base-list">
         <li class="heading__bottom-item">
-          <span class="heading__bottom-circle">
-            <span class="heading__bottom-smallcircle"></span>
-          </span>
           <span class="heading__bottom-caption">Вам никуда не нужно ехать или идти</span>
         </li>
         <li class="heading__bottom-item">
-          <span class="heading__bottom-circle">
-            <span class="heading__bottom-smallcircle"></span>
-          </span>
           <span class="heading__bottom-caption">Высококвалифицированный врач</span>
         </li>
         <li class="heading__bottom-item">
-          <span class="heading__bottom-circle">
-            <span class="heading__bottom-smallcircle"></span>
-          </span>
           <span class="heading__bottom-caption">Быстрое получение результата и назначения</span>
         </li>
       </ul>
@@ -74,9 +65,9 @@
       </div>
     </div>
 
-    <a class="heading__whatsup-link base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-      <span class="heading__whatsup-inner">
-        <svg class="heading__whatsup-icon" width="20" height="20">
+    <a class="heading__whatsup-link whatsup-ball base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+      <span class="whatsup-ball__inner">
+        <svg class="whatsup-ball__icon" width="20" height="20">
           <use href="img/icon/sprite.svg#whatsup-icon"></use>
         </svg>
       </span>
@@ -229,6 +220,7 @@
             </button>
             <div class="appointment__attach-items">
               <div class="appointment__attached-item">
+                <img src="../../img/image/design/test.png" width="136" height="82" class="appointment__attached-img">
                 <button class="appointment__attach-delete base-button" type="button">
                   <div class="appointment__delete-inner">
                     <span class="appointment__delete-line"></span>
@@ -245,7 +237,7 @@
         </button>
 
         <div class="appointment__terms">
-          <input class="appointment__terms-hidden visually-hidden" type="checkbox" id="appointment-terms-of-use" value="terms-checked">
+          <input class="appointment__terms-hidden visually-hidden" type="checkbox" id="appointment-terms-of-use" value="terms-checked" checked>
           <label class="appointment__terms-label" for="appointment-terms-of-use">
             <span class="appointment__terms-shown">
               <svg class="appointment__terms-check" width="15" height="15">
@@ -323,6 +315,18 @@
 <section class="about">
   <div class="about__container base-container">
     <div class="about__slider swiper">
+
+      <div class="about__item-arrow about__item-arrow--left">
+        <svg class="about__arrow-icon" width="12" height="20">
+          <use href="img/icon/sprite.svg#arrow-icon"></use>
+        </svg>
+      </div>
+      <div class="about__item-arrow about__item-arrow--right">
+        <svg class="about__arrow-icon" width="12" height="20">
+          <use href="img/icon/sprite.svg#arrow-icon"></use>
+        </svg>
+      </div>
+
       <div class="about__slider-wrapper swiper-wrapper">
         <div class="about__slider-item swiper-slide">
           <figure class="about__item-image base-figure">
@@ -331,61 +335,64 @@
                 class="about__item-img" alt="Изображение ампул" loading="lazy">
             </picture>
           </figure>
-          <h3 class="about__sitem-title base-title">О враче гематологе</h3>
-          <p class="about__item-info base-par">
-            <span class="about__info-part">
-              Гематология – это раздел медицины, изучающий работу кровеносной системы. Сегодня около 8% всех заболеваний
-              приходится на органы кроветворения.
-            </span>
-            <span class="about__info-part">Гематолог – врач, занимающийся диагностикой, выявлением и лечением
-              заболеваний крови. Гематолог ведет как детский, так и взрослый прием.
-            </span>
-            <span class="about__info-part">Современные методики и инновационные разработки позволяют
-              диагностировать заболевания на ранних этапах возникновения без явных клинических проявлений.</span>
-          </p>
+          <div class="about__item-inner">
+            <h3 class="about__item-title base-title">О враче гематологе</h3>
+            <p class="about__item-info base-par">
+              <span class="about__info-part">
+                Гематология – это раздел медицины, изучающий работу кровеносной системы. Сегодня около 8% всех заболеваний
+                приходится на органы кроветворения.
+              </span>
+              <span class="about__info-part">Гематолог – врач, занимающийся диагностикой, выявлением и лечением
+                заболеваний крови. Гематолог ведет как детский, так и взрослый прием.
+              </span>
+              <span class="about__info-part">Современные методики и инновационные разработки позволяют
+                диагностировать заболевания на ранних этапах возникновения без явных клинических проявлений.</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="about__tabs">
       <nav class="about__tabs-nav">
-        <a href="#tabs_item_01" class="about__nav-link base-link">Образование</a>
-        <a href="#tabs_item_02" class="about__nav-link base-link">Повышение квалификации</a>
-        <a href="#tabs_item_03" class="about__nav-link base-link">Звания, членства, награды</a>
-        <a href="#tabs_item_04" class="about__nav-link base-link">Опыт работы</a>
+        <a class="about__nav-link about__nav-link--active base-link" href="#tabs-item-1" id="about-tab-1">Образование</a>
+        <a class="about__nav-link base-link" href="#tabs-item-2" id="about-tab-2">Повышение квалификации</a>
+        <a class="about__nav-link base-link" href="#tabs-item-3" id="about-tab-3">Звания, членства, награды</a>
+        <a class="about__nav-link base-link" href="#tabs-item-4" id="about-tab-4">Опыт работы</a>
       </nav>
       <div class="about__tabs-body">
-        <div class="about__tabs-item" id="tabs_item_01">
-          <h4 class="about__item-title base-title">Образование</h4>
-          <ul class="about__item-list base-list">
-            <li class="about__item-value">
+        <div class="about__tabs-item" id="tabs-item-1">
+          <h4 class="about__tabs-title base-title">Образование</h4>
+          <ul class="about__tabs-list base-list">
+            <li class="about__tabs-value">
               2012 г. – лечебное дело, Первый Московский Государственный<br>
               Медицинский Университет им. И.М. Сеченова, Москва
             </li>
-            <li class="about__item-value">
+            <li class="about__tabs-value">
               2013 г. – интернатура по терапии, Первый Московский<br>
               Государственный Медицинский Университет им. И.М. Сеченова, Москва
             </li>
-            <li class="about__item-value">
+            <li class="about__tabs-value">
               2015 г. – ординатура по специальности “Гематология”,<br>
               Гематологический научный центр Российской академии медицинских наук, Москва
             </li>
-            <li class="about__item-value">
+            <li class="about__tabs-value">
               2016 г. – повышение квалификации “Психосоматические<br>
               расстройства”, ПМГМУ им. И.М. Сеченова
             </li>
-            <li class="about__item-value">
+            <li class="about__tabs-value">
               2016 г. – сертификат “Основы клинической трансфузиологии”, ФГБУ<br>
               дополнительного профессионального образования
             </li>
-            <li class="about__item-value">
+            <li class="about__tabs-value">
               2018 г. – аспирантура “Гематология и переливание крови”,<br>
               Гематологический научный центр Российской академии медицинских наук, Москва
             </li>
           </ul>
         </div>
-        <div class="about__tabs-item" id="tabs_item_02"></div>
-        <div class="about__tabs-item" id="tabs_item_03"></div>
-        <div class="about__tabs-item" id="tabs_item_04"></div>
+        <div class="about__tabs-item" id="tabs-item-2"></div>
+        <div class="about__tabs-item" id="tabs-item-2"></div>
+        <div class="about__tabs-item" id="tabs-item-3"></div>
       </div>
     </div>
     <div class="about__motto">
@@ -407,19 +414,21 @@
         </picture>
       </figure>
 
-      <a class="required__whatsup-link base-link" href="#">
-        <svg class="required__whatsup-icon" width="20" height="20">
-          <use href="img/icon/sprite.svg#whatsup-icon"></use>
-        </svg>
+      <a class="required__whatsup-link whatsup-ball base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
+        <span class="whatsup-ball__inner">
+          <svg class="whatsup-ball__icon" width="36" height="36">
+            <use href="img/icon/sprite.svg#whatsup-icon"></use>
+          </svg>
+        </span>
       </a>
 
-      <a class="required__tel-link base-link" href="#">
-        <svg class="required__tel-icon" width="20" height="20">
+      <a class="required__tel-link phone-ball base-link">
+        <svg class="phone-ball__icon" width="36" height="36">
           <use href="img/icon/sprite.svg#phone-icon"></use>
         </svg>
       </a>
-
     </div>
+
     <div class="required__main">
       <h2 class="required__title section-title base-title">Что нужно для получения консультации</h2>
       <span class="required__info">Для консультации врача гематолога необходимо иметь:</span>

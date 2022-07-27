@@ -1,5 +1,6 @@
 //Для разработки
 @use 'global/variables';
+@use 'node_modules/swiper/swiper-bundle.min.css';
 
 //Миксины
 @use 'mixins/font-face';
@@ -20,6 +21,8 @@
 //БЭМ блоки
 @use 'blocks/order-link';
 @use 'blocks/section-title';
+@use 'blocks/whatsup-ball';
+@use 'blocks/phone-ball';
 @use 'blocks/visually-hidden';
 
 @use 'blocks/page-header';
@@ -30,3 +33,5 @@
 @use 'blocks/heading';
 @use 'blocks/guide';
 @use 'blocks/appointment';
+@use 'blocks/about';
+@use 'blocks/required';

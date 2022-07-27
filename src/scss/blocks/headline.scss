@@ -4,8 +4,6 @@
 
   height: 90px;
 
-  margin-bottom: 10px;
-
   @include mixins.respond-to(mobileOnly) {
     background-color: var(--color-viking);
   }

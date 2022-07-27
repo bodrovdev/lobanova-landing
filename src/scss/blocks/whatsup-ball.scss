@@ -1,0 +1,45 @@
+@use "../mixins";
+
+.whatsup-ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.2);
+
+  @include mixins.respond-to(mobileOnly) {
+    &:active {
+      outline: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+  @include mixins.respond-to(desktopS) {
+    &:hover .heading__whatsup-inner{
+      transform: scale(1.3);
+      transition: transform, 0.2s;
+    }
+  }
+
+  &:active .heading__whatsup-inner {
+    transform: scale(1.3);
+    transition: transform, 0.1s;
+  }
+}
+
+.whatsup-ball__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: var(--color-scooter);
+
+  transition: 0.1s;
+
+  @include mixins.respond-to(desktopS) {
+    transition: 0.2s;
+  }
+}

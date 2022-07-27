@@ -1,0 +1,136 @@
+@use "../mixins";
+
+.required {
+
+  &__container {
+    display: flex;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__aside {
+    position: relative;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    @include mixins.respond-to(mobileOnly) {
+      width: 290px;
+    }
+  }
+
+  &__whatsup-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(103.57% 103.57% at 50% 0%, #FDFEFE 0%, #FDFEFE 100%);
+    opacity: 0.7;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  & .whatsup-ball__inner {
+    width: 55px;
+    height: 55px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  & .whatsup-ball__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__tel-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__title {
+    position: relative;
+
+    font-size: 35px;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 23px;
+
+      padding-bottom: 20px;
+      margin: 0 0 30px 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 81px;
+      height: 15px;
+      background-image: url("../../img/image/design/title-graphic.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__info {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    color: var(--color-mine-shaft);
+  }
+
+  &__list {
+    margin-top: 20px;
+    color: black;
+  }
+
+  &__list-item {
+    position: relative;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    color: var(--color-black);
+
+    @include mixins.respond-to(mobileOnly) {
+      padding-left: 30px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+
+      width: 15px;
+      height: 15px;
+      box-sizing: border-box;
+      background-color: var(--color-tangerine);
+      border-radius: 50%;
+      border: 3px solid var(--color-monza);
+    }
+  }
+}
