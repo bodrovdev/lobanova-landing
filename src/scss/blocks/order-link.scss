@@ -12,4 +12,10 @@
   font-size: 14px;
   font-weight: 600;
   color: var(--color-white);
+
+  @include mixins.respond-to(desktopS) {
+    &:hover {
+      background-color: var(--color-scooter);
+    }
+  }
 }

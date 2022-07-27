@@ -2,6 +2,10 @@
 
 .required {
 
+  @include mixins.respond-to(mobileOnly) {
+    margin-bottom: 50px;
+  }
+
   &__container {
     display: flex;
 
@@ -97,8 +101,9 @@
   }
 
   &__list {
-    margin-top: 20px;
-    color: black;
+    @include mixins.respond-to(mobileOnly) {
+      margin: 20px 0 30px 0;
+    }
   }
 
   &__list-item {
@@ -131,6 +136,13 @@
       background-color: var(--color-tangerine);
       border-radius: 50%;
       border: 3px solid var(--color-monza);
+    }
+  }
+
+  &__order-link {
+    @include mixins.respond-to(mobileOnly) {
+      width: 290px;
+      height: 60px;
     }
   }
 }
