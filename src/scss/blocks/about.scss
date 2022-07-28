@@ -11,6 +11,8 @@
     color: black;
   }
 
+  //Стили для слайдера в блоке about
+
   &__slider {
     position: relative;
 
@@ -29,10 +31,9 @@
   }
 
   &__item-img {
-    @include mixins.respond-to(mobileOnly) {
-      width: 320px;
-      height: auto;
-    }
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   &__item-title {
@@ -71,105 +72,118 @@
     color: var(--color-white);
   }
 
+  //Стили для блока с табами в блоке about
+
   &__tabs {
 
-    margin-bottom: 30px;
-
-    &-nav {
-      display: flex;
-
-      @include mixins.respond-to(mobileOnly) {
-        flex-direction: column;
-
-        margin-bottom: 30px;
-      }
-    }
-  }
-
-  &__nav-link {
     display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--color-catskill-white);
-    border: 1px solid var(--color-ghost);
-    box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
-    border-radius: 8px;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--color-shuttle-gray);
-
-    padding: 10px 30px 10px 30px;
+    flex-wrap: wrap;
 
     @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 24px;
+      flex-direction: column;
+    }
 
-      &:last-child {
-        margin-bottom: 0;
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid var(--color-ghost);
+      box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
+      border-radius: 8px;
+
+      transition: 0.2s;
+
+      padding: 10px 0 10px 0;
+
+      @include mixins.respond-to(mobileOnly) {
+        margin-bottom: 15px;
       }
     }
 
-    &--active {
-      background-color: var(--color-scooter);
-      color: var(--color-white);
+    &-button--4 {
+      margin-bottom: 0;
+    }
+
+    &-body {
+      @include mixins.respond-to(mobileOnly) {
+        margin-top: 30px;
+      }
+    }
+
+    &-item {
+      display: none;
+    }
+
+    &-title {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: var(--color-black);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+
+      @include mixins.respond-to(mobileOnly) {
+        margin-top: 20px;
+      }
+    }
+
+    &-value {
+      position: relative;
+
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--color-black);
+
+      padding-left: 30px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 0;
+  
+        width: 15px;
+        height: 15px;
+        box-sizing: border-box;
+        background-color: var(--color-tangerine);
+        border-radius: 50%;
+        border: 3px solid var(--color-monza);
+      }
+
+      @include mixins.respond-to(mobileOnly) {
+        margin-bottom: 15px;
+      }
     }
   }
 
-  &__tabs-item {
-    display: none;
+  &__radio-hidden:checked + .about__tabs-button {
+    background-color: var(--color-scooter);
+
+    color: var(--color-white);
+
+    transition: 0.2s;
   }
 
-  &__tabs-item:target {
+  #tabs-radio-1:checked ~ .about__tabs-body .about__tabs-radio--1 {
+    display: block;
+  }
+  #tabs-radio-2:checked ~ .about__tabs-body .about__tabs-radio--2 {
+    display: block;
+  }
+  #tabs-radio-3:checked ~ .about__tabs-body .about__tabs-radio--3 {
+    display: block;
+  }
+  #tabs-radio-4:checked ~ .about__tabs-body .about__tabs-radio--4 {
     display: block;
   }
 
-  &__tabs-title {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    color: var(--color-black);
-
-    margin-bottom: 20px;
-  }
-
-  &__tabs-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__tabs-value {
-    position: relative;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: left;
-
-    @include mixins.respond-to(mobileOnly) {
-      padding-left: 30px;
-      margin-bottom: 30px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: 0;
-
-      width: 15px;
-      height: 15px;
-      box-sizing: border-box;
-      background-color: var(--color-tangerine);
-      border-radius: 50%;
-      border: 3px solid var(--color-monza);
-    }
-  }
+  //Стили для блока motto в блоке about
 
   &__motto {
     position: relative;

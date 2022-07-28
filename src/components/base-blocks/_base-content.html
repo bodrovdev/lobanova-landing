@@ -342,53 +342,39 @@
     </div>
 
     <div class="about__tabs">
-      <nav class="about__tabs-nav">
-        <a class="about__nav-link about__nav-link--active base-link" href="#tabs-item-1" id="about-tab-1">Образование</a>
-        <a class="about__nav-link base-link" href="#tabs-item-2" id="about-tab-2">Повышение квалификации</a>
-        <a class="about__nav-link base-link" href="#tabs-item-3" id="about-tab-3">Звания, членства, награды</a>
-        <a class="about__nav-link base-link" href="#tabs-item-4" id="about-tab-4">Опыт работы</a>
-      </nav>
+      <input class="about__radio-hidden visually-hidden" type="radio" id="tabs-radio-1" name="tabs-radio" checked>
+      <label class="about__tabs-button" for="tabs-radio-1">Образование</label>
+      <input class="about__radio-hidden visually-hidden" type="radio" id="tabs-radio-2" name="tabs-radio">
+      <label class="about__tabs-button" for="tabs-radio-2">Повышение квалификации</label>
+      <input class="about__radio-hidden visually-hidden" type="radio" id="tabs-radio-3" name="tabs-radio">
+      <label class="about__tabs-button" for="tabs-radio-3">Звания, членства, награды</label>
+      <input class="about__radio-hidden visually-hidden" type="radio" id="tabs-radio-4" name="tabs-radio">
+      <label class="about__tabs-button about__tabs-button--4" for="tabs-radio-4">Опыт работы</label>
+
       <div class="about__tabs-body">
-        <div class="about__tabs-item" id="tabs-item-1">
-          <h4 class="about__tabs-title base-title">Образование</h4>
+        <div class="about__tabs-item about__tabs-radio--1">
+          <span class="about__tabs-title">Образование</span>
           <ul class="about__tabs-list base-list">
-            <li class="about__tabs-value">
-              2012 г. – лечебное дело, Первый Московский Государственный<br>
-              Медицинский Университет им. И.М. Сеченова, Москва
-            </li>
-            <li class="about__tabs-value">
-              2013 г. – интернатура по терапии, Первый Московский<br>
-              Государственный Медицинский Университет им. И.М. Сеченова, Москва
-            </li>
-            <li class="about__tabs-value">
-              2015 г. – ординатура по специальности “Гематология”,<br>
-              Гематологический научный центр Российской академии медицинских наук, Москва
-            </li>
-            <li class="about__tabs-value">
-              2016 г. – повышение квалификации “Психосоматические<br>
-              расстройства”, ПМГМУ им. И.М. Сеченова
-            </li>
-            <li class="about__tabs-value">
-              2016 г. – сертификат “Основы клинической трансфузиологии”, ФГБУ<br>
-              дополнительного профессионального образования
-            </li>
-            <li class="about__tabs-value">
-              2018 г. – аспирантура “Гематология и переливание крови”,<br>
-              Гематологический научный центр Российской академии медицинских наук, Москва
-            </li>
+            <li class="about__tabs-value">2012 г. – лечебное дело, Первый Московский Государственный Медицинский Университет им. И.М. Сеченова, Москва</li>
+            <li class="about__tabs-value">2013 г. – интернатура по терапии, Первый Московский Государственный Медицинский Университет им. И.М. Сеченова, Москва</li>
+            <li class="about__tabs-value">2015 г. – ординатура по специальности “Гематология”, Гематологический научный центр Российской академии медицинских наук, Москва</li>
+            <li class="about__tabs-value">2016 г. – повышение квалификации “Психосоматические расстройства”, ПМГМУ им. И.М. Сеченова</li>
+            <li class="about__tabs-value">2016 г. – сертификат “Основы клинической трансфузиологии”, ФГБУ дополнительного профессионального образования</li>
+            <li class="about__tabs-value">2018 г. – аспирантура “Гематология и переливание крови”, Гематологический научный центр Российской академии медицинских наук, Москва</li>
           </ul>
         </div>
-        <div class="about__tabs-item" id="tabs-item-2"></div>
-        <div class="about__tabs-item" id="tabs-item-2"></div>
-        <div class="about__tabs-item" id="tabs-item-3"></div>
+        <div class="about__tabs-item about__tabs-radio--2">2</div>
+        <div class="about__tabs-item about__tabs-radio--3">3</div>
+        <div class="about__tabs-item about__tabs-radio--4">4</div>
       </div>
     </div>
-    <div class="about__motto">
+
+    <article class="about__motto">
       <h3 class="about__motto-title base-title">Врач – это не профессия, а образ жизни</h3>
       <p class="about__motto-info base-par">Доктором может быть не каждый. Это действительно призвание. Эта профессия
         подходит тем, кто искренне хочет помогать людям, кто умеет сопереживать. Если все эти качества соединены в одном
         человеке, то у него есть шанс стать настоящим Врачом с большой буквы.</p>
-    </div>
+    </article>
   </div>
 </section>
 
@@ -486,98 +472,59 @@
 <section class="faq">
   <div class="faq__container base-container">
     <div class="faq__main">
-      <h2 class="faq__title section-title base-title">О чем часто спрашивают</h2>
+      <h2 class="faq__title section-title base-title">О чём часто спрашивают</h2>
       <div class="faq__spoilers">
         <div class="faq__spoilers-item">
-          <div class="faq__item-head">
-            <button class="faq__item-headline base-button" type="button">Как будет проходить консультация?</button>
-            <div class="faq__item-cross">
-              <span class="faq__cross-line"></span>
-              <span class="faq__cross-line"></span>
-            </div>
-          </div>
-          <div class="faq__item-body"></div>
+          <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-1">
+          <label class="faq__spoilers-button" for="spoilers-check-1">
+            <span class="faq__spoilers-caption">Как будет проходить консультация?</span>
+            <div class="faq__spoilers-cross"></div>
+          </label>
+          <div class="faq__spoilers-content">111</div>
         </div>
         <div class="faq__spoilers-item">
-          <div class="faq__item-head">
-            <button class="faq__item-headline base-button" type="button">Можно ли записаться на консультацию если нет
-              анализов?</button>
-            <div class="faq__item-cross">
-              <span class="faq__cross-line"></span>
-              <span class="faq__cross-line"></span>
-            </div>
-            </div>
-          <div class="faq__item-body"></div>
+          <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-2">
+          <label class="faq__spoilers-button" for="spoilers-check-2">
+            <span class="faq__spoilers-caption">Можно ли записаться на консультацию если нет анализов?</span>
+            <div class="faq__spoilers-cross"></div>
+          </label>
+          <div class="faq__spoilers-content">222</div>
         </div>
         <div class="faq__spoilers-item">
-          <div class="faq__item-head">
-            <button class="faq__item-headline base-button" type="button">Есть ли особые рекомендации перед
-              консультацией врача – гематолога</button>
-            <div class="faq__item-cross">
-              <span class="faq__cross-line"></span>
-              <span class="faq__cross-line"></span>
-            </div>
-          </div>
-            <div class="faq__item-body"></div>
+          <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-3">
+          <label class="faq__spoilers-button" for="spoilers-check-3">
+            <span class="faq__spoilers-caption">Есть ли особые рекомендации перед консультацией врача – гематолога</span>
+            <div class="faq__spoilers-cross"></div>
+          </label>
+          <div class="faq__spoilers-content">333</div>
         </div>
         <div class="faq__spoilers-item">
-          <div class="faq__item-head">
-            <button class="faq__item-headline base-button" type="button">Может ли врач после консультации дать
-              направление на лечение в какую-либо клинику?</button>
-            <div class="faq__item-cross">
-              <span class="faq__cross-line"></span>
-              <span class="faq__cross-line"></span>
-            </div>
-          </div>
-          <div class="faq__item-body"></div>
+          <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-4">
+          <label class="faq__spoilers-button" for="spoilers-check-4">
+            <span class="faq__spoilers-caption">Может ли врач после консультации дать направление на лечение в какую-либо клинику?</span>
+            <div class="faq__spoilers-cross"></div>
+          </label>
+          <div class="faq__spoilers-content">444</div>
         </div>
         <div class="faq__spoilers-item">
-          <div class="faq__item-head">
-            <button class="faq__item-headline base-button" type="button">Можно ли получить консультация врача –
-              гематолога во время беременности</button>
-            <div class="faq__item-cross">
-              <span class="faq__cross-line"></span>
-              <span class="faq__cross-line"></span>
-            </div>
-          </div>
-          <div class="faq__item-body"></div>
+          <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-5">
+          <label class="faq__spoilers-button" for="spoilers-check-5">
+            <span class="faq__spoilers-caption">Можно ли получить консультация врача – гематолога во время беременности</span>
+            <div class="faq__spoilers-cross"></div>
+          </label>
+          <div class="faq__spoilers-content">555</div>
         </div>
         <div class="faq__spoilers-item">
-          <div class="faq__item-head">
-            <button class="faq__item-headline base-button" type="button">Как можно отменить уже оплаченную
-              консультацию?</button>
-            <div class="faq__item-cross">
-              <span class="faq__cross-line"></span>
-              <span class="faq__cross-line"></span>
-            </div>
-          </div>
-          <div class="faq__item-body"></div>
+          <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-6">
+          <label class="faq__spoilers-button" for="spoilers-check-6">
+            <span class="faq__spoilers-caption">Как можно отменить уже оплаченную консультацию?</span>
+            <div class="faq__spoilers-cross"></div>
+          </label>
+          <div class="faq__spoilers-content">666</div>
         </div>
       </div>
-      <a class="faq__order-link order-link base-link" href="#">Записаться на консультацию</a>
     </div>
-    <div class="faq__aside">
-      <figure class="faq__image base-figure">
-        <picture>
-          <img srcset="img/image/design/faq-graphic.png 1x, img/image/design/X2-faq-graphic.png 2x" class="faq__img"
-            alt="Изображение медицинской процедуры" loading="lazy">
-        </picture>
-      </figure>
-
-      <a class="faq__whatsup-link whatsup-ball base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener noreferrer">
-        <span class="whatsup-ball__inner">
-          <svg class="whatsup-ball__icon" width="36" height="36">
-            <use href="img/icon/sprite.svg#whatsup-icon"></use>
-          </svg>
-        </span>
-      </a>
-
-      <a class="faq__tel-link phone-ball base-link" href="tel:XXXXXXXXXXX">
-        <svg class="phone-ball__icon" width="36" height="36">
-          <use href="img/icon/sprite.svg#phone-icon"></use>
-        </svg>
-      </a>
-    </div>
+    <div class="faq__aside"></div>
   </div>
 </section>
 

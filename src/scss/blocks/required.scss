@@ -18,6 +18,10 @@
     position: relative;
 
     @include mixins.respond-to(mobileOnly) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
       margin-bottom: 30px;
     }
   }

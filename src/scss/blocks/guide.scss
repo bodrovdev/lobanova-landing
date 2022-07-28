@@ -75,18 +75,18 @@
     text-align: center;
 
     @include mixins.respond-to(mobileOnly) {
-      min-width: 280px;
-
-      margin-right: 30px;
-
-      &:last-child {
-        margin-right: 0;
-      }
+      min-width: 100%;
     }
   }
 
   &__item-image {
     margin-bottom: 20px;
+  }
+
+  &__item-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   &__item-title {
