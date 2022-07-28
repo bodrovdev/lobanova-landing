@@ -20,6 +20,14 @@
     }
   }
 
+  &__main {
+    order: 1;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 2;
+    }
+  }
+
   &__title {
     position: relative;
 
@@ -49,8 +57,9 @@
   }
 
   // Стили для спойлеров в блоке faq
-
   &__spoilers {
+
+    margin-bottom: 35px;
 
     &-item {
 
@@ -61,6 +70,10 @@
         width: 100%;
 
         margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
@@ -154,5 +167,66 @@
   &__check-hidden:checked + .faq__spoilers-button .faq__spoilers-cross::after {
     transform: rotate(180deg);
     transition: rotate, 0.2s;
+  }
+
+  &__order-link {
+    height: 60px;
+  }
+
+  
+  &__aside {
+    order: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 1;
+
+      margin-bottom: 30px;
+    }
+  }
+
+  &__aside-inner {
+    position: relative;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: fit-content;
+      height: auto;
+    }
+  }
+
+  &__aside-image {
+    top: -50px;
+
+    z-index: 5;
+  }
+
+  &__aside-img {
+    display: block;
+
+    height: auto;
+
+    z-index: 5;
+
+    @include mixins.respond-to(mobileOnly) {
+      max-width: 100%;
+    }
+  }
+
+  &__whatsup-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 65px;
+    height: 65px;
+
+    z-index: 10;
+  }
+
+  &__tel-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
   }
 }

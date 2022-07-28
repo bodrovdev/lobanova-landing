@@ -1,0 +1,113 @@
+@use "../mixins";
+
+.questions {
+  position: relative;
+
+  background-image: -webkit-image-set(
+    url('../img/image/design/X2-motto-background.png') 2x,
+    url('../img/image/design/motto-background.png') 1x
+);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  padding: 10px 0 10px 0;
+
+  &__container {
+    display: flex;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__main {
+    order: 1;
+
+    @include mixins.respond-to(mobileOnly) {
+      order: 2;
+    }
+  }
+
+  &__headline {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 150%;
+    color: var(--color-white);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 20px;
+
+      margin-bottom: 30px;
+    }
+  }
+
+  &__whatsup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+    background-color: var(--color-monza);
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+  }
+
+  &__whatsup-icon {
+    margin-right: 10px;
+  }
+
+  &__whatsup-caption {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--color-white);
+  }
+
+  &__aside {
+    order: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+
+      margin-bottom: 30px;
+    }
+
+    color: red;
+  }
+
+  &__aside-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: 290px;
+      height: auto;
+
+      margin: 0 auto;
+    }
+  }
+
+  &__whatsup-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  &__tel-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}

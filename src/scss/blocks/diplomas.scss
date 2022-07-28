@@ -3,7 +3,7 @@
 .diplomas {
 
   @include mixins.respond-to(mobileOnly) {
-    margin-bottom: 50px;
+    margin-bottom: 90px;
   }
 
   &__title {

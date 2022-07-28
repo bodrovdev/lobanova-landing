@@ -1,3 +1,11 @@
+@use "../mixins";
+
 .page-content {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+
+  @include mixins.respond-to(mobileOnly) {
+    margin-bottom: 50px;
+  }
 }
