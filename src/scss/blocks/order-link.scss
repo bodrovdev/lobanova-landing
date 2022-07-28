@@ -1,21 +1,34 @@
 @use "../mixins";
 
 .order-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: var(--color-monza);
+  height: 50px;
+  background: var(--color-monza);
   box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-white);
+  &__caption {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center; 
+    color: var(--color-white);
+  }
+}
 
-  @include mixins.respond-to(desktopS) {
-    &:hover {
-      background-color: var(--color-scooter);
-    }
+.whatsup-link {
+  height: 50px;
+  background: var(--color-scooter);
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--color-white);
   }
 }

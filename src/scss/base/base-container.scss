@@ -5,7 +5,7 @@
 
 	margin: 0 auto;
 
-	@include mixins.respond-to(desktopS) {
+	@include mixins.respond-to(desktopD) {
 		width: 67%;
 	}
 }

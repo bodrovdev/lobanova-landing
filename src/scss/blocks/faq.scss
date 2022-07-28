@@ -170,7 +170,17 @@
   }
 
   &__order-link {
-    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 315px;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 220px;
+
+      margin: 0 auto;
+    }
   }
 
   

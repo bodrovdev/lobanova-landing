@@ -48,25 +48,15 @@
     align-items: center;
     justify-content: center;
 
-    height: 60px;
+    width: 290px;
+
     background-color: var(--color-monza);
-    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 
     @include mixins.respond-to(mobileOnly) {
-      width: 100%;
+      width: 220px;
+
+      margin: 0 auto;
     }
-  }
-
-  &__whatsup-icon {
-    margin-right: 10px;
-  }
-
-  &__whatsup-caption {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 120%;
-    color: var(--color-white);
   }
 
   &__aside {
