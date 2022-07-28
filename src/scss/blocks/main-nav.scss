@@ -21,11 +21,17 @@
     &--opened {
       left: 0;
 
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-y: contain;
+
       transition-property: left;
       transition-duration: 0.3s;
       transition-timing-function: ease-in-out;
     }
   }
+
+  &__container {}
 
   &__list {
 
@@ -89,7 +95,7 @@
       height: 50px;
       background-color: var(--color-monza);
       border-radius: 8px;
-      
+
       color: var(--color-white);
     }
   }

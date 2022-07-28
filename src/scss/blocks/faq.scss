@@ -100,10 +100,10 @@
 
       @include mixins.respond-to(mobileOnly) {
         align-self: center;
-        
+
         text-align: center;
 
-        margin-bottom: 15px;  
+        margin-bottom: 15px;
       }
     }
 
@@ -157,15 +157,15 @@
 
       padding: 0 13px 13px 13px;
     }
-    
+
   }
 
-  &__check-hidden:checked ~ .faq__spoilers-content {
+  &__check-hidden:checked~.faq__spoilers-content {
     display: block;
   }
 
-  &__check-hidden:checked + .faq__spoilers-button .faq__spoilers-cross::after {
-    transform: rotate(180deg);
+  &__check-hidden:checked+.faq__spoilers-button .faq__spoilers-cross::after {
+    transform: translateY(-2px) rotate(180deg);
     transition: rotate, 0.2s;
   }
 
@@ -183,7 +183,7 @@
     }
   }
 
-  
+
   &__aside {
     order: 2;
 
@@ -201,12 +201,6 @@
       width: fit-content;
       height: auto;
     }
-  }
-
-  &__aside-image {
-    top: -50px;
-
-    z-index: 5;
   }
 
   &__aside-img {

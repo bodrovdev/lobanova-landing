@@ -133,13 +133,13 @@
     transition: 0.2s;
   }
 
-  &__hidden-radio:checked + .appointment__type-label .appointment__check-icon {
+  &__hidden-radio:checked+.appointment__type-label .appointment__check-icon {
     opacity: 1;
 
     transition: opacity 0.1s;
   }
 
-  &__hidden-radio:checked + .appointment__type-label .appointment__item-price {
+  &__hidden-radio:checked+.appointment__type-label .appointment__item-price {
     color: var(--color-monza);
 
     transition: color 0.1s;
@@ -218,7 +218,7 @@
 
   &__attach-area {
     display: flex;
-    
+
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
     }
@@ -258,7 +258,7 @@
 
   &__attach-items {
     display: flex;
-    
+
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
     }
@@ -295,14 +295,13 @@
     height: 50px;
 
     @include mixins.respond-to(mobileOnly) {
-      margin: 0 auto;
+      width: 215px;
+      margin: 0 auto 15px auto;
     }
 
     background: var(--color-monza);
     box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-
-    margin-bottom: 15px;
   }
 
   &__order-caption {
@@ -320,7 +319,7 @@
       display: flex;
     }
 
-    &-hidden:checked + label svg {
+    &-hidden:checked+label svg {
       opacity: 1;
     }
 
