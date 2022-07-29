@@ -11,7 +11,6 @@
 );
 
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 
   padding-top: 10px;
@@ -85,9 +84,21 @@
 
     order: 2;
 
-    background-color: var(--color-scooter);
-
     z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-scooter);
+      opacity: 0.6;
+
+      z-index: 5;
+    }
 
     @include mixins.respond-to(mobileOnly) {
       order: 3;
@@ -113,6 +124,8 @@
     padding-left: 25px;
     margin-bottom: 20px;
 
+    z-index: 10;
+
     &::before {
       content: "";
       position: absolute;
@@ -133,6 +146,8 @@
     font-size: 16px;
     line-height: 130%;
     color: var(--color-white);
+
+    z-index: 10;
   }
 
   &__bottom-info {
@@ -140,6 +155,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    z-index: 10;
   }
 
   &__order-wrapper {
@@ -152,6 +169,8 @@
     background-color: var(--color-white);
     box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
     border-radius: 8px;
+
+    z-index: 10;
 
     @include mixins.respond-to (mobileOnly) {
       width: 260px;
@@ -167,6 +186,8 @@
 
     width: 270px;
 
+    z-index: 10;
+
     @include mixins.respond-to (mobileOnly) {
       width: 215px;
     }
@@ -177,6 +198,8 @@
     font-size: 16px;
     line-height: 130%;
     color: var(--color-white);
+
+    z-index: 10;
   }
 
   &__image-block {
@@ -227,6 +250,11 @@
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 0px 5.54897px 33.2938px rgba(0, 0, 0, 0.1);
+
+    @include mixins.respond-to(mobileOnly) {
+      border: 1px solid var(--color-scooter);
+      color: red;
+    }
 
     &-headline {
       display: flex;
@@ -314,23 +342,22 @@
     }
   }
 
-  &__whatsup-link {
+  &__whatsup-ball {
     position: absolute;
+
+    width: 65px;
+    height: 65px;
 
     @include mixins.respond-to(mobileOnly) {
       top: 50%;
       transform: translateY(-50%);
-      right: 0;
+      left: 0;
     }
-    
-    width: 65px;
-    height: 65px;
-    background: radial-gradient(103.57% 103.57% at 50% 0%, #FDFEFE 0%, #FDFEFE 100%);
-    opacity: 0.7;
   }
 
   & .whatsup-ball__inner {
     width: 35px;
     height: 35px;
   }
+  
 }

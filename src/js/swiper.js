@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 //Слайдер из блока about
-const about_swiper = new Swiper('.about__slider', {
+const about_swiper = new Swiper('.about__info-slider', {
 
   direction: 'horizontal',
 
@@ -10,14 +10,14 @@ const about_swiper = new Swiper('.about__slider', {
   spaceBetween: 50,
 
   autoplay: {
-    delay: 3000,
+    delay: 10000,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
 
   navigation: {
-    nextEl: '.about__item-arrow--right',
-    prevEl: '.about__item-arrow--left',
+    nextEl: '.about__slider-right',
+    prevEl: '.about__slider-left',
   },
 });
 
@@ -45,9 +45,9 @@ const reviews_swiper = new Swiper('.reviews__slider', {
 
   spaceBetween: 150,
 
-  autoplay: {
-    delay: 10000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
+  // autoplay: {
+  //   delay: 10000,
+  //   disableOnInteraction: false,
+  //   pauseOnMouseEnter: true,
+  // },
 });

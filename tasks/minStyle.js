@@ -22,7 +22,15 @@ module.exports = function minStyle(browserSync) {
 		.pipe(plumber())
 		.pipe(scss({ outputStyle: 'compressed' }))
 		.pipe(postcss(plugins))
-		.pipe(clean({ level: 2 }))
+		.pipe(clean({ level: {
+			1: {
+				all: true,
+				normalizeUrls: false
+			},
+			2: {
+				restructureRules: true
+			}
+		} }))
 		.pipe(concat('style.min.css'))
 		.pipe(dest('build/css/'))
 		.pipe(browserSync.stream())

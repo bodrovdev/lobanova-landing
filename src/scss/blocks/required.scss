@@ -15,7 +15,7 @@
   }
 
   &__aside {
-    position: relative;
+    // position: relative;
 
     @include mixins.respond-to(mobileOnly) {
       display: flex;
@@ -26,23 +26,26 @@
     }
   }
 
+  &__image {
+    position: relative;
+  }
+
   &__img {
     @include mixins.respond-to(mobileOnly) {
       width: 290px;
     }
   }
 
-  &__whatsup-link {
+  &__whatsup-ball {
     position: absolute;
-    top: 0;
-    left: 0;
 
     width: 100px;
     height: 100px;
-    background: radial-gradient(103.57% 103.57% at 50% 0%, #FDFEFE 0%, #FDFEFE 100%);
-    opacity: 0.7;
 
     @include mixins.respond-to(mobileOnly) {
+      top: 0;
+      left: 0;
+
       width: 65px;
       height: 65px;
     }
@@ -63,10 +66,13 @@
     height: 20px;
   }
 
-  &__tel-link {
+  &__phone-ball {
     position: absolute;
-    bottom: 0;
-    right: 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      bottom: 0;
+      right: 0;
+    }
   }
 
   &__title {

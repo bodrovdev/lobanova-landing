@@ -2,12 +2,12 @@
 
 .headline {
   height: 90px;
-  border-bottom: 1px solid var(--color-mine-shaft);
 
   z-index: 4;
 
   @include mixins.respond-to(mobileOnly) {
     background-color: var(--color-viking);
+    border-bottom: 1px solid var(--color-spindle);
   }
 
   &__container {
@@ -21,6 +21,13 @@
   &__logo-block {
     z-index: 4;
   }
+
+  // &__logo-img {
+  //   @include mixins.respond-to(mobileOnly) {
+  //     width: 200px;
+  //     height: auto;
+  //   }
+  // }
 
   &__link-block {
     display: flex;

@@ -16,7 +16,7 @@
       flex-direction: column;
       align-items: center;
 
-      padding: 10px;
+      padding: 20px 10px 20px 10px;
     }
   }
 
@@ -160,11 +160,11 @@
 
   }
 
-  &__check-hidden:checked~.faq__spoilers-content {
+  &__check-hidden:checked ~ .faq__spoilers-content {
     display: block;
   }
 
-  &__check-hidden:checked+.faq__spoilers-button .faq__spoilers-cross::after {
+  &__check-hidden:checked + .faq__spoilers-button .faq__spoilers-cross::after {
     transform: translateY(-2px) rotate(180deg);
     transition: rotate, 0.2s;
   }
@@ -211,26 +211,46 @@
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
-      max-width: 100%;
+      width: 280px;
     }
   }
 
-  &__whatsup-link {
+  &__whatsup-ball {
     position: absolute;
-    bottom: 0;
-    right: 0;
 
-    width: 65px;
-    height: 65px;
+    width: 100px;
+    height: 100px;
 
-    z-index: 10;
+    @include mixins.respond-to(mobileOnly) {
+      bottom: 0;
+      right: 0;
+
+      width: 65px;
+      height: 65px;
+    }
   }
 
-  &__tel-link {
-    position: absolute;
-    top: 0;
-    left: 0;
+  & .whatsup-ball__inner {
+    width: 55px;
+    height: 55px;
 
-    z-index: 10;
+    @include mixins.respond-to(mobileOnly) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  & .whatsup-ball__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__phone-ball {
+    position: absolute;
+
+    @include mixins.respond-to(mobileOnly) {
+      top: 0;
+      left: 0;
+    }
   }
 }

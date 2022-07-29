@@ -90,6 +90,14 @@
     height: 100%;
   }
 
+  &__breakpoint {
+    display: none;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: inline;
+    }
+  }
+
   &__item-caption {
     font-weight: 400;
     font-size: 16px;
@@ -105,7 +113,6 @@
   }
 
   &__shown-radio {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +121,8 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 5px;
+      left: 10px;
+      color: red;
     }
 
     width: 30px;
@@ -133,13 +141,13 @@
     transition: 0.2s;
   }
 
-  &__hidden-radio:checked+.appointment__type-label .appointment__check-icon {
+  &__hidden-radio:checked + .appointment__type-label .appointment__check-icon {
     opacity: 1;
 
     transition: opacity 0.1s;
   }
 
-  &__hidden-radio:checked+.appointment__type-label .appointment__item-price {
+  &__hidden-radio:checked + .appointment__type-label .appointment__item-price {
     color: var(--color-monza);
 
     transition: color 0.1s;
@@ -198,7 +206,7 @@
   }
 
   &__attach {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   &__attach-caption {
@@ -258,6 +266,7 @@
 
   &__attach-items {
     display: flex;
+    align-items: center;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
@@ -296,7 +305,7 @@
 
     @include mixins.respond-to(mobileOnly) {
       width: 215px;
-      margin: 0 auto 15px auto;
+      margin: 0 auto 30px auto;
     }
 
     background: var(--color-monza);
