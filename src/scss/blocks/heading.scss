@@ -40,16 +40,29 @@
 
     order: 1;
 
+    margin-bottom: 30px;
+
     z-index: 2;
 
     @include mixins.respond-to(mobileOnly) {
       order: 2;
     }
 
-    margin-bottom: 30px;
+    @include mixins.respond-to(tablet) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: column;
   }
 
   &__title {
+    display: inline-block;
+
+    width: fit-content;
+
     font-weight: 700;
     font-size: 30px;
     line-height: 120%;
@@ -64,12 +77,21 @@
     }
   }
 
+  &__top-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    width: fit-content;
+  }
+
   &__name {
     font-weight: 700;
     font-size: 20px;
     line-height: 130%;
     color: var(--color-mine-shaft);
 
+    margin-bottom: 10px;
   }
 
   &__profession {
@@ -97,7 +119,7 @@
       background-color: var(--color-scooter);
       opacity: 0.6;
 
-      z-index: 5;
+      z-index: 1;
     }
 
     @include mixins.respond-to(mobileOnly) {
@@ -106,25 +128,49 @@
   }
 
   &__bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
     padding: 20px 0 20px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      align-items: center;
+    }
   }
 
   &__bottom-list {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+
+    width: fit-content;
 
     margin-bottom: 20px;
+
+    @include mixins.respond-to(tablet) {
+      margin-bottom: 50px;
+    }
   }
 
-  &__bottom-item {
+  &__list-item {
     position: relative;
 
     display: flex;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-white);
 
     padding-left: 25px;
     margin-bottom: 20px;
 
     z-index: 10;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &::before {
       content: "";
@@ -141,22 +187,19 @@
     }
   }
 
-  &__bottom-caption {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    color: var(--color-white);
-
-    z-index: 10;
-  }
-
   &__bottom-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+    width: fit-content;
+
     z-index: 10;
+
+    @include mixins.respond-to(tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__order-wrapper {
@@ -170,12 +213,12 @@
     box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
     border-radius: 8px;
 
+    margin-bottom: 20px;
+
     z-index: 10;
 
     @include mixins.respond-to (mobileOnly) {
       width: 260px;
-
-      margin-bottom: 20px;
     }
   }
 
@@ -214,6 +257,16 @@
     @include mixins.respond-to(mobileOnly) {
       order: 1;
     }
+
+    @include mixins.respond-to(tablet) {
+      position: absolute;
+      top: 0;
+      right: 5%;
+    }
+  }
+
+  &__image-inner {
+    position: relative;
   }
 
   &__photo-image {
@@ -234,26 +287,29 @@
   }
 
   &__experience {
+    display: none;
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 20px;
+    right: 7%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
-    width: 250px;
+    width: 260px;
     height: 100px;
 
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 0px 5.54897px 33.2938px rgba(0, 0, 0, 0.1);
 
+    z-index: 2;
+
     @include mixins.respond-to(mobileOnly) {
+      top: 240px;
+
       border: 1px solid var(--color-scooter);
-      color: red;
     }
 
     &-headline {
@@ -290,6 +346,8 @@
 
   &__patients {
     position: absolute;
+    bottom: 140px;
+    right: 7%;
 
     display: none;
 
@@ -299,6 +357,12 @@
     box-shadow: 0px 3.9051px 21.4781px rgba(0, 0, 0, 0.04);
     border-radius: 19.5255px;
     background-color: var(--color-white);
+
+    z-index: 2;
+
+    @include mixins.respond-to(tablet) {
+      display: block;
+    }
 
     &-inner {
       position: relative;
@@ -344,20 +408,16 @@
 
   &__whatsup-ball {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
 
     width: 65px;
     height: 65px;
-
-    @include mixins.respond-to(mobileOnly) {
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-    }
   }
 
   & .whatsup-ball__inner {
     width: 35px;
     height: 35px;
   }
-  
 }
