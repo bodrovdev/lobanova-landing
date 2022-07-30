@@ -1,6 +1,6 @@
-let uploadInput = document.getElementById('upload-input');
-let uploadButton = document.getElementById('upload-button');
+let appointmentFileInput = document.getElementById('appointment-file-input');
+let appointmentFileButton = document.getElementById('appointment-file-button');
 
-uploadButton.addEventListener('click', () => {
-  uploadInput.click();
+appointmentFileButton.addEventListener('click', () => {
+  appointmentFileInput.click();
 })

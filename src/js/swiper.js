@@ -1,53 +1,50 @@
 import Swiper from 'swiper/bundle';
 
 //Слайдер из блока about
-const about_swiper = new Swiper('.about__info-slider', {
+const about_slider = new Swiper('.about__info-slider', {
 
   direction: 'horizontal',
 
-  loop: true,
-
-  spaceBetween: 50,
-
-  autoplay: {
-    delay: 10000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-
   navigation: {
-    nextEl: '.about__slider-right',
-    prevEl: '.about__slider-left',
+    nextEl: '.about__slider-button--next',
+    prevEl: '.about__slider-button--prev',
   },
+
 });
 
 
 //Слайдер из блока diplomas
-const diplomas_swiper = new Swiper('.diplomas__slider', {
+const diplomas_slider = new Swiper('.diplomas__slider', {
 
   direction: 'horizontal',
 
-  loop: true,
-
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
+  navigation: {
+    nextEl: '.diplomas__slider-button--next',
+    prevEl: '.diplomas__slider-button--prev',
   },
+
+  pagination: {
+    el: '.diplomas__slider-pagination',
+    clickable: true,
+  },
+
 });
 
 //Слайдер из блока reviews
-const reviews_swiper = new Swiper('.reviews__slider', {
+const reviews_slider = new Swiper('.reviews__slider', {
 
   direction: 'horizontal',
 
-  loop: true,
-
   spaceBetween: 150,
 
-  // autoplay: {
-  //   delay: 10000,
-  //   disableOnInteraction: false,
-  //   pauseOnMouseEnter: true,
-  // },
+  navigation: {
+    nextEl: '.reviews__slider-button--next',
+    prevEl: '.reviews__slider-button--prev',
+  },
+
+  pagination: {
+    el: '.reviews__slider-pagination',
+    clickable: true,
+  },
+
 });

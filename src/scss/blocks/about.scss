@@ -10,9 +10,7 @@
     z-index: 5;
   }
 
-  //Стили для блока со слайдером в блоке about
-
-  &__info-block  {
+  &__info-block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,42 +94,45 @@
     }
   }
 
-  &__slider-left, .about__slider-right {
-    position: absolute;
+  &__slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
+
     border-radius: 50%;
-    background: url("../../img/image/design/arrow.svg") var(--color-white);
-    background-position: center;
-    background-size: 12px 20px;
-    background-repeat: no-repeat;
-    border: 1px solid var(--color-scooter);
+    background-color: var(--color-scooter);
 
-    z-index: 10;
+    transition: 0.2s;
   }
 
-  &__slider-left {
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
+  &__slider-icon {
+    transition: 0.2s;
   }
 
-  &__slider-right {
-    top: 50%;
-    transform: translateY(-50%) rotate(180deg);
-    right: 0;
+  &__info-slider .swiper-button-disabled {
+    background-color: var(--color-white);
+    opacity: 0.5;
+
+    transition: background-color 0.2s;
   }
 
-  //Стили для блока с табами в блоке about
+  &__info-slider .swiper-button-disabled .about__slider-icon {
+    fill: var(--color-scooter);
+
+    transition: fill 0.2s;
+  }
 
   &__tabs {
-
     display: flex;
     flex-wrap: wrap;
 
     @include mixins.respond-to(mobileOnly) {
       flex-direction: column;
+
+      margin-bottom: 30px;
     }
 
     &-button {
@@ -179,7 +180,7 @@
       flex-direction: column;
 
       @include mixins.respond-to(mobileOnly) {
-        margin: 20px 0 30px 0;
+        margin-top: 20px;
       }
     }
 
@@ -198,7 +199,7 @@
         position: absolute;
         top: 3px;
         left: 0;
-  
+
         width: 15px;
         height: 15px;
         box-sizing: border-box;
@@ -217,7 +218,7 @@
     }
   }
 
-  &__radio-hidden:checked + .about__tabs-button {
+  &__radio-hidden:checked+.about__tabs-button {
     background-color: var(--color-scooter);
 
     color: var(--color-white);
@@ -225,16 +226,19 @@
     transition: 0.2s;
   }
 
-  #tabs-radio-1:checked ~ .about__tabs-body .about__tabs-radio--1 {
+  #tabs-radio-1:checked~.about__tabs-body .about__tabs-radio--1 {
     display: block;
   }
-  #tabs-radio-2:checked ~ .about__tabs-body .about__tabs-radio--2 {
+
+  #tabs-radio-2:checked~.about__tabs-body .about__tabs-radio--2 {
     display: block;
   }
-  #tabs-radio-3:checked ~ .about__tabs-body .about__tabs-radio--3 {
+
+  #tabs-radio-3:checked~.about__tabs-body .about__tabs-radio--3 {
     display: block;
   }
-  #tabs-radio-4:checked ~ .about__tabs-body .about__tabs-radio--4 {
+
+  #tabs-radio-4:checked~.about__tabs-body .about__tabs-radio--4 {
     display: block;
   }
 
@@ -247,11 +251,9 @@
     flex-direction: column;
     align-items: center;
 
-    background-image: -webkit-image-set(
-      url('../img/image/design/X2-motto-background.png') 2x,
-      url('../img/image/design/motto-background.png') 1x
-  );
-  
+    background-image: -webkit-image-set(url('../img/image/design/X2-motto-background.png') 2x,
+        url('../img/image/design/motto-background.png') 1x);
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

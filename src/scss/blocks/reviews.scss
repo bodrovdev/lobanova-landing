@@ -3,6 +3,10 @@
 .reviews {
   z-index: 5;
 
+  @include mixins.respond-to(mobileOnly) {
+    margin-bottom: 50px;
+  }
+
   &__container {
     z-index: 5;
   }
@@ -114,5 +118,41 @@
 
       padding: 10px;
     }
+  }
+
+  &__slider-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 5px;
+    background-color: var(--color-scooter);
+
+    transition: 0.2s;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__slider-icon {
+    transition: 0.2s;
+  }
+
+  &__slider .swiper-button-disabled {
+    background-color: var(--color-white);
+    opacity: 0.5;
+
+    transition: background-color 0.2s;
+  }
+
+  &__slider .swiper-button-disabled .reviews__slider-icon {
+    fill: var(--color-scooter);
+
+    transition: fill 0.2s;
   }
 }
