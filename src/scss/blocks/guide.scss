@@ -17,7 +17,7 @@
 
     padding-bottom: 20px;
     margin: 50px 0 30px 0;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -31,7 +31,7 @@
       background-position: center;
       background-size: cover;
     }
-    
+
     z-index: 5;
   }
 
@@ -52,8 +52,13 @@
 
     text-align: center;
 
-    min-width: 100%;
-    color: red;
+    @include mixins.respond-to(mobileOnly) {
+      min-width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      min-width: 50%;
+    }
   }
 
   &__item-image {
@@ -102,7 +107,7 @@
   .guide__graphic--left {
     width: 150px;
   }
- }
+}
 
 .guide__graphic--right {
   position: absolute;
@@ -119,4 +124,4 @@
   .guide__graphic--right {
     width: 150px;
   }
- }
+}

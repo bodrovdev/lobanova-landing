@@ -20,7 +20,7 @@
         </ul>
         <div class="heading__bottom-info">
           <span class="heading__order-wrapper">
-            <a href="#" class="heading__order-link order-link base-link">
+            <a href="#appointment-form" class="heading__order-link order-link base-link">
               <span class="order-link__caption">Записаться на консультацию
             </a>
           </span>
@@ -144,17 +144,17 @@
 
   <!------------------------>
 
-  <section class="appointment">
+  <section class="appointment" id="appointment-form">
     <div class="appointment__container base-container">
       <div class="appointment__inner">
         <h2 class="appointment__title section-title base-title">Запишись на консультацию сейчас</h2>
-        <form action="#" class="appointment__form">
+        <form action="http://foo.com" method="post" class="appointment__form">
           <div class="appointment__type">
             <span class="appointment__type-caption">Выберите вид консультации на которую вы хотите записаться</span>
             <div class="appointment__type-body">
               <div class="appointment__type-item">
                 <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-1"
-                  value="appointment-1" name="appointment-radio">
+                  value="Первичный приём" name="appointment-radio" checked>
                 <label class="appointment__type-label" for="appointment-radio-1">
                   <span class="appointment__shown-radio">
                     <svg class="appointment__check-icon check-icon" width="20" height="20">
@@ -167,7 +167,7 @@
               </div>
               <div class="appointment__type-item">
                 <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-2"
-                  value="appointment-2" name="appointment-radio">
+                  value="Вторичный прием" name="appointment-radio">
                 <label class="appointment__type-label" for="appointment-radio-2">
                   <span class="appointment__shown-radio">
                     <svg class="appointment__check-icon check-icon" width="20" height="20">
@@ -180,7 +180,7 @@
               </div>
               <div class="appointment__type-item">
                 <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-3"
-                  value="appointment-3" name="appointment-radio">
+                  value="English speaking patient" name="appointment-radio">
                 <label class="appointment__type-label" for="appointment-radio-3">
                   <span class="appointment__shown-radio">
                     <svg class="appointment__check-icon check-icon" width="20" height="20">
@@ -197,16 +197,15 @@
           <div class="appointment__info">
             <div class="appointment__info-item">
               <label class="appointment__info-label" for="appointment-name">Ваше имя</label>
-              <input class="appointment__info-input " type="text" id="appointment-name" placeholder="Напишите ваше имя">
+              <input class="appointment__info-input" type="text" id="appointment-name" placeholder="Напишите ваше имя">
             </div>
             <div class="appointment__info-item">
               <label class="appointment__info-label" for="appointment-phone">Ваш телефон</label>
               <input class="appointment__info-input" type="tel" id="appointment-phone" placeholder="+7 (___) ___-__-__">
             </div>
             <div class="appointment__info-item">
-              <label class="appointment__info-label" for="appointment-email">Ваше имя</label>
-              <input class="appointment__info-input" type="email" id="appointment-email"
-                placeholder="Напишите ваше имя">
+              <label class="appointment__info-label" for="appointment-email">Ваш email</label>
+              <input class="appointment__info-input" type="email" id="appointment-email" placeholder="info@mail.ru">
             </div>
           </div>
           <div class="appointment__attach">
@@ -224,12 +223,12 @@
               </button>
             </ul>
           </div>
-          <button class="appointment__order-button base-button" type="button" id="appointment-submit">
+          <button class="appointment__order-button base-button" type="submit" id="appointment-submit">
             <span class="appointment__order-caption">Выбрать дату и оплатить</span>
           </button>
           <div class="appointment__terms">
             <input class="appointment__terms-hidden visually-hidden" type="checkbox" id="appointment-terms-of-use"
-              value="terms-checked" checked>
+              value="terms-checked" value="terms-checked" checked>
             <label class="appointment__terms-label" for="appointment-terms-of-use">
               <span class="appointment__terms-shown">
                 <svg class="appointment__terms-check check-icon" width="15" height="15">
@@ -304,7 +303,7 @@
 
   <!------------------------>
 
-  <section class="about">
+  <section class="about" id="about-block">
     <div class="about__container base-container">
       <article class="about__info-block">
         <div class="about__info-slider swiper">
@@ -390,7 +389,7 @@
             </ul>
           </div>
           <div class="about__tabs-item about__tabs-radio--2">
-            <span class="about__tabs-title"></span>
+            <span class="about__tabs-title">Повышение квалификации</span>
             <ul class="about__tabs-list base-list">
               <li class="about__tabs-value"></li>
               <li class="about__tabs-value"></li>
@@ -401,7 +400,7 @@
             </ul>
           </div>
           <div class="about__tabs-item about__tabs-radio--3">
-            <span class="about__tabs-title"></span>
+            <span class="about__tabs-title">Звания, членства, награды</span>
             <ul class="about__tabs-list base-list">
               <li class="about__tabs-value"></li>
               <li class="about__tabs-value"></li>
@@ -412,7 +411,7 @@
             </ul>
           </div>
           <div class="about__tabs-item about__tabs-radio--4">
-            <span class="about__tabs-title"></span>
+            <span class="about__tabs-title">Опыт работы</span>
             <ul class="about__tabs-list base-list">
               <li class="about__tabs-value"></li>
               <li class="about__tabs-value"></li>
@@ -438,7 +437,7 @@
 
   <!------------------------>
 
-  <section class="required">
+  <section class="required" id="required-block">
     <div class="required__container base-container">
       <div class="required__aside">
         <figure class="required__image base-figure">
@@ -471,7 +470,7 @@
           <li class="required__list-item">Согласие на онлайн консультацию;</li>
           <li class="required__list-item">Оплаченная запись и ее подтверждение.</li>
         </ul>
-        <a class="required__order-link order-link base-link" href="#">
+        <a class="required__order-link order-link base-link" href="#appointment-form">
           <span class="order-link__caption">Записаться на консультацию</span>
         </a>
       </div>
@@ -480,7 +479,7 @@
 
   <!------------------------>
 
-  <section class="diplomas">
+  <section class="diplomas" id="diplomas-block">
     <div class="diplomas__container base-container">
       <h2 class="diplomas__title section-title base-title">Дипломы и сертификаты</h2>
       <div class="diplomas__slider swiper">
@@ -545,7 +544,7 @@
 
   <!------------------------>
 
-  <section class="faq">
+  <section class="faq" id="faq-block">
     <div class="faq__container base-container">
       <div class="faq__main">
         <h2 class="faq__title section-title base-title">О чём часто спрашивают</h2>
@@ -626,7 +625,7 @@
             </div>
           </div>
         </div>
-        <a class="faq__order-link order-link base-link" href="#">
+        <a class="faq__order-link order-link base-link" href="#appointment-form">
           <span class="order-link__caption">Записаться на консультацию</span>
         </a>
       </div>
@@ -656,7 +655,7 @@
 
   <!------------------------>
 
-  <section class="reviews">
+  <section class="reviews" id="reviews-block">
     <div class="reviews__container base-container">
       <h2 class="reviews__title section-title base-title">Отзывы пациентов</h2>
       <div class="reviews__slider swiper">

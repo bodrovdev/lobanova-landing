@@ -60,8 +60,10 @@
     }
 
     @include mixins.respond-to(tablet) {
+      flex-wrap: wrap;
       align-items: stretch;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      gap: 10px 10px;
     }
   }
 
@@ -88,7 +90,7 @@
     @include mixins.respond-to(tablet) {
       width: 32%;
 
-      padding: 10px 0 10px 0;
+      padding: 10px 5px 10px 5px;
       margin-bottom: 0;
     }
   }
@@ -230,9 +232,7 @@
   }
 
   &__attach {
-    @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
   }
 
   &__attach-caption {
@@ -250,8 +250,11 @@
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    // justify-content: space-between;
     gap: 30px 15px;
+
+    @include mixins.respond-to(tablet) {
+      gap: 30px 30px;
+    }
   }
 
   &__attach-button {
@@ -260,14 +263,14 @@
     align-items: center;
     justify-content: space-evenly;
 
-    width: 100%;
-    height: 100px;
+    width: 100px;
+    height: 70px;
 
     border: 1px solid var(--color-ghost);
     border-radius: 5px;
 
-    @media (min-width: 450px) {
-      width: 100px;
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
       height: 100px;
     }
   }
@@ -301,7 +304,7 @@
 
   &__attach-img {
     width: 100px;
-    height: auto;
+    height: 70px;
     border: 1px solid var(--color-ghost);
     border-radius: 5px;
   }
@@ -333,6 +336,10 @@
     @include mixins.respond-to(mobileOnly) {
       width: 215px;
       margin: 0 auto 30px auto;
+    }
+
+    @include mixins.respond-to(tablet) {
+      margin-bottom: 30px;
     }
 
     background: var(--color-monza);

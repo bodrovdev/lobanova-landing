@@ -12,7 +12,6 @@ const about_slider = new Swiper('.about__info-slider', {
 
 });
 
-
 //Слайдер из блока diplomas
 const diplomas_slider = new Swiper('.diplomas__slider', {
 
