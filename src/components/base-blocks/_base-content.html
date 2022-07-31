@@ -213,19 +213,16 @@
             <span class="appointment__attach-caption">
               Прикрепите ваши анализы <br class="appointment__breakpoint">(не более 10)
             </span>
-            <div class="appointment__attach-area">
-              <input class="appointment__attach-hidden visually-hidden" type="file" multiple accept=".jpg, .jpeg, .png"
-                id="appointment-file-input">
-              <button class="appointment__attach-button base-button" type="button" id="appointment-file-button">
+            <ul class="appointment__attach-list base-list" id="attach-list">
+              <input class="appointment__attach-hidden visually-hidden" type="file" multiple accept=".jpg,.jpeg,.png"
+                id="attach-input">
+              <button class="appointment__attach-button base-button" type="button" id="attach-button">
                 <svg class="appointment__button-icon check-icon" width="28" height="24">
                   <use href="img/icon/sprite.svg#camera-icon"></use>
                 </svg>
                 <span class="appointment__button-caption">Добавить фото</span>
               </button>
-              <ul class="appointment__attach-list base-list">
-                <li class="appointment__attach-item"></li>
-              </ul>
-            </div>
+            </ul>
           </div>
           <button class="appointment__order-button base-button" type="button" id="appointment-submit">
             <span class="appointment__order-caption">Выбрать дату и оплатить</span>
