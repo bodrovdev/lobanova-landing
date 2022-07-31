@@ -13,7 +13,3 @@ navigationLinks.forEach((element) => {
     burger.classList.remove('headline__burger--opened');
   });
 });
-
-let test = document.querySelectorAll('.about__tabs-button');
-
-console.log(test);

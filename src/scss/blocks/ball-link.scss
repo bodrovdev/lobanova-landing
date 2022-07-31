@@ -6,13 +6,14 @@
   justify-content: center;
 
   background: radial-gradient(103.57% 103.57% at 50% 0%, #FDFEFE 0%, #FDFEFE 100%);
-  opacity: 0.7;
-  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.05);
+  opacity: 1;
+  border: 1px solid var(--color-scooter);
   border-radius: 50%;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.05);
 
-  @include mixins.respond-to(mobileOnly) {
-    opacity: 1;
-    border: 1px solid var(--color-scooter);
+  @include mixins.respond-to(desktopS) {
+    opacity: 0.7;
+    border: none;
   }
 
   &__inner {
@@ -35,12 +36,13 @@
   height: 65px;
 
   background: radial-gradient(103.57% 103.57% at 50% 0%, #FDFEFE 0%, #FDFEFE 100%);
-  opacity: 0.7;
-  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.05);
+  opacity: 1;
+  border: 1px solid var(--color-scooter);
   border-radius: 50%;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.05);
 
-  @include mixins.respond-to(mobileOnly) {
-    opacity: 1;
-    border: 1px solid var(--color-scooter);
+  @include mixins.respond-to(desktopS) {
+    opacity: 0.7;
+    border: none;
   }
 }

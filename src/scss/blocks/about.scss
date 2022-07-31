@@ -1,10 +1,7 @@
 @use "../mixins";
 
 .about {
-
-  @include mixins.respond-to(mobileOnly) {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
 
   &__container {
     display: flex;
@@ -160,6 +157,8 @@
     }
 
     @include mixins.respond-to(tablet) {
+      justify-content: center;
+
       gap: 20px;
     }
 
@@ -287,8 +286,6 @@
     display: block;
   }
 
-  //Стили для блока motto в блоке about
-
   &__motto {
     position: relative;
 
@@ -318,10 +315,23 @@
       background-position: center;
       background-size: 30px 30px;
       background-repeat: no-repeat;
+
+      @include mixins.respond-to(tablet) {
+        top: 24px;
+        left: 20px;
+
+        transform: none;
+      }
     }
 
     @include mixins.respond-to(mobileOnly) {
       padding: 50px 10px 30px 10px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      align-items: flex-start;
+
+      padding: 20px 70px 20px 70px;
     }
 
     &-title {
