@@ -397,6 +397,140 @@
   }
 
   &__modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--color-iceberg);
+    border: 30px solid var(--color-white);
+    border-radius: 15px;
+
+    text-align: center;
+
+    padding: 30px;
+
+    @include mixins.respond-to(mobileOnly) {
+      border: 10px solid var(--color-white);
+
+      padding: 10px;
+    } 
+  }
+
+  &__modal-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-mine-shaft);
+
+    margin-bottom: 10px;
+  }
+
+  &__modal-info {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-black);
+
+    margin-bottom: 10px;
+  }
+
+  &__modal-date {
+    margin-bottom: 10px;
+  }
+
+  &__modal-date .datepicker-header {
+    display: flex;
+    align-items: center;
+
+    max-height: fit-content !important;
+
+    width: 100%;
+    height: fit-content !important;
+
+    padding: 30px 30px 0 30px;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 15px 15px 0 15px;
+    }
+  }
+
+  &__modal-date .datepicker-controls {
+    display: inline-block !important;
+    max-height: fit-content !important;
+
+    width: 100%;
+    height: fit-content !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  &__modal-date .prev-btn, .next-btn {
     display: none;
+  }
+
+  &__modal-date .view-switch {
+    position: relative;
+
+    display: inline-block !important;
+    max-height: fit-content !important;
+
+    width: 100%;
+    height: fit-content !important;
+
+    text-align: left !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+
+      width: 20px;
+      height: 20px;
+      background: url('../img/image/design/month-change.svg') var(--color-white);
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__modal-date .days-of-week {
+    justify-content: space-between;
+
+    max-height: fit-content !important;
+
+    width: 100%;
+    height: fit-content !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  &__modal-date .dow {
+    max-width: fit-content !important;
+    max-height: fit-content !important;
+    
+    width: fit-content !important;
+    height: fit-content !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  &__modal-date .datepicker-footer {
+    display: none;
+  }
+
+  &__modal-time {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mixins.respond-to(mobileOnly) {
+      gap: 10px 15px;
+    }
   }
 }

@@ -245,61 +245,59 @@
             </label>
           </div>
         </form>
-        <div class="appointment__modal">
-          <div class="appointment__modal-inner">
-            <span class="appointment__modal-title">Запись на первичный прием</span>
-            <span class="appointment__modal-info">
-              Консультация ведется в онлайн форме<br>
-              по воскресеньям по WhatsApp
-            </span>
-            <div class="appointment__modal-date"></div>
-            <div class="appointment__modal-time">
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="10">
-                <span class="appointment__time-radio">10:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="11">
-                <span class="appointment__time-radio">11:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="12">
-                <span class="appointment__time-radio">12:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="13">
-                <span class="appointment__time-radio">13:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="15">
-                <span class="appointment__time-radio">15:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="16">
-                <span class="appointment__time-radio">16:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="17">
-                <span class="appointment__time-radio">17:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="18">
-                <span class="appointment__time-radio">18:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="19">
-                <span class="appointment__time-radio">19:00</span>
-              </div>
-              <div class="appointment__time-item">
-                <input class="visually-hidden" type="radio" name="appointment-modal-time" value="20">
-                <span class="appointment__time-radio">20:00</span>
-              </div>
-            </div>
-            <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price">6000</span> ₽</span>
-            <button class="appointment__modal-submit base-button" type="submit">Оплатить</button>
-            <button class="appointment__modal-cancel base-button" type="reset">Отменить</button>
+      </div>
+      <div class="appointment__modal">
+        <span class="appointment__modal-title">Запись на первичный прием</span>
+        <span class="appointment__modal-info">
+          Консультация ведется в онлайн форме<br>
+          по воскресеньям по WhatsApp
+        </span>
+        <div class="appointment__modal-date" id="appointment-modal-date"></div>
+        <div class="appointment__modal-time">
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="10">
+            <span class="appointment__time-radio">10:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="11">
+            <span class="appointment__time-radio">11:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="12">
+            <span class="appointment__time-radio">12:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="13">
+            <span class="appointment__time-radio">13:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="15">
+            <span class="appointment__time-radio">15:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="16">
+            <span class="appointment__time-radio">16:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="17">
+            <span class="appointment__time-radio">17:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="18">
+            <span class="appointment__time-radio">18:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="19">
+            <span class="appointment__time-radio">19:00</span>
+          </div>
+          <div class="appointment__time-item">
+            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="20">
+            <span class="appointment__time-radio">20:00</span>
           </div>
         </div>
+        <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price">6000</span> ₽</span>
+        <button class="appointment__modal-submit base-button" type="submit">Оплатить</button>
+        <button class="appointment__modal-cancel base-button" type="reset">Отменить</button>
       </div>
     </div>
   </section>
@@ -689,31 +687,83 @@
       <h2 class="reviews__title section-title base-title">Отзывы пациентов</h2>
       <div class="reviews__slider swiper">
         <div class="reviews__slider-wrapper swiper-wrapper">
-
-          <div class="reviews__slider-item item-1 swiper-slide">
-            <div class="reviews__slider-head">
-              <!-- <figure class="reviews__slider-image base-figure">
+          <div class="reviews__slider-item swiper-slide">
+            <div class="reviews__item-head">
+              <figure class="reviews__item-image base-figure">
                 <picture>
                   <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
                     type="image/webp">
                   <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1.png 2x"
-                    class="reviews__slider-img" alt="Фото человека, оставившего отзыв" loading="lazy">
+                    class="reviews__item-img" alt="" loading="lazy">
                 </picture>
               </figure>
-              <span class="reviews__item-name">Елизавета Константинопольская</span> -->
+              <span class="reviews__item-title">Елизавета Константинопольская</span>
             </div>
-            <div class="reviews__slider-body">
-              <p class="reviews__slider-text base-par">
-                <!-- Мне очень понравилось как Татьяна Игоревна 
-                провела со мной консультацию. Было все 
-                подробно рассказано, и я, не имея медицинского 
-                образования, все понимала, что говорила мне врач.
-                После консультации я получила документы и рекомендации. 
-                Я обязательно буду рекомендовать всем моим знакомым. -->
-                </p>
+            <p class="reviews__item-body base-par">
+              Мне очень понравилось как Татьяна Игоревна 
+              провела со мной консультацию. Было все подробно 
+              рассказано, и я, не имея медицинского образования, 
+              все понимала, что говорила мне врач. 
+              После консультации я получила документы и рекомендации. 
+              Я обязательно буду рекомендовать всем моим знакомым.
+            </p>
+          </div>
+          <div class="reviews__slider-item swiper-slide">
+            <div class="reviews__item-head">
+              <figure class="reviews__item-image base-figure">
+                <picture>
+                  <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
+                    type="image/webp">
+                  <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1.png 2x"
+                    class="reviews__item-img" alt="" loading="lazy">
+                </picture>
+              </figure>
+              <span class="reviews__item-title">Елизавета Константинопольская</span>
             </div>
+            <p class="reviews__item-body base-par">
+              Мне очень понравилось как Татьяна Игоревна 
+              провела со мной консультацию. Было все подробно 
+              рассказано, и я, не имея медицинского образования, 
+              все понимала, что говорила мне врач. 
+              После консультации я получила документы и рекомендации. 
+              Я обязательно буду рекомендовать всем моим знакомым.
+            </p>
+          </div>
+          <div class="reviews__slider-item swiper-slide">
+            <div class="reviews__item-head">
+              <figure class="reviews__item-image base-figure">
+                <picture>
+                  <source srcset="img/image/content/review-item-1.webp 1x, img/image/content/X2-review-item-1.webp 2x"
+                    type="image/webp">
+                  <img srcset="img/image/content/review-item-1.png 1x, img/image/content/X2-review-item-1.png 2x"
+                    class="reviews__item-img" alt="" loading="lazy">
+                </picture>
+              </figure>
+              <span class="reviews__item-title">Елизавета Константинопольская</span>
+            </div>
+            <p class="reviews__item-body base-par">
+              Мне очень понравилось как Татьяна Игоревна 
+              провела со мной консультацию. Было все подробно 
+              рассказано, и я, не имея медицинского образования, 
+              все понимала, что говорила мне врач. 
+              После консультации я получила документы и рекомендации. 
+              Я обязательно буду рекомендовать всем моим знакомым.
+            </p>
           </div>
         </div>
+        <div class="reviews__slider-navigation">
+          <div class="reviews__slider-button reviews__slider-button--prev swiper-button-prev">
+            <svg class="reviews__slider-icon slider-icon" width="11" height="17">
+              <use href="img/icon/sprite.svg#arrow-icon"></use>
+            </svg>
+          </div>
+          <div class="reviews__slider-button reviews__slider-button--next swiper-button-next">
+            <svg class="reviews__slider-icon slider-icon" width="11" height="17">
+              <use href="img/icon/sprite.svg#arrow-icon"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="reviews__slider-pagination swiper-pagination"></div>
       </div>
     </div>
   </section>
