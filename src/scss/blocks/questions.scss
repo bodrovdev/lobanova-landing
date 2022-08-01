@@ -1,9 +1,14 @@
 @use "../mixins";
 
 .questions {
-  position: relative;
+
+  @include mixins.respond-to(tablet) {
+    margin-bottom: 50px;
+  }
 
   &__container {
+    position: relative;
+
     display: flex;
 
     background-image: -webkit-image-set(
@@ -18,9 +23,19 @@
     box-sizing: border-box;
 
     @include mixins.respond-to(mobileOnly) {
+      align-items: center;
       flex-direction: column;
 
+      text-align: center;
+
       padding: 20px 10px 20px 10px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px;
     }
   }
 
@@ -42,6 +57,10 @@
       font-size: 20px;
 
       margin-bottom: 30px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      margin-bottom: 40px;
     }
   }
 
@@ -75,26 +94,80 @@
   }
 
   &__aside-img {
+    display: block;
+    height: auto;
+
     @include mixins.respond-to(mobileOnly) {
+      position: relative;
+      left: -13px;
+
       width: 260px;
-      height: auto;
 
       margin: 0 auto;
+    }
+
+    @include mixins.respond-to(tablet) {
+      width: 290px;
     }
   }
 
   &__whatsup-ball {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
     @include mixins.respond-to(mobileOnly) {
-      display: none;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      width: 65px;
+      height: 65px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      top: -33px;
+      left: 0;
+
+      width: 65px;
+      height: 65px;
     }
   }
 
-  &__phone-ball {
+  & .whatsup-ball__inner {
+    width: 55px;
+    height: 55px;
+
     @include mixins.respond-to(mobileOnly) {
-      display: none;
+      width: 35px;
+      height: 35px;
     }
 
-    color: red;
+    @include mixins.respond-to(tablet) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  & .whatsup-ball__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__phone-ball {
+    position: absolute;
+
+    @include mixins.respond-to(mobileOnly) {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+
+    @include mixins.respond-to(tablet) {
+      top: -33px;
+      right: 0;
+    }
   }
 
 }

@@ -16,6 +16,8 @@ const about_slider = new Swiper('.about__info-slider', {
 const diplomas_slider = new Swiper('.diplomas__slider', {
 
   direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 30,
 
   navigation: {
     nextEl: '.diplomas__slider-button--next',
@@ -27,6 +29,17 @@ const diplomas_slider = new Swiper('.diplomas__slider', {
     clickable: true,
   },
 
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50
+    }
+  }
 });
 
 //Слайдер из блока reviews
@@ -34,7 +47,7 @@ const reviews_slider = new Swiper('.reviews__slider', {
 
   direction: 'horizontal',
 
-  spaceBetween: 150,
+  slidesPerView: 1,
 
   navigation: {
     nextEl: '.reviews__slider-button--next',
@@ -45,5 +58,15 @@ const reviews_slider = new Swiper('.reviews__slider', {
     el: '.reviews__slider-pagination',
     clickable: true,
   },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+
+    1024: {
+      slidesPerView: 3,
+    }
+  }
 
 });
