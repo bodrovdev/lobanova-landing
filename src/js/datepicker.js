@@ -14,10 +14,26 @@ const datepicker = new Datepicker(elem, {
 
   todayHighlight: false,
 
-  todayBtnMode: 1,
-
   weekStart: 1,
 
   language: 'ru',
 
-}); 
+});
+
+let dateInput = document.getElementById('appointment-date-input');
+
+elem.addEventListener('changeDate', function (evt) {
+  let year = evt.detail.date.getFullYear();
+
+  let month = evt.detail.date.getMonth() + 1;
+  if (month < 10) {
+    month = `0` + month;
+  }
+
+  let date = evt.detail.date.getDate();
+  if (date < 10) {
+    date = `0` + date;
+  }
+
+  dateInput.value = `${year}-${month}-${date}`;
+});

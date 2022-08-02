@@ -249,50 +249,63 @@
           Консультация ведется в онлайн форме<br>
           по воскресеньям по WhatsApp
         </span>
-        <div class="appointment__modal-date" id="appointment-modal-date"></div>
+        <div class="appointment__modal-date" id="appointment-modal-date">
+          <input class="appointment__hidden-date" type="date" id="appointment-date-input">
+        </div>
         <div class="appointment__modal-time">
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="10:00" id="appointment-time-10">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="10:00" id="appointment-time-10">
             <label class="appointment__time-radio" for="appointment-time-10">10:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="11:00" id="appointment-time-11">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="11:00" id="appointment-time-11">
             <label class="appointment__time-radio" for="appointment-time-11">11:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="12:00" id="appointment-time-12">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="12:00" id="appointment-time-12">
             <label class="appointment__time-radio" for="appointment-time-12">12:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="13:00" id="appointment-time-13">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="13:00" id="appointment-time-13">
             <label class="appointment__time-radio" for="appointment-time-13">13:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="15:00" id="appointment-time-15">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="15:00" id="appointment-time-15">
             <label class="appointment__time-radio" for="appointment-time-15">15:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="16:00" id="appointment-time-16">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="16:00" id="appointment-time-16">
             <label class="appointment__time-radio" for="appointment-time-16">16:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="17:00" id="appointment-time-17">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="17:00" id="appointment-time-17">
             <label class="appointment__time-radio" for="appointment-time-17">17:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="18:00" id="appointment-time-18">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="18:00" id="appointment-time-18">
             <label class="appointment__time-radio" for="appointment-time-18">18:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="19:00" id="appointment-time-19">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="19:00" id="appointment-time-19">
             <label class="appointment__time-radio" for="appointment-time-19">19:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="20" id="appointment-time-20">
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time"
+              value="20" id="appointment-time-20">
             <label class="appointment__time-radio" for="appointment-time-20">20:00</label>
           </div>
         </div>
-        <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price" id="appointment-result-price"></span> ₽</span>
+        <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price"
+            id="appointment-result-price">4000</span> ₽</span>
         <button class="appointment__modal-submit base-button" type="submit">Оплатить</button>
         <button class="appointment__modal-cancel base-button" type="reset">Отменить</button>
       </div>
@@ -420,7 +433,8 @@
         </div>
       </div>
       <article class="about__motto">
-        <h3 class="about__motto-title section-title__article-block base-title">Врач – это не профессия, а образ жизни</h3>
+        <h3 class="about__motto-title section-title__article-block base-title">Врач – это не профессия, а образ жизни
+        </h3>
         <p class="about__motto-info base-par">
           Доктором может быть не каждый. Это действительно призвание. Эта профессия
           подходит тем, кто искренне хочет помогать людям, кто умеет сопереживать.
@@ -480,10 +494,11 @@
             <a href="img/image/content/X2-diplomas-item-1.jpg" class="glightbox" zoomable: true>
               <figure class="diplomas__item-image base-figure">
                 <picture>
-                  <source srcset="img/image/content/diplomas-item-1.webp 1x, img/image/content/X2-diplomas-item-1.webp 2x"
+                  <source
+                    srcset="img/image/content/diplomas-item-1.webp 1x, img/image/content/X2-diplomas-item-1.webp 2x"
                     type="image/webp">
                   <img srcset="img/image/content/diplomas-item-1.jpg 1x, img/image/content/X2-diplomas-item-1.jpg 2x"
-                  class="diplomas__item-img" alt="Скан диплома об окончании аспирантуры" loading="lazy">
+                    class="diplomas__item-img" alt="Скан диплома об окончании аспирантуры" loading="lazy">
                 </picture>
               </figure>
             </a>
@@ -492,7 +507,8 @@
             <a href="img/image/content/X2-diplomas-item-2.jpg" class="glightbox" zoomable: true>
               <figure class="diplomas__item-image base-figure">
                 <picture>
-                  <source srcset="img/image/content/diplomas-item-2.webp 1x, img/image/content/X2-diplomas-item-2.webp 2x"
+                  <source
+                    srcset="img/image/content/diplomas-item-2.webp 1x, img/image/content/X2-diplomas-item-2.webp 2x"
                     type="image/webp">
                   <img srcset="img/image/content/diplomas-item-2.jpg 1x, img/image/content/X2-diplomas-item-2.jpg 2x"
                     class="diplomas__item-img" alt="Скан сертификата специалиста" loading="lazy">
@@ -504,7 +520,8 @@
             <a href="img/image/content/X2-diplomas-item-3.jpg" class="glightbox" zoomable: true>
               <figure class="diplomas__item-image base-figure">
                 <picture>
-                  <source srcset="img/image/content/diplomas-item-3.webp 1x, img/image/content/X2-diplomas-item-3.webp 2x"
+                  <source
+                    srcset="img/image/content/diplomas-item-3.webp 1x, img/image/content/X2-diplomas-item-3.webp 2x"
                     type="image/webp">
                   <img srcset="img/image/content/diplomas-item-3.png 1x, img/image/content/X2-diplomas-item-3.jpg 2x"
                     class="diplomas__item-img" alt="Скан диплома ординатуры" loading="lazy">
@@ -516,7 +533,8 @@
             <a href="img/image/content/X2-diplomas-item-4.jpg" class="glightbox" zoomable: true>
               <figure class="diplomas__item-image base-figure">
                 <picture>
-                  <source srcset="img/image/content/diplomas-item-4.webp 1x, img/image/content/X2-diplomas-item-4.webp 2x"
+                  <source
+                    srcset="img/image/content/diplomas-item-4.webp 1x, img/image/content/X2-diplomas-item-4.webp 2x"
                     type="image/webp">
                   <img srcset="img/image/content/diplomas-item-4.jpg 1x, img/image/content/X2-diplomas-item-4.jpg 2x"
                     class="diplomas__item-img" alt="Скан приложения к диплому" loading="lazy">
@@ -669,11 +687,11 @@
               <span class="reviews__item-title">Елизавета Константинопольская</span>
             </div>
             <p class="reviews__item-body base-par">
-              Мне очень понравилось как Татьяна Игоревна 
-              провела со мной консультацию. Было все подробно 
-              рассказано, и я, не имея медицинского образования, 
-              все понимала, что говорила мне врач. 
-              После консультации я получила документы и рекомендации. 
+              Мне очень понравилось как Татьяна Игоревна
+              провела со мной консультацию. Было все подробно
+              рассказано, и я, не имея медицинского образования,
+              все понимала, что говорила мне врач.
+              После консультации я получила документы и рекомендации.
               Я обязательно буду рекомендовать всем моим знакомым.
             </p>
           </div>
@@ -690,11 +708,11 @@
               <span class="reviews__item-title">Елизавета Константинопольская</span>
             </div>
             <p class="reviews__item-body base-par">
-              Мне очень понравилось как Татьяна Игоревна 
-              провела со мной консультацию. Было все подробно 
-              рассказано, и я, не имея медицинского образования, 
-              все понимала, что говорила мне врач. 
-              После консультации я получила документы и рекомендации. 
+              Мне очень понравилось как Татьяна Игоревна
+              провела со мной консультацию. Было все подробно
+              рассказано, и я, не имея медицинского образования,
+              все понимала, что говорила мне врач.
+              После консультации я получила документы и рекомендации.
               Я обязательно буду рекомендовать всем моим знакомым.
             </p>
           </div>
@@ -711,11 +729,11 @@
               <span class="reviews__item-title">Елизавета Константинопольская</span>
             </div>
             <p class="reviews__item-body base-par">
-              Мне очень понравилось как Татьяна Игоревна 
-              провела со мной консультацию. Было все подробно 
-              рассказано, и я, не имея медицинского образования, 
-              все понимала, что говорила мне врач. 
-              После консультации я получила документы и рекомендации. 
+              Мне очень понравилось как Татьяна Игоревна
+              провела со мной консультацию. Было все подробно
+              рассказано, и я, не имея медицинского образования,
+              все понимала, что говорила мне врач.
+              После консультации я получила документы и рекомендации.
               Я обязательно буду рекомендовать всем моим знакомым.
             </p>
           </div>

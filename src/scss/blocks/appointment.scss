@@ -410,39 +410,25 @@
   }
 
   &__modal {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
-    visibility: hidden;
-
-    width: 100vw;
-    height: 100vh;
-
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
 
     background-color: var(--color-iceberg);
     border-radius: 15px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
 
     text-align: center;
 
     transition: all 0.3s ease;
 
-    z-index: 100;
-
     padding: 60px 30px 60px 30px;
-  }
 
-  &__modal--opened {
-    opacity: 1;
-    visibility: visible;
+    z-index: 100;
   }
 
   &__modal-close {
@@ -458,9 +444,6 @@
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-
-    @include mixins.respond-to(mobileOnly) {
-    }
   }
 
   &__modal-title {
@@ -523,7 +506,8 @@
     margin: 0 !important;
   }
 
-  &__modal-date .prev-btn, .next-btn {
+  &__modal-date .prev-btn,
+  .next-btn {
     display: none;
   }
 
@@ -582,7 +566,7 @@
   &__modal-date .dow {
     max-width: fit-content !important;
     max-height: fit-content !important;
-    
+
     width: fit-content !important;
     height: fit-content !important;
 
@@ -643,14 +627,14 @@
     }
   }
 
-  &__hidden-time:checked + label {
+  &__hidden-time:checked+label {
     color: var(--color-monza);
     text-decoration: underline;
 
     transition: all 0.1s;
   }
 
-  &__hidden-time:disabled + label {
+  &__hidden-time:disabled+label {
     color: var(--color-ghost);
     pointer-events: none;
   }
