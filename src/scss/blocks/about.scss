@@ -65,23 +65,7 @@
   &__info-title {
     position: relative;
 
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 70px;
-    color: var(--color-white);
-
-    @include mixins.respond-to(mobileOnly) {
-      font-size: 24px;
-      line-height: 130%;
-
-      padding-bottom: 20px;
-      margin: 0 0 30px 0;
-    }
-
-    @include mixins.respond-to(tablet) {
-      padding-bottom: 20px;
-      margin: 0 0 30px 0;
-    }
+    margin: 0 0 30px 0;
 
     &::before {
       content: "";
@@ -287,11 +271,8 @@
   }
 
   &__motto {
-    position: relative;
-
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     background-image: -webkit-image-set(url('../img/image/design/X2-motto-background.png') 2x,
         url('../img/image/design/motto-background.png') 1x);
@@ -301,52 +282,65 @@
     background-size: cover;
     border-radius: 15px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 30px;
-      height: 30px;
-
-      background-image: url("../../img/image/design/quotes.svg");
-      background-position: center;
-      background-size: 30px 30px;
-      background-repeat: no-repeat;
-
-      @include mixins.respond-to(tablet) {
-        top: 24px;
-        left: 20px;
-
-        transform: none;
-      }
-    }
-
     @include mixins.respond-to(mobileOnly) {
-      padding: 50px 10px 30px 10px;
+      padding: 30px 0 30px 0;
     }
 
     @include mixins.respond-to(tablet) {
-      align-items: flex-start;
-
-      padding: 20px 70px 20px 70px;
+      padding: 50px 0 50px 0;
     }
 
     &-title {
       position: relative;
 
-      font-weight: 500;
-      font-size: 30px;
-      line-height: 34px;
-      letter-spacing: 0.02em;
-      color: var(--color-white);
-
       margin-bottom: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        color: red;
+
+        background: url('../../img/image/design/quotes.svg') transparent;
+        background-repeat: no-repeat;
+
+        @include mixins.respond-to(mobileOnly) {
+          width: 20px;
+          height: 15px;
+          background-size: 20px 15px;
+        }
+
+        @include mixins.respond-to(tablet) {
+          top: 6px;
+
+          width: 25px;
+          height: 20px;
+          background-size: 25px 20px;
+        }
+
+        @include mixins.respond-to(desktopS) {
+          top: 5px;
+          left: 15px;
+
+          width: 35px;
+          height: 30px;
+          background-size: 35px 30px;
+        }
+      }
 
       @include mixins.respond-to (mobileOnly) {
         font-size: 25px;
+
+        padding: 0 35px 0 35px;
+      }
+
+      @include mixins.respond-to (tablet) {
+        padding: 0 50px 0 50px;
+      }
+
+      @include mixins.respond-to (desktopS) {
+        padding: 0 65px 0 65px;
       }
     }
 
@@ -355,6 +349,18 @@
       font-size: 18px;
       line-height: 150%;
       color: var(--color-white);
+
+      @include mixins.respond-to (mobileOnly) {
+        padding: 0 35px 0 35px;
+      }
+
+      @include mixins.respond-to (tablet) {
+        padding: 0 50px 0 50px;
+      }
+
+      @include mixins.respond-to (desktopS) {
+        padding: 0 65px 0 65px;
+      }
     }
   }
 }

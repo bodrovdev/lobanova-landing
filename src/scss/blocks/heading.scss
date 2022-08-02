@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  padding-top: 10px;
+  padding-top: 110px;
 
   &::before {
     content: "";
@@ -280,8 +280,17 @@
   }
 
   &__photo-img {
-    width: 290px;
-    vertical-align: top;
+    display: block;
+
+    height: auto;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 290px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      width: 350px;
+    }
   }
 
   &__experience {
@@ -305,11 +314,9 @@
     z-index: 2;
 
     @include mixins.respond-to(mobileOnly) {
-      top: 240px;
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-
-      border: 1px solid var(--color-scooter);
     }
 
     &-headline {
@@ -414,6 +421,7 @@
 
     width: 65px;
     height: 65px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   & .whatsup-ball__inner {

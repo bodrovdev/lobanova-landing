@@ -71,6 +71,12 @@ body {
 	transition: 0.2s;
 }
 
+.glightbox-mobile .goverlay {
+	background: none;
+
+	background-color: rgb(0, 0, 0, 0.6);
+}
+
 .whatsup-ball__icon {
 	fill: var(--color-white);
 }

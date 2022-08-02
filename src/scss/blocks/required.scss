@@ -11,11 +11,15 @@
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-
     @include mixins.respond-to(mobileOnly) {
+      display: flex;
       flex-direction: column;
+    }
+
+    @include mixins.respond-to(tablet) {
+      display: grid;
+      grid-template: 1fr / repeat(2, 1fr);
+      grid-column-gap: 30px;
     }
   }
 
@@ -31,14 +35,20 @@
 
   &__image {
     position: relative;
+    color: red;
   }
 
   &__img {
     display: block;
 
-    max-width: 100%;
-    width: 290px;
-    height: auto;
+    @include mixins.respond-to(mobileOnly) {
+      width: 290px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   &__whatsup-ball {
@@ -101,31 +111,17 @@
   &__main {
     display: flex;
     flex-direction: column;
-    color: red;
-
-    @include mixins.respond-to(tablet) {
-      align-items: flex-end;
-      text-align: right;
-    }
   }
 
   &__title {
     position: relative;
 
-    font-size: 35px;
-
     padding-bottom: 20px;
     margin: 0 0 30px 0;
-
-    @include mixins.respond-to(mobileOnly) {
-      font-size: 23px;
-    }
 
     @include mixins.respond-to(tablet) {
       display: block;
       width: fit-content;
-
-      font-size: 30px;
     }
 
     &::before {
@@ -133,11 +129,6 @@
       position: absolute;
       bottom: 0;
       left: 0;
-
-      @include mixins.respond-to(tablet) {
-        left: auto;
-        right: 0;
-      }
 
       width: 81px;
       height: 15px;

@@ -21,3 +21,5 @@ const datepicker = new Datepicker(elem, {
   language: 'ru',
 
 }); 
+
+console.log(datepicker);
