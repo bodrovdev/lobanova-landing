@@ -149,8 +149,8 @@
             <span class="appointment__type-caption">Выберите вид консультации на которую вы хотите записаться</span>
             <div class="appointment__type-body">
               <div class="appointment__type-item">
-                <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-1"
-                  value="Первичный приём" name="appointment-radio" checked>
+                <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-radio-1"
+                  value="4000" name="appointment-radio" checked>
                 <label class="appointment__type-label" for="appointment-radio-1">
                   <span class="appointment__shown-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
@@ -162,8 +162,8 @@
                 </label>
               </div>
               <div class="appointment__type-item">
-                <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-2"
-                  value="Вторичный прием" name="appointment-radio">
+                <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-radio-2"
+                  value="3000" name="appointment-radio">
                 <label class="appointment__type-label" for="appointment-radio-2">
                   <span class="appointment__shown-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
@@ -175,8 +175,8 @@
                 </label>
               </div>
               <div class="appointment__type-item">
-                <input type="radio" class="appointment__hidden-radio visually-hidden" id="appointment-radio-3"
-                  value="English speaking patient" name="appointment-radio">
+                <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-radio-3"
+                  value="6000" name="appointment-radio">
                 <label class="appointment__type-label" for="appointment-radio-3">
                   <span class="appointment__shown-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
@@ -222,7 +222,7 @@
               </button>
             </ul>
           </div>
-          <button class="appointment__order-button base-button" type="submit" id="appointment-submit">
+          <button class="appointment__order-button base-button" type="button" id="appointment-submit">
             <span class="appointment__order-caption">Выбрать дату и оплатить</span>
           </button>
           <div class="appointment__terms">
@@ -243,6 +243,7 @@
         </form>
       </div>
       <div class="appointment__modal">
+        <button class="appointment__modal-close base-button" type="button"></button>
         <span class="appointment__modal-title">Запись на первичный прием</span>
         <span class="appointment__modal-info">
           Консультация ведется в онлайн форме<br>
@@ -251,47 +252,47 @@
         <div class="appointment__modal-date" id="appointment-modal-date"></div>
         <div class="appointment__modal-time">
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="10">
-            <span class="appointment__time-radio">10:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="10:00" id="appointment-time-10">
+            <label class="appointment__time-radio" for="appointment-time-10">10:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="11">
-            <span class="appointment__time-radio">11:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="11:00" id="appointment-time-11">
+            <label class="appointment__time-radio" for="appointment-time-11">11:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="12">
-            <span class="appointment__time-radio">12:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="12:00" id="appointment-time-12">
+            <label class="appointment__time-radio" for="appointment-time-12">12:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="13">
-            <span class="appointment__time-radio">13:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="13:00" id="appointment-time-13">
+            <label class="appointment__time-radio" for="appointment-time-13">13:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="15">
-            <span class="appointment__time-radio">15:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="15:00" id="appointment-time-15">
+            <label class="appointment__time-radio" for="appointment-time-15">15:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="16">
-            <span class="appointment__time-radio">16:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="16:00" id="appointment-time-16">
+            <label class="appointment__time-radio" for="appointment-time-16">16:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="17">
-            <span class="appointment__time-radio">17:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="17:00" id="appointment-time-17">
+            <label class="appointment__time-radio" for="appointment-time-17">17:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="18">
-            <span class="appointment__time-radio">18:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="18:00" id="appointment-time-18">
+            <label class="appointment__time-radio" for="appointment-time-18">18:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="19">
-            <span class="appointment__time-radio">19:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="19:00" id="appointment-time-19">
+            <label class="appointment__time-radio" for="appointment-time-19">19:00</label>
           </div>
           <div class="appointment__time-item">
-            <input class="visually-hidden" type="radio" name="appointment-modal-time" value="20">
-            <span class="appointment__time-radio">20:00</span>
+            <input class="appointment__hidden-time visually-hidden" type="radio" name="appointment-modal-time" value="20" id="appointment-time-20">
+            <label class="appointment__time-radio" for="appointment-time-20">20:00</label>
           </div>
         </div>
-        <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price">6000</span> ₽</span>
+        <span class="appointment__modal-tag">К оплате <span class="appointment__modal-price" id="appointment-result-price"></span> ₽</span>
         <button class="appointment__modal-submit base-button" type="submit">Оплатить</button>
         <button class="appointment__modal-cancel base-button" type="reset">Отменить</button>
       </div>
