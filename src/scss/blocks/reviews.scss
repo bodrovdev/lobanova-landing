@@ -39,13 +39,7 @@
   &__slider {
     z-index: 5;
 
-    @include mixins.respond-to(mobileOnly) {
-      padding: 20px 30px 40px 30px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      padding: 20px 40px 20px 40px;
-    }
+    padding: 20px 0 20px 0;
   }
 
   &__slider-item {
@@ -62,27 +56,18 @@
     position: relative;
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    color: red;
 
+    padding: 30px 30px 0 30px;
     margin-bottom: 15px;
 
     z-index: 10;
-
-    @include mixins.respond-to (mobileOnly) {
-      padding: 10px 10px 0 10px;
-    }
-
-    @include mixins.respond-to (tablet) {
-      padding: 10px 10px 0 10px;
-    }
 
     &::before {
       content: "";
       position: absolute;
       top: -20px;
-      right: 0;
+      right: 20px;
 
       width: 40px;
       height: 40px;
@@ -93,13 +78,6 @@
       background-repeat: no-repeat;
 
       z-index: 10;
-    }
-
-    @include mixins.respond-to(mobileOnly) {
-      flex-direction: column;
-      text-align: center;
-
-      padding: 10px;
     }
   }
 
@@ -120,14 +98,10 @@
     line-height: 25px;
     color: var(--color-mine-shaft);
 
+    padding: 0 30px 30px 30px;
+
     @include mixins.respond-to(mobileOnly) {
       font-size: 16px;
-
-      padding: 0 10px 10px 10px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      padding: 0 10px 10px 10px;
     }
   }
 

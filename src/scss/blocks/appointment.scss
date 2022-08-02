@@ -414,6 +414,7 @@
     flex-direction: column;
     align-items: center;
 
+    max-width: 650px;
     background: var(--color-iceberg);
     border: 30px solid var(--color-white);
     border-radius: 15px;
@@ -448,7 +449,13 @@
   }
 
   &__modal-date {
+    font-family: var(--font-family-date) !important;
+
     margin-bottom: 10px;
+  }
+
+  &__modal-date .datepicker-picker {
+    border-radius: 20px !important;
   }
 
   &__modal-date .datepicker-header {
@@ -461,10 +468,15 @@
     height: fit-content !important;
 
     padding: 30px 30px 0 30px;
+    margin-bottom: 10px;
 
     @include mixins.respond-to(mobileOnly) {
       padding: 15px 15px 0 15px;
     }
+  }
+
+  &__modal-date .datepicker-main {
+    padding: 0 !important;
   }
 
   &__modal-date .datepicker-controls {
@@ -491,6 +503,11 @@
     width: 100%;
     height: fit-content !important;
 
+    font-family: var(--font-family-date);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-blue-dianne);
     text-align: left !important;
 
     padding: 0 !important;
@@ -518,9 +535,15 @@
 
     width: 100%;
     height: fit-content !important;
+    border-bottom: 1px solid var(--color-bombay);
 
-    padding: 0 !important;
     margin: 0 !important;
+
+    padding: 0 30px 10px 30px;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 0 15px 10px 15px;
+    }
   }
 
   &__modal-date .dow {
@@ -530,8 +553,45 @@
     width: fit-content !important;
     height: fit-content !important;
 
+    font-family: var(--font-family-date);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+
     padding: 0 !important;
     margin: 0 !important;
+  }
+
+  &__modal-date .disabled {
+    color: var(--color-bombay);
+  }
+
+  &__modal-date .selected {
+    background-color: var(--color-scooter) !important;
+  }
+
+  &__modal-date .datepicker-grid {
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 0 5px 15px 5px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      padding: 0 25px 30px 25px;
+    }
+  }
+
+  &__modal-date .datepicker-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__modal-date .day {
+    font-family: var(--font-family-date);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
   }
 
   &__modal-date .datepicker-footer {

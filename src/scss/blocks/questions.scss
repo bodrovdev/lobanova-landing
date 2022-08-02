@@ -118,17 +118,14 @@
     height: 100px;
 
     @include mixins.respond-to(mobileOnly) {
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-
-      width: 65px;
-      height: 65px;
+      display: none;
     }
 
     @include mixins.respond-to(tablet) {
-      top: -33px;
+      bottom: -33px;
       left: 0;
+
+      display: flex;
 
       width: 65px;
       height: 65px;
@@ -138,11 +135,6 @@
   & .whatsup-ball__inner {
     width: 55px;
     height: 55px;
-
-    @include mixins.respond-to(mobileOnly) {
-      width: 35px;
-      height: 35px;
-    }
 
     @include mixins.respond-to(tablet) {
       width: 35px;
@@ -159,14 +151,14 @@
     position: absolute;
 
     @include mixins.respond-to(mobileOnly) {
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
+      display: none;
     }
 
     @include mixins.respond-to(tablet) {
       top: -33px;
       right: 0;
+
+      display: flex;
     }
   }
 

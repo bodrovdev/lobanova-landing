@@ -258,13 +258,14 @@
 
     @include mixins.respond-to(tablet) {
       position: absolute;
-      top: 0;
+      top: 110px;
       right: 5%;
     }
   }
 
   &__image-inner {
     position: relative;
+    color: red;
   }
 
   &__photo-image {
@@ -289,7 +290,7 @@
     }
 
     @include mixins.respond-to(tablet) {
-      width: 350px;
+      width: 290px;
     }
   }
 
@@ -314,6 +315,12 @@
     z-index: 2;
 
     @include mixins.respond-to(mobileOnly) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include mixins.respond-to(tablet) {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -368,6 +375,11 @@
     z-index: 2;
 
     @include mixins.respond-to(tablet) {
+      bottom: -210px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+
       display: block;
     }
 

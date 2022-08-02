@@ -7,16 +7,28 @@
 
   &__container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    gap: 20px;
+    @include mixins.respond-to(tablet) {
+      display: grid;
+      grid-template: 1fr / repeat(3, 1fr);
+      grid-column-gap: 30px;
+    }
+  }
+
+  &__logo-block {
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 30px;
+    }
   }
 
   &__desc {
     display: flex;
     flex-direction: column;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin-bottom: 30px;
+    }
     
     &-top {
       font-weight: 400;
