@@ -7,6 +7,7 @@ let files = [];
 function addItem(event) {
   if (event.target.files.length > 10) {
     alert('Не более 10 изображений!');
+    attachInput.value = '';
     return;
   }
 

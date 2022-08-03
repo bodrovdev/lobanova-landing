@@ -1,8 +1,6 @@
 import { Datepicker } from 'vanillajs-datepicker';
-
 import ru from 'vanillajs-datepicker/locales/ru';
 Object.assign(Datepicker.locales, ru);
-
 
 const elem = document.getElementById('appointment-modal-date');
 
@@ -17,6 +15,8 @@ const datepicker = new Datepicker(elem, {
   weekStart: 1,
 
   language: 'ru',
+
+  minDate: new Date(),
 
 });
 

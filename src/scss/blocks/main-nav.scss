@@ -3,10 +3,6 @@
 .main-nav {
   z-index: 3;
 
-  @include mixins.respond-to(tabletOnly) {
-    padding: 10px 0 10px 0;
-  }
-
   @include mixins.respond-to(mobileOnly) {
     position: absolute;
     top: 90px;
@@ -20,18 +16,26 @@
     transition-property: left;
     transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
+  }
 
-    &--opened {
-      left: 0;
+  @include mixins.respond-to(tablet) {
+    margin-bottom: 30px;
+  }
 
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior-y: contain;
+  @include mixins.respond-to(desktopS) {
+    margin-bottom: 66px;
+  }
 
-      transition-property: left;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in-out;
-    }
+  &--opened {
+    left: 0;
+
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+
+    transition-property: left;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
   }
 
   &__container {
@@ -118,6 +122,21 @@
           height: 5px;
           background-color: var(--color-scooter);
           border-radius: 50%;
+        }
+      }
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin: 0 15px 0 15px;
+
+      & .main-nav__list-link {
+        font-size: 16px;
+
+        padding-left: 20px;
+
+        &::before {
+          width: 10px;
+          height: 10px;
         }
       }
     }

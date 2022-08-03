@@ -5,9 +5,7 @@
   flex-direction: column;
   flex-grow: 1;
 
-  margin-top: -90px;
-
   @include mixins.respond-to(mobileOnly) {
-    margin-bottom: 50px;
+    margin-botton: 50px;
   }
 }
