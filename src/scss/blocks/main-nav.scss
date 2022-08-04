@@ -2,7 +2,6 @@
 
 .main-nav {
   z-index: 3;
-  color: black;
 
   @include mixins.respond-to(mobileOnly) {
     position: absolute;
@@ -24,7 +23,7 @@
   }
 
   @include mixins.respond-to(desktopS) {
-    margin-bottom: 66px;
+    margin-bottom: 67px;
   }
 
   &--opened {
