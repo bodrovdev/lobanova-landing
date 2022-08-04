@@ -2,6 +2,7 @@
 
 .main-nav {
   z-index: 3;
+  color: black;
 
   @include mixins.respond-to(mobileOnly) {
     position: absolute;
@@ -11,7 +12,7 @@
     width: 100%;
     height: calc(100vh - 90px);
 
-    background-color: var(--color-white);
+    background-color: rgb(255, 255, 255, 0.9);
 
     transition-property: left;
     transition-duration: 0.3s;

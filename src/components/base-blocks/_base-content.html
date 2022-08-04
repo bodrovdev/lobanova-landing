@@ -1,7 +1,8 @@
 <main class="page-content">
   <section class="guide">
-    <img class="guide__graphic--left" src="img/image/design/guide-graphic-left.png" loading="lazy">
-    <img class="guide__graphic--right" src="img/image/design/guide-graphic-right.png" loading="lazy">
+    <img class="guide__graphic guide__graphic--left" src="img/image/design/guide-graphic-left.png" loading="lazy">
+    <img class="guide__graphic guide__graphic--right" src="img/image/design/guide-graphic-right.png" loading="lazy">
+    <img class="guide__graphic guide__graphic--top" src="img/image/design/guide-graphic-top.png" loading="lazy">
     <div class="guide__container base-container">
       <h2 class="guide__title section-title base-title">Как проходит консультация врача</h2>
       <div class="guide__inner">
@@ -149,7 +150,6 @@
           <button class="appointment__order-button base-button" type="button" id="appointment-modal-open">
             <span class="appointment__order-caption">Выбрать дату и оплатить</span>
           </button>
-
           <div class="appointment__modal" id="appointment-modal-popup">
             <div class="appointment__modal-wrapper">
               <button class="appointment__modal-close base-button" type="button" id="appointment-modal-close"></button>
@@ -205,7 +205,6 @@
               <input class="appointment__form-reset base-button" type="reset" value="Отменить" id="appointment-form-reset"></input>     
             </div>
           </div>
-
           <div class="appointment__terms">
             <input class="appointment__terms-hidden visually-hidden" type="checkbox" id="appointment-terms-of-use"
               value="terms-checked" value="terms-checked" checked>
@@ -367,19 +366,18 @@
             <img srcset="img/image/design/required-graphic.png 1x, img/image/design/X2-required-graphic.png 2x"
               class="required__img" alt="Изображение эритроцитов" loading="lazy">
           </picture>
-          <a class="required__whatsup-ball whatsup-ball base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank"
-            rel="noopener noreferrer">
+          <span class="required__whatsup-ball whatsup-ball">
             <span class="whatsup-ball__inner">
               <svg class="whatsup-ball__icon" width="36" height="36">
                 <use href="img/icon/sprite.svg#whatsup-icon"></use>
               </svg>
             </span>
-          </a>
-          <a class="required__phone-ball phone-ball base-link" href="tel:XXXXXXXXXXX">
+          </span>
+          <span class="required__phone-ball phone-ball">
             <svg class="phone-ball__icon" width="30" height="30">
               <use href="img/icon/sprite.svg#phone-icon"></use>
             </svg>
-          </a>
+          </span>
         </figure>
       </div>
       <div class="required__main">
@@ -564,19 +562,18 @@
           <figure class="faq__aside-image base-figure">
             <img class="faq__aside-img" src="../../img/image/design/faq-graphic.png"
               alt="Изображение медицинской процедуры">
-            <a class="faq__whatsup-ball whatsup-ball base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank"
-              rel="noopener noreferrer">
+            <span class="faq__whatsup-ball whatsup-ball">
               <span class="whatsup-ball__inner">
                 <svg class="whatsup-ball__icon" width="36" height="36">
                   <use href="img/icon/sprite.svg#whatsup-icon"></use>
                 </svg>
               </span>
-            </a>
-            <a class="faq__phone-ball phone-ball base-link" href="tel:XXXXXXXXXXX">
+            </span>
+            <span class="faq__phone-ball phone-ball">
               <svg class="phone-ball__icon" width="30" height="30">
                 <use href="img/icon/sprite.svg#phone-icon"></use>
               </svg>
-            </a>
+            </span>
           </figure>
         </div>
       </div>
@@ -693,19 +690,18 @@
           </figure>
         </div>
       </div>
-      <a class="questions__whatsup-ball whatsup-ball base-link" href="https://wa.me/XXXXXXXXXXX" target="_blank"
-        rel="noopener noreferrer">
+      <span class="questions__whatsup-ball whatsup-ball">
         <span class="whatsup-ball__inner">
           <svg class="whatsup-ball__icon" width="36" height="36">
             <use href="img/icon/sprite.svg#whatsup-icon"></use>
           </svg>
         </span>
-      </a>
-      <a class="questions__phone-ball phone-ball base-link" href="tel:XXXXXXXXXXX">
+      </span>
+      <span class="questions__phone-ball phone-ball">
         <svg class="phone-ball__icon" width="30" height="30">
           <use href="img/icon/sprite.svg#phone-icon"></use>
         </svg>
-      </a>
+      </span>
     </div>
   </section>
 </main>

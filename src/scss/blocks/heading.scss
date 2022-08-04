@@ -130,6 +130,7 @@
 
   &__bottom-container {
     display: flex;
+    color: red;
     flex-direction: column;
     align-items: center;
 
@@ -140,7 +141,7 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      padding: 49px 0 34px 0;
+      padding: 52px 0 40px 0;
     }
   }
 
@@ -155,6 +156,10 @@
 
     @include mixins.respond-to(tablet) {
       margin-bottom: 50px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 55px;
     }
   }
 
@@ -204,6 +209,7 @@
       font-size: 18px;
 
       padding-left: 50px;
+      margin-bottom: 25px;
     }
   }
 
@@ -220,25 +226,10 @@
     @include mixins.respond-to(tablet) {
       align-items: flex-start;
     }
-  }
 
-  &__order-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 300px;
-    height: 90px;
-    background-color: var(--color-white);
-    box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
-    border-radius: 8px;
-
-    margin-bottom: 20px;
-
-    z-index: 10;
-
-    @include mixins.respond-to (mobileOnly) {
-      width: 260px;
+    @include mixins.respond-to(desktopS) {
+      flex-direction: row;
+      align-items: center;
     }
   }
 
@@ -248,11 +239,25 @@
     justify-content: center;
 
     width: 270px;
+    box-sizing: content-box;
+    border: 10px solid var(--color-white);
 
     z-index: 10;
 
     @include mixins.respond-to (mobileOnly) {
       width: 215px;
+
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to (tablet) {
+      margin-bottom: 20px;
+    }
+
+    @include mixins.respond-to (desktopS) {
+      border: 13px solid var(--color-white);
+
+      margin: 0 25px 0 0;
     }
   }
 
@@ -283,6 +288,11 @@
       top: 0;
       right: 5%;
     }
+
+    @include mixins.respond-to(desktopXL) {
+      top: -30px;
+      right: calc(16.5% - 75px);
+    }
   }
 
   &__image-inner {
@@ -294,16 +304,14 @@
       align-self: center;
       order: 1;
 
-      width: 290px;
-      height: auto;
-
       margin: 0 auto;
     }
   }
 
   &__photo-img {
     display: block;
-
+    
+    max-width: 100%;
     height: auto;
 
     @include mixins.respond-to(mobileOnly) {
@@ -313,18 +321,28 @@
     @include mixins.respond-to(tablet) {
       width: 290px;
     }
+
+    @include mixins.respond-to(desktopS) {
+      width: 400px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      width: 500px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 635px;
+    }
   }
 
   &__experience {
     display: none;
     position: absolute;
-    bottom: 20px;
-    right: 7%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
     width: 260px;
     height: 100px;
@@ -347,12 +365,25 @@
       transform: translateX(-50%);
     }
 
+    @include mixins.respond-to(desktopD) {
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+
+    @include mixins.respond-to(desktopXL) {
+      top: 95px;
+      left: -110px;
+    }
+
     &-headline {
       display: flex;
       align-items: center;
       justify-content: flex-end;
 
       width: 100%;
+
+      margin-bottom: 10px;
     }
 
     &-title {
@@ -381,8 +412,6 @@
 
   &__patients {
     position: absolute;
-    bottom: 140px;
-    right: 7%;
 
     display: none;
 
@@ -395,13 +424,16 @@
 
     z-index: 2;
 
-    @include mixins.respond-to(tablet) {
-      bottom: -210px;
-      right: auto;
-      left: 50%;
-      transform: translateX(-50%);
-
+    @include mixins.respond-to(desktopD) {
       display: block;
+
+      bottom: 0;
+      left: 0;
+    }
+
+    @include mixins.respond-to(desktopXL) {
+      bottom: 80px;
+      left: -100px;
     }
 
     &-inner {
@@ -455,6 +487,13 @@
     width: 65px;
     height: 65px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include mixins.respond-to(desktopXL) {
+      top: 140px;
+      bottom: auto;
+      right: 25px;
+      left: auto;
+    }
   }
 
   & .whatsup-ball__inner {
