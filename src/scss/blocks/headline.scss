@@ -13,18 +13,21 @@
 
   &__container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 
     height: 100%;
   }
 
   &__logo-block {
+    margin-top: 15px;
+
     z-index: 12;
   }
 
   &__link-block {
     display: flex;
+
+    margin-top: 20px;
 
     @include mixins.respond-to(mobileOnly) {
       display: none;

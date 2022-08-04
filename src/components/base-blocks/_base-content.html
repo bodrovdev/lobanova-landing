@@ -65,54 +65,63 @@
     </div>
   </section>
 
-  <section class="appointment" id="appointment-form">
+  <section class="appointment" id="appointment-block">
     <div class="appointment__container base-container">
       <div class="appointment__inner">
         <h2 class="appointment__title section-title base-title">Запишись на консультацию сейчас</h2>
         <form action="http://foo.com" method="post" class="appointment__form">
           <div class="appointment__type">
-            <span class="appointment__type-caption">Выберите вид консультации на которую вы хотите записаться</span>
+            <span class="appointment__type-title">Выберите вид консультации на которую вы хотите записаться</span>
             <div class="appointment__type-body">
+
               <div class="appointment__type-item">
                 <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-1"
                   value="4000" name="appointment-type-radio" checked>
                 <label class="appointment__type-label" for="appointment-type-radio-1">
-                  <span class="appointment__shown-radio">
-                    <svg class="appointment__check-icon check-icon" width="12" height="12">
-                      <use href="img/icon/sprite.svg#check-icon"></use>
-                    </svg>
-                  </span>
-                  <span class="appointment__item-caption">Первичный приём</span>
-                  <span class="appointment__item-price">4 000 ₽</span>
+                  <div class="appointment__type-caption">
+                    <span class="appointment__type-radio">
+                      <svg class="appointment__check-icon check-icon" width="12" height="12">
+                        <use href="img/icon/sprite.svg#check-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="appointment__type-text">Первичный приём</span>
+                  </div>
+                  <span class="appointment__type-price">4 000 ₽</span>
                 </label>
               </div>
+
               <div class="appointment__type-item">
                 <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-2"
                   value="3000" name="appointment-type-radio">
                 <label class="appointment__type-label" for="appointment-type-radio-2">
-                  <span class="appointment__shown-radio">
-                    <svg class="appointment__check-icon check-icon" width="12" height="12">
-                      <use href="img/icon/sprite.svg#check-icon"></use>
-                    </svg>
-                  </span>
-                  <span class="appointment__item-caption">Вторичный прием</span>
-                  <span class="appointment__item-price">3 000 ₽</span>
+                  <div class="appointment__type-caption">
+                    <span class="appointment__type-radio">
+                      <svg class="appointment__check-icon check-icon" width="12" height="12">
+                        <use href="img/icon/sprite.svg#check-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="appointment__type-text">Вторичный прием</span>
+                  </div>
+                  <span class="appointment__type-price">3 000 ₽</span>
                 </label>
               </div>
+
               <div class="appointment__type-item">
                 <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-3"
                   value="6000" name="appointment-type-radio">
                 <label class="appointment__type-label" for="appointment-type-radio-3">
-                  <span class="appointment__shown-radio">
-                    <svg class="appointment__check-icon check-icon" width="12" height="12">
-                      <use href="img/icon/sprite.svg#check-icon"></use>
-                    </svg>
-                  </span>
-                  <span class="appointment__item-caption">English speaking patient<br class="appointment__breakpoint">
-                    consultation</span>
-                  <span class="appointment__item-price">6 000 ₽</span>
+                  <div class="appointment__type-caption">
+                    <span class="appointment__type-radio">
+                      <svg class="appointment__check-icon check-icon" width="12" height="12">
+                        <use href="img/icon/sprite.svg#check-icon"></use>
+                      </svg>
+                    </span>
+                    <span class="appointment__type-text">English speaking patient<br>consultation</span>
+                  </div>
+                  <span class="appointment__type-price">6 000 ₽</span>
                 </label>
               </div>
+
             </div>
           </div>
           <div class="appointment__info">
@@ -133,7 +142,7 @@
             </div>
           </div>
           <div class="appointment__attach">
-            <span class="appointment__attach-caption">
+            <span class="appointment__attach-title">
               Прикрепите ваши анализы <br class="appointment__breakpoint">(не более 10)
             </span>
             <ul class="appointment__attach-list base-list" id="attach-list">
@@ -214,7 +223,7 @@
                   <use href="img/icon/sprite.svg#check-icon"></use>
                 </svg>
               </span>
-              <span class="appointment__terms-caption">
+              <span class="appointment__terms-title">
                 Отправляя данную форму, вы принимаете условие <a class="appointment__terms-link base-link"
                   href="#">пользовательского соглашения</a>
               </span>
