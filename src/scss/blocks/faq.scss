@@ -29,6 +29,12 @@
 
       padding: 20px 0 20px 0;
     }
+
+    @include mixins.respond-to(desktopS) {
+      grid-template: auto / auto 559px;
+      align-items: center;
+      grid-gap: 35px;
+    }
   }
 
   &__main {
@@ -43,9 +49,10 @@
       flex-direction: column;
       align-items: center;
 
-      
       padding: 10px 0 10px 10px;
+    }
 
+    @include mixins.respond-to(tabletOnly) {
       order: 2;
     }
   }
@@ -211,7 +218,7 @@
       order: 1;
     }
 
-    @include mixins.respond-to(tablet) {
+    @include mixins.respond-to(tabletOnly) {
       order: 1;
     }
   }
@@ -250,6 +257,10 @@
 
     @include mixins.respond-to(tablet) {
       width: 350px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      width: 559px;
     }
   }
 

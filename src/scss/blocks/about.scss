@@ -1,7 +1,7 @@
 @use "../mixins";
 
 .about {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 
   &__container {
     display: flex;
@@ -365,7 +365,7 @@
     @include mixins.respond-to(desktopS) {
       grid-area: motto;
 
-      padding: 30px 130px 50px 160px;
+      padding: 30px 130px 55px 160px;
     }
 
     &-title {

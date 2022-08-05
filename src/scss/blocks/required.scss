@@ -10,6 +10,10 @@
     margin-bottom: 50px;
   }
 
+  @include mixins.respond-to(desktopS) {
+    margin-bottom: 100px;
+  }
+
   &__container {
     @include mixins.respond-to(mobileOnly) {
       display: flex;
@@ -20,6 +24,11 @@
       display: grid;
       grid-template: 1fr / repeat(2, 1fr);
       grid-column-gap: 30px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      grid-template: auto / 536px auto;
+      grid-column-gap: 80px;
     }
   }
 
@@ -35,7 +44,6 @@
 
   &__image {
     position: relative;
-    color: red;
   }
 
   &__img {
@@ -54,9 +62,6 @@
   &__whatsup-ball {
     position: absolute;
 
-    width: 100px;
-    height: 100px;
-
     @include mixins.respond-to(mobileOnly) {
       top: 0;
       left: 0;
@@ -71,13 +76,18 @@
 
       width: 65px;
       height: 65px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      top: 30px;
+      left: 0;
+      
+      width: 100px;
+      height: 100px;
     }
   }
 
   & .whatsup-ball__inner {
-    width: 55px;
-    height: 55px;
-
     @include mixins.respond-to(mobileOnly) {
       width: 35px;
       height: 35px;
@@ -86,12 +96,22 @@
     @include mixins.respond-to(tablet) {
       width: 35px;
       height: 35px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      width: 55px;
+      height: 55px;
     }
   }
 
   & .whatsup-ball__icon {
     width: 20px;
     height: 20px;
+
+    @include mixins.respond-to(desktopS) {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__phone-ball {
@@ -105,6 +125,11 @@
     @include mixins.respond-to(tablet) {
       bottom: 0;
       right: 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      bottom: 165px;
+      right: 24px;
     }
   }
 
@@ -122,6 +147,10 @@
     @include mixins.respond-to(tablet) {
       display: block;
       width: fit-content;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin: 0 0 40px 0;
     }
 
     &::before {
@@ -154,6 +183,10 @@
 
     @include mixins.respond-to(tablet) {
       margin: 30px 0 40px 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin: 32px 0 54px 0;
     }
   }
 
@@ -210,6 +243,15 @@
       width: 220px;
 
       margin: 0 auto;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      height: 60px;
+    }
+
+    & .order-link__caption {
+      font-family: var(--font-family-button);
+      font-weight: 600;
     }
   }
 }

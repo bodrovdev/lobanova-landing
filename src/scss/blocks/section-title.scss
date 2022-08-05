@@ -33,7 +33,7 @@
     @include mixins.respond-to(mobileOnly) {
       font-size: 25px;
     }
-    @include mixins.respond-to(tablet) {
+    @include mixins.respond-to(tabletOnly) {
       font-size: 35px;
     }
   }
