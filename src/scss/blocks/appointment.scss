@@ -3,6 +3,10 @@
 .appointment {
   margin: 50px 0 50px 0;
 
+  @include mixins.respond-to(desktopS) {
+    margin: 100px 0 95px 0;
+  }
+
   &__inner {
     background: var(--color-iceberg);
     border: 5px solid var(--color-white);
@@ -14,8 +18,7 @@
     @include mixins.respond-to(desktopS) {
       border: 9px solid var(--color-white);
 
-      padding: 43px 63px 45px 58px;
-      margin: 40px 0 50px 0;
+      padding: 43px 63px 55px 45px;
     }
   }
 
@@ -107,15 +110,19 @@
 
   &__type-label {
 		position: relative;
+
     display: flex;
-		padding: 20px 60px 20px 60px;
+		
 		height: 100%;
+
+    padding: 20px 60px 20px 60px;
   }
 
   &__type-radio {
 		position: absolute;
 		top: 20px;
 		left: 20px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,6 +138,7 @@
 	&__type-caption {
 		display: flex;
 		flex-direction: column;
+
 		width: 100%;
 		text-align: center;
 	}
@@ -173,6 +181,7 @@
 
   &__info {
     display: flex;
+    flex-wrap: wrap;
 
     margin-bottom: 30px;
 
@@ -187,7 +196,7 @@
     @include mixins.respond-to(desktopS) {
       justify-content: flex-start;
 
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   }
 
@@ -205,10 +214,10 @@
       width: 32%;
     }
 
-    @include mixins.respond-to(tabletS) {
+    @include mixins.respond-to(desktopS) {
       width: auto;
 
-      margin-right: 10px;
+      margin: 0 10px 10px 0;
     }
   }
 
@@ -359,7 +368,7 @@
     justify-content: center;
 
     width: 315px;
-    height: 50px;
+    height: 60px;
 
     @include mixins.respond-to(mobileOnly) {
       width: 215px;
@@ -368,6 +377,10 @@
 
     @include mixins.respond-to(tablet) {
       margin-bottom: 30px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 15px;
     }
 
     background: var(--color-monza);
@@ -405,6 +418,10 @@
       border-radius: 5px;
 
       margin-right: 10px;
+
+      @include mixins.respond-to(desktopS) {
+        margin-right: 20px;
+      }
     }
 
     &-check {
@@ -417,6 +434,10 @@
       line-height: 150%;
       color: var(--color-black);
       color: black;
+
+      @include mixins.respond-to(desktopS) {
+        font-size: 12px;
+      }
     }
 
     &-link {

@@ -12,6 +12,24 @@
     @include mixins.respond-to(tablet) {
       align-items: center;
     }
+
+    @include mixins.respond-to(desktopS) {
+      display: grid;
+      grid-template: repeat(2, auto) / 450px auto;
+      grid-template-areas: 
+      "slider tabs"
+      "motto motto";
+      align-items: start;
+
+      grid-gap: 50px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      grid-template: repeat(2, auto) / 650px auto;
+      grid-template-areas: 
+      "slider tabs"
+      "motto motto";
+    }
   }
 
   &__info-block {
@@ -35,7 +53,15 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      flex-direction: row;
+      grid-area: slider;
+
+      width: 450px;
+
+      margin-bottom: 0;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      width: 655px;
     }
   }
 
@@ -44,8 +70,8 @@
 
     margin-bottom: 30px;
 
-    @include mixins.respond-to(tablet) {
-      max-width: 655px;
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 36px;
     }
   }
 
@@ -60,6 +86,10 @@
     flex-direction: column;
 
     padding: 0 10px 20px 10px;
+
+    @include mixins.respond-to(desktopS) {
+      padding: 0 65px 44px 44px;
+    }
   }
 
   &__info-title {
@@ -67,6 +97,11 @@
 
     padding-bottom: 20px;
     margin: 0 0 30px 0;
+
+    @include mixins.respond-to(desktopS) {
+      padding-bottom: 35px;
+      margin: 0 0 40px 0;
+    }
 
     &::before {
       content: "";
@@ -97,6 +132,14 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -143,8 +186,12 @@
 
     @include mixins.respond-to(tablet) {
       justify-content: center;
+    }
 
-      gap: 20px;
+    @include mixins.respond-to(desktopS) {
+      grid-area: tabs;
+
+      justify-content: flex-start;
     }
 
     &-button {
@@ -159,14 +206,25 @@
       transition: 0.2s;
 
       padding: 10px 0 10px 0;
+      margin: 0 5px 20px 0;
 
-      @include mixins.respond-to(mobileOnly) {
-        margin-bottom: 15px;
+      &:last-of-type {
+        margin-right: 0;
+        margin-bottom: 20px;
       }
 
       @include mixins.respond-to(tablet) {
         display: block;
         padding: 10px 30px 10px 30px;
+      }
+
+      @include mixins.respond-to(desktopD) {
+        margin: 0 24px 24px 0;
+
+        &:last-of-type {
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
       }
     }
 
@@ -183,6 +241,10 @@
         width: 100%;
 
         margin-top: 20px;
+      }
+
+      @include mixins.respond-to(desktopS) {
+        margin-top: 25px;
       }
     }
 
@@ -203,6 +265,10 @@
       flex-direction: column;
 
       margin-top: 20px;
+
+      @include mixins.respond-to(desktopS) {
+        padding-left: 15px;
+      }
     }
 
     &-value {
@@ -243,6 +309,11 @@
         &:last-child {
           margin-bottom: 0;
         }
+      }
+
+      @include mixins.respond-to(desktopS) {
+        padding-left: 35px;
+        margin-bottom: 30px;
       }
     }
   }
@@ -291,6 +362,12 @@
       padding: 50px 0 50px 0;
     }
 
+    @include mixins.respond-to(desktopS) {
+      grid-area: motto;
+
+      padding: 30px 130px 50px 160px;
+    }
+
     &-title {
       position: relative;
 
@@ -301,7 +378,6 @@
         position: absolute;
         top: 8px;
         left: 10px;
-        color: red;
 
         background: url('../../img/image/design/quotes.svg') transparent;
         background-repeat: no-repeat;
@@ -321,12 +397,12 @@
         }
 
         @include mixins.respond-to(desktopS) {
-          top: 5px;
-          left: 15px;
+          top: 0;
+          left: 0;
 
-          width: 35px;
-          height: 30px;
-          background-size: 35px 30px;
+          width: 37px;
+          height: 38px;
+          background-size: 37px 38px;
         }
       }
 
@@ -341,7 +417,7 @@
       }
 
       @include mixins.respond-to (desktopS) {
-        padding: 0 65px 0 65px;
+        padding: 0 0 0 80px;
       }
     }
 
@@ -360,7 +436,7 @@
       }
 
       @include mixins.respond-to (desktopS) {
-        padding: 0 65px 0 65px;
+        padding: 0 65px 0 80px;
       }
     }
   }
