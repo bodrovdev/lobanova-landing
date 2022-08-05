@@ -1,6 +1,6 @@
 let burger = document.getElementById('burger');
 let navigation = document.getElementById('main-nav');
-let navigationLinks = document.querySelectorAll('.main-nav__list-item');
+let navigationLinks = document.querySelectorAll('.main-nav__list-link');
 
 burger.addEventListener('click', () => {
   navigation.classList.toggle('main-nav--opened');

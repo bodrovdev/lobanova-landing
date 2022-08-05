@@ -241,7 +241,15 @@
     box-sizing: content-box;
     border: 10px solid var(--color-white);
 
+    transition: 0.1s;
+
     z-index: 10;
+
+    &:active {
+      border: 10px solid var(--color-monza) !important;
+
+      transition: all 0.1s;
+    }
 
     @include mixins.respond-to (mobileOnly) {
       width: 215px;
@@ -257,6 +265,12 @@
       border: 13px solid var(--color-white);
 
       margin: 0 25px 0 0;
+
+      &:active {
+        border: 13px solid var(--color-monza) !important;
+  
+        transition: all 0.1s;
+      }
     }
   }
 

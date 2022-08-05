@@ -5,6 +5,9 @@
   background: var(--color-monza);
   box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: 0.1s;
 
   &__caption {
     font-weight: 500;
@@ -13,6 +16,19 @@
     text-align: center; 
     color: var(--color-white);
   }
+
+  &:active {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-monza);
+
+    transition: all 0.1s;
+  }
+
+  &:active .order-link__caption {
+    color: var(--color-monza);
+
+    transition: all 0.1s;
+  }
 }
 
 .whatsup-link {
@@ -20,6 +36,9 @@
   background: var(--color-scooter);
   box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: 0.1s;
 
   &__icon {
     margin-right: 10px;
@@ -30,5 +49,18 @@
     font-size: 14px;
     line-height: 120%;
     color: var(--color-white);
+  }
+
+  &:active {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-scooter);
+
+    transition: all 0.1s;
+  }
+
+  &:active .whatsup-link__caption {
+    color: var(--color-scooter);
+
+    transition: all 0.1s;
   }
 }

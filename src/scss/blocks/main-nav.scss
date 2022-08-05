@@ -184,10 +184,22 @@
       height: 50px;
       background-color: var(--color-monza);
       border-radius: 8px;
+      -webkit-tap-highlight-color: transparent;
 
       color: var(--color-white);
 
+      transition: 0.1s;
+
       margin-top: 50px;
+
+      &:active {
+        background-color: var(--color-white);
+        border: 2px solid var(--color-monza);
+
+        color: var(--color-monza);
+
+        transition: all 0.1s;
+      }
     }
   }
 
@@ -204,10 +216,20 @@
       height: 50px;
       background-color: var(--color-scooter);
       border-radius: 8px;
+      -webkit-tap-highlight-color: transparent;
 
       color: var(--color-white);
 
       margin-top: 30px;
+
+      &:active {
+        background-color: var(--color-white);
+        border: 2px solid var(--color-scooter);
+
+        color: var(--color-scooter);
+
+        transition: all 0.1s;
+      }
     }
   }
 }

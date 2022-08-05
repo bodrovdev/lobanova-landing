@@ -10,7 +10,7 @@
     margin-bottom: 50px;
   }
 
-  &__container {
+  &__inner {
     display: grid;
     grid-template: 290px 1fr / 1fr;
     grid-row-gap: 30px;
@@ -30,10 +30,15 @@
       padding: 20px 0 20px 0;
     }
 
+    @include mixins.respond-to(desktopS) {
+      max-width: 1193px;
+
+      padding: 50px 0 42px 50px;
+    }
+
     @include mixins.respond-to(desktopD) {
       grid-template: auto / auto 559px;
       align-items: center;
-      grid-gap: 35px;
     }
   }
 
@@ -82,6 +87,11 @@
     @include mixins.respond-to(tablet) {
       align-self: flex-start;
     }
+
+    @include mixins.respond-to(desktopS) {
+      padding-bottom: 25px;
+      margin: 0 0 37px 0;
+    }
   }
 
   &__spoilers {
@@ -104,7 +114,6 @@
 
       @include mixins.respond-to(mobileOnly) {
         width: 100%;
-
         margin-bottom: 20px;
       }
 
@@ -114,6 +123,12 @@
 
       @include mixins.respond-to(desktopS) {
         width: 100%;
+
+        max-width: 637px;
+      }
+
+      @include mixins.respond-to(desktopD) {
+
       }
     }
 
@@ -189,7 +204,7 @@
       line-height: 150%;
       color: var(--color-black);
 
-      padding: 10px 50px 10px 50px;
+      padding: 15px 25px;
     }
 
   }
@@ -227,6 +242,10 @@
     }
 
     @include mixins.respond-to(desktopD) {
+      position: relative;
+      top: -30px;
+      right: -70px;
+      
       order: 2;
     }
   }
@@ -268,6 +287,10 @@
     }
 
     @include mixins.respond-to(desktopD) {
+      width: 450px;
+    }
+
+    @include mixins.respond-to(desktopM) {
       width: 559px;
     }
   }
@@ -286,12 +309,17 @@
       height: 65px;
     }
 
-    @include mixins.respond-to(tablet) {
+    @include mixins.respond-to(tabletOnly) {
       bottom: 0;
       right: 0;
 
       width: 65px;
       height: 65px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      bottom: 23px;
+      right: 56px;
     }
   }
 
@@ -304,15 +332,15 @@
       height: 35px;
     }
 
-    @include mixins.respond-to(tablet) {
+    @include mixins.respond-to(tabletOnly) {
       width: 35px;
       height: 35px;
     }
   }
 
   & .whatsup-ball__icon {
-    width: 20px;
-    height: 20px;
+    width: 36px;
+    height: 36px;
   }
 
   &__phone-ball {
@@ -326,6 +354,11 @@
     @include mixins.respond-to(tablet) {
       top: 0;
       left: 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      top: 29px;
+      left: 54px;
     }
   }
 }

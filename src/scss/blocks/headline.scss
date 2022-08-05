@@ -1,6 +1,7 @@
 @use "../mixins";
 
 .headline {
+  color: red;
   height: 90px;
   background-color: transparent;
   border-bottom: 1px solid var(--color-mystic);
@@ -95,7 +96,7 @@
     height: 2px;
     background-color: var(--color-monza);
 
-    transition: all 0.1s;
+    transition: all 0.3s;
 
     &:nth-child(1) {
       top: 0;
@@ -118,7 +119,7 @@
   &__burger--opened .headline__burger-line:nth-child(1) {
     top: 45%;
     transform: translateY(-45%) rotate(45deg);
-    transition: all 0.1s;
+    transition: all 0.3s;
   }
 
   &__burger--opened .headline__burger-line:nth-child(2) {
@@ -129,6 +130,6 @@
   &__burger--opened .headline__burger-line:nth-child(3) {
     bottom: 45%;
     transform: translateY(-45%) rotate(-45deg);
-    transition: all 0.1s;
+    transition: all 0.3s;
   }
 }
