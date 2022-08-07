@@ -1,8 +1,6 @@
 @use "../mixins";
 
 .diplomas {
-  color: red;
-
   @include mixins.respond-to(mobileOnly) {
     margin-bottom: 50px;
   }
@@ -11,9 +9,8 @@
     margin-bottom: 50px;
   }
 
-
   @include mixins.respond-to(desktopS) {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
 
   &__container {
@@ -36,7 +33,7 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      padding: 0 100px 0 58px;
+      padding: 0 114px 0 58px;
       margin: 0 0 60px 0;
     }
 
@@ -54,10 +51,14 @@
       background-size: cover;
 
       @include mixins.respond-to(tablet) {
-        top: 50%;
-        transform: translateY(-50%);
+        top: 56%;
+        transform: translateY(-56%);
         left: auto;
         right: 0;
+      }
+
+      @include mixins.respond-to(desktopS) {
+        top: 54%;
       }
     }
   }
@@ -93,8 +94,7 @@
 
   &__slider-button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 43%;
 
     display: flex;
     align-items: center;
@@ -121,22 +121,24 @@
     }
 
     &--prev {
+      transform: rotate(180deg);
+
       @include mixins.respond-to(desktopS) {
-        left: 0 !important;
+        left: -35px;
       }
 
       @include mixins.respond-to(desktopD) {
-        left: -50px !important;
+        left: -50px;
       }
 
       @include mixins.respond-to(desktopXL) {
-        left: -67px !important;
+        left: -67px;
       }
     }
 
     &--next {
       @include mixins.respond-to(desktopS) {
-        right: 0 !important;
+        right: -35px !important;
       }
 
       @include mixins.respond-to(desktopD) {
@@ -147,22 +149,5 @@
         right: -67px !important;
       }
     }
-  }
-
-  &__slider-icon {
-    transition: 0.2s;
-  }
-
-  &__slider .swiper-button-disabled {
-    background-color: var(--color-white);
-    opacity: 0.5;
-
-    transition: background-color 0.2s;
-  }
-
-  &__slider .swiper-button-disabled .diplomas__slider-icon {
-    fill: var(--color-scooter);
-
-    transition: fill 0.2s;
   }
 }

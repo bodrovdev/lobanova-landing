@@ -15,11 +15,9 @@
 
     display: flex;
 
-    background-image: -webkit-image-set(
-      url('../img/image/design/X2-motto-background.png') 2x,
-      url('../img/image/design/motto-background.png') 1x
-  );
-  
+    background-image: -webkit-image-set(url('../img/image/design/X2-motto-background.png') 2x,
+        url('../img/image/design/motto-background.png') 1x);
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -36,11 +34,24 @@
     }
 
     @include mixins.respond-to(tablet) {
-      align-items: center;
-      justify-content: space-between;
+      display: grid;
+      grid-template: 1fr / auto 290px;
+      grid-column-gap: 10px;
 
       padding: 20px;
     }
+
+    @include mixins.respond-to(desktopD) {
+      grid-template: 1fr / auto 376px;
+
+      padding: 63px 0 54px 114px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      padding: 63px 0 54px 214px;
+    }
+
+
   }
 
   &__main {
@@ -48,6 +59,13 @@
 
     @include mixins.respond-to(mobileOnly) {
       order: 2;
+    }
+
+    @include mixins.respond-to(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
     }
   }
 
@@ -59,6 +77,7 @@
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 20px;
+      text-align: left;
 
       margin-bottom: 30px;
     }
@@ -97,13 +116,27 @@
     }
   }
 
+  &__aside-inner {
+    position: relative;
+  }
+
+  &__aside-image {
+    vertical-align: top;
+
+    @include mixins.respond-to(desktopD) {
+      position: absolute;
+      top: -100px;
+      right: 55px;
+    }
+  }
+
   &__aside-img {
     display: block;
     height: auto;
 
     @include mixins.respond-to(mobileOnly) {
       position: relative;
-      left: -13px;
+      // left: -13px;
 
       width: 260px;
 
@@ -113,42 +146,67 @@
     @include mixins.respond-to(tablet) {
       width: 290px;
     }
+
+    @include mixins.respond-to(desktopD) {
+      width: 376px;
+    }
   }
 
   &__whatsup-ball {
     position: absolute;
-
-    width: 100px;
-    height: 100px;
 
     @include mixins.respond-to(mobileOnly) {
       display: none;
     }
 
     @include mixins.respond-to(tablet) {
-      bottom: -33px;
-      left: 0;
+      bottom: 0;
+      right: 0;
 
       display: flex;
 
       width: 65px;
       height: 65px;
     }
+
+    @include mixins.respond-to(desktopS) {
+      bottom: -35px;
+      top: auto;
+      left: 44%;
+      right: auto;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      bottom: 35px;
+      top: auto;
+      left: -73px;
+      right: auto;
+    }
   }
 
   & .whatsup-ball__inner {
-    width: 55px;
-    height: 55px;
-
     @include mixins.respond-to(tablet) {
       width: 35px;
       height: 35px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      width: 55px;
+      height: 55px;
     }
   }
 
   & .whatsup-ball__icon {
     width: 20px;
     height: 20px;
+
+    @include mixins.respond-to(desktopS) {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__phone-ball {
@@ -159,10 +217,15 @@
     }
 
     @include mixins.respond-to(tablet) {
-      top: -33px;
+      top: 0;
       right: 0;
 
       display: flex;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      top: -33px;
+      right: 44%;
     }
   }
 

@@ -10,6 +10,10 @@
     margin-bottom: 50px;
   }
 
+  @include mixins.respond-to(desktopS) {
+    margin-bottom: 95px;
+  }
+
   &__inner {
     display: grid;
     grid-template: 290px 1fr / 1fr;
@@ -33,7 +37,7 @@
     @include mixins.respond-to(desktopS) {
       max-width: 1193px;
 
-      padding: 50px 0 42px 50px;
+      padding: 50px 0 30px 50px;
     }
 
     @include mixins.respond-to(desktopD) {
@@ -306,9 +310,6 @@
   &__whatsup-ball {
     position: absolute;
 
-    width: 100px;
-    height: 100px;
-
     @include mixins.respond-to(mobileOnly) {
       bottom: 0;
       right: 0;
@@ -317,7 +318,7 @@
       height: 65px;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(tablet) {
       bottom: 0;
       right: 0;
 
@@ -328,27 +329,45 @@
     @include mixins.respond-to(desktopD) {
       bottom: 23px;
       right: 56px;
+
+      width: 100px;
+      height: 100px;
     }
   }
 
   & .whatsup-ball__inner {
-    width: 55px;
-    height: 55px;
 
     @include mixins.respond-to(mobileOnly) {
       width: 35px;
       height: 35px;
     }
 
-    @include mixins.respond-to(tabletOnly) {
+    @include mixins.respond-to(tablet) {
       width: 35px;
       height: 35px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      width: 55px;
+      height: 55px;
     }
   }
 
   & .whatsup-ball__icon {
-    width: 36px;
-    height: 36px;
+    @include mixins.respond-to(mobileOnly) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__phone-ball {
@@ -364,7 +383,7 @@
       left: 0;
     }
 
-    @include mixins.respond-to(desktopS) {
+    @include mixins.respond-to(desktopD) {
       top: 29px;
       left: 54px;
     }
