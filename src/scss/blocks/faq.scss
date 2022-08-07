@@ -37,8 +37,9 @@
     }
 
     @include mixins.respond-to(desktopD) {
-      grid-template: auto / auto 559px;
-      align-items: center;
+      grid-template: auto / auto auto;
+      align-items: start;
+      grid-row-gap: 0;
     }
   }
 
@@ -59,6 +60,7 @@
 
     @include mixins.respond-to(desktopD) {
       order: 1;
+      align-items: flex-start;
     }
   }
 
@@ -128,7 +130,7 @@
       }
 
       @include mixins.respond-to(desktopD) {
-
+        min-width: 637px;
       }
     }
 
@@ -146,6 +148,10 @@
 
       @include mixins.respond-to(tablet) {
         padding: 15px 25px 15px 25px;
+      }
+
+      @include mixins.respond-to(desktopD) {
+        padding: 13px 25px 13px 25px;
       }
     }
 
@@ -243,10 +249,12 @@
 
     @include mixins.respond-to(desktopD) {
       position: relative;
-      top: -30px;
-      right: -70px;
-      
+      top: 10px;
+      right: 0;
+
       order: 2;
+
+      width: 559px;
     }
   }
 

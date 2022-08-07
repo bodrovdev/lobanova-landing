@@ -6,7 +6,7 @@
   padding-top: 50px;
 
   @include mixins.respond-to(desktopS) {
-    padding-top: 95px;
+    padding-top: 89px;
   }
 
   &__title {
@@ -43,6 +43,8 @@
   }
 
   &__inner {
+    position: relative;
+
     display: flex;
 
     width: 100%;
@@ -53,15 +55,21 @@
     padding-bottom: 50px;
 
     @include mixins.respond-to(tablet) {
-      background-position: center;
+      background-position: center 50px;
     }
 
     @include mixins.respond-to(desktopS) {
       justify-content: space-between;
 
-      background-position: center 80px;
+      background-position: center 60px;
+      background-size: 800px auto;
 
       padding-bottom: 0;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      background-position: center 80px;
+      background-size: auto auto
     }
   }
 
@@ -90,9 +98,15 @@
       }
 
       &:nth-child(3) {
+        position: relative;
+        top: -10px;
+        right: -30px;
+
         padding-top: 90px;
 
-        margin: -10px -20px 0 0;
+        & .guide__item-image {
+          // margin-bottom: 25px;
+        }
       }
     }
   }
@@ -129,81 +143,97 @@
 
   &__graphic--left {
     position: absolute;
-    top: 0;
-    left: 0;
-  
-    width: 100px;
-    height: auto;
+
+    display: none;
+
     pointer-events: none;
-  
+
     z-index: 1;
 
-    @include mixins.respond-to(tablet) {
-      width: 150px;
+    @include mixins.respond-to(mobileOnly) {
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 100px;
+      height: auto;
     }
 
-    @include mixins.respond-to(desktopS) {
+    @include mixins.respond-to(tablet) {
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 100px;
+      height: auto;
+    }
+
+    @include mixins.respond-to(desktopXL) {
       width: 282px;
     }
   }
 
   &__graphic--right {
     position: absolute;
-    right: 0;
-  
-    width: 100px;
-    height: auto;
+
+    display: none;
+
     pointer-events: none;
-  
+
     z-index: 1;
 
     @include mixins.respond-to(mobileOnly) {
       bottom: 0;
-      top: auto;
+      right: 0;
+
+      display: block;
+
+      width: 100px;
+      height: auto;
     }
 
     @include mixins.respond-to(tablet) {
-      bottom: 0;
-      top: auto;
-
-      width: 150px;
-    }
-
-    @include mixins.respond-to(desktopS) {
-      width: 226px;
-    }
-
-    @include mixins.respond-to(desktopM) {
       top: 0;
       bottom: auto;
+      right: 0;
+
+      display: block;
+
+      width: 100px;
+      height: auto;
+    }
+
+    @include mixins.respond-to(desktopXL) {
+      width: 226px;
     }
   }
 
   &__graphic--top {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
 
     display: none;
-  
-    width: 100px;
-    height: auto;
+
     pointer-events: none;
-  
+
     z-index: 0;
 
-    @include mixins.respond-to(desktopS) {
-      top: -120px;
+    @include mixins.respond-to(tablet) {
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
 
       display: block;
 
-      width: 414px;
+      width: 100px;
+      height: auto;
     }
 
     @include mixins.respond-to(desktopXL) {
-      top: -110px;
-      right: 100px;
+      top: -120px;
+      right: 290px;
+      transform: none;
       left: auto;
 
       width: 414px;

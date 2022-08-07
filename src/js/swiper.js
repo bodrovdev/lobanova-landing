@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 //Слайдер из блока about
-const about_slider = new Swiper('.about__info-slider', {
+const about_slider = new Swiper('.about__slider', {
 
   direction: 'horizontal',
 

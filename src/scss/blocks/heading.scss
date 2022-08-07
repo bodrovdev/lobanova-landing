@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
 
+  z-index: 2;
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -140,7 +142,7 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      padding: 52px 0 40px 0;
+      padding: 52px 0 35px 0;
     }
   }
 
@@ -268,7 +270,7 @@
 
       &:active {
         border: 13px solid var(--color-monza) !important;
-  
+
         transition: all 0.1s;
       }
     }
@@ -303,7 +305,7 @@
     }
 
     @include mixins.respond-to(desktopXL) {
-      top: -30px;
+      top: -37px;
       right: calc(16.5% - 75px);
     }
   }
@@ -379,12 +381,17 @@
     }
 
     @include mixins.respond-to(desktopD) {
-      top: 0;
-      left: 0;
+      top: 95px;
+      left: -110px;
       transform: none;
     }
 
-    @include mixins.respond-to(desktopXL) {
+    @include mixins.respond-to(desktopM) {
+      top: 150px;
+      left: -90px;
+    }
+
+    @include mixins.respond-to(desktopL) {
       top: 95px;
       left: -110px;
     }
@@ -437,16 +444,36 @@
 
     z-index: 2;
 
-    @include mixins.respond-to(desktopD) {
-      display: block;
+    @include mixins.respond-to(tablet) {
+      bottom: -190px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.9);
 
+      display: block;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      transform: translateX(-50%) scale(0.8);
+    }
+
+    @include mixins.respond-to(desktopD) {
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%) scale(1);
+    }
+
+    @include mixins.respond-to(desktopM) {
       bottom: 0;
-      left: 0;
+    }
+
+    @include mixins.respond-to(desktopL) {
+      bottom: 95px;
+      left: -100px;
+      transform: none;
     }
 
     @include mixins.respond-to(desktopXL) {
-      bottom: 80px;
-      left: -100px;
+      bottom: 75px;
     }
 
     &-inner {
@@ -455,10 +482,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
 
       width: 260px;
       height: 170px;
+
+      padding: 42px 0 24px 0;
     }
 
     &-love {
@@ -469,7 +497,7 @@
     }
 
     &-img {
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     &-title {
@@ -479,7 +507,7 @@
       letter-spacing: 0.02em;
       color: #3D3D3F;
 
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     &-info {
@@ -488,6 +516,18 @@
       line-height: 16px;
       letter-spacing: 0.02em;
       color: rgba(61, 61, 63, 0.56);
+    }
+  }
+
+  &__graphic {
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+
+    display: none;
+
+    @include mixins.respond-to(desktopL) {
+      display: block;
     }
   }
 
@@ -501,7 +541,7 @@
     height: 65px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-    @include mixins.respond-to(desktopXL) {
+    @include mixins.respond-to(desktopD) {
       top: 140px;
       bottom: auto;
       right: 25px;

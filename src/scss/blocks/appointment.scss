@@ -4,7 +4,7 @@
   margin: 50px 0 50px 0;
 
   @include mixins.respond-to(desktopS) {
-    margin: 100px 0 95px 0;
+    margin: 93px 0 95px 0;
   }
 
   &__inner {
@@ -86,20 +86,20 @@
 
   &__type-body {
     display: grid;
-		grid-gap: 20px;
+    grid-gap: 20px;
 
-		@include mixins.respond-to(tablet) {
-			grid-template-columns: repeat(auto-fill, calc(50% - 10px));
-		}
+    @include mixins.respond-to(tablet) {
+      grid-template-columns: repeat(auto-fill, calc(50% - 10px));
+    }
 
-		@include mixins.respond-to(desktopS) {
-			grid-template-columns: repeat(3, 1fr);
-		}
+    @include mixins.respond-to(desktopS) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-		@include mixins.respond-to(desktopM) {
-			grid-template-columns: repeat(auto-fit, minmax(25%, 314px));
-			justify-content: space-between;
-		}
+    @include mixins.respond-to(desktopM) {
+      grid-template-columns: repeat(auto-fit, minmax(25%, 314px));
+      justify-content: space-between;
+    }
   }
 
   &__type-item {
@@ -109,19 +109,19 @@
   }
 
   &__type-label {
-		position: relative;
+    position: relative;
 
     display: flex;
-		
-		height: 100%;
+
+    height: 100%;
 
     padding: 20px 60px 20px 60px;
   }
 
   &__type-radio {
-		position: absolute;
-		top: 20px;
-		left: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 
     display: flex;
     align-items: center;
@@ -135,13 +135,13 @@
     border-radius: 50%;
   }
 
-	&__type-caption {
-		display: flex;
-		flex-direction: column;
+  &__type-caption {
+    display: flex;
+    flex-direction: column;
 
-		width: 100%;
-		text-align: center;
-	}
+    width: 100%;
+    text-align: center;
+  }
 
   &__type-text {
     font-weight: 400;
@@ -167,13 +167,13 @@
     transition: 0.2s;
   }
 
-  &__hidden-type:checked ~ .appointment__type-radio .appointment__check-icon {
+  &__hidden-type:checked~.appointment__type-radio .appointment__check-icon {
     opacity: 1;
 
     transition: opacity 0.1s;
   }
 
-  &__hidden-type:checked ~ .appointment__type-caption .appointment__type-price {
+  &__hidden-type:checked~.appointment__type-caption .appointment__type-price {
     color: var(--color-monza);
 
     transition: color 0.1s;
@@ -493,143 +493,7 @@
   }
 
   &__modal {
-    position: absolute;
-    top: -100%;
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--color-white);
-    border-radius: 15px;
-    visibility: hidden;
-
-    padding: 30px;
-
-    z-index: 100;
-
-    @include mixins.respond-to(mobileOnly) {
-      width: 100vw;
-      height: 100vh;
-      background-color: rgb(0, 0, 0, 0.9);
-      border-radius: 0;
-
-      padding: 10px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      width: 100vw;
-      height: 100vh;
-      background-color: rgb(0, 0, 0, 0.9);
-      border-radius: 0;
-
-      padding: 30px;
-    }
-  }
-
-  &__modal--opened {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-
-    visibility: visible;
-
-    transition: all 0.3s;
-  }
-
-  &__modal-wrapper {
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: var(--color-viking);
-    border: 1px solid white;
-    border-radius: 15px;
-
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-
-    padding: 30px;
-
-    z-index: 150;
-
-    @include mixins.respond-to(mobileOnly) {
-      padding: 50px 10px 30px 10px;
-    }
-  }
-
-  &__modal-close {
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    width: 45px;
-    height: 45px;
-    background: url("../../img/image/design/cross.svg") var(--color-white);
-    background-position: center;
-    background-size: 17px 17px;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-
-    z-index: 200;
-
-    @include mixins.respond-to(mobileOnly) {
-      width: 25px;
-      height: 25px;
-      background-size: 12px 12px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      position: fixed;
-      top: 25px;
-      right: 25px;
-
-      width: 25px;
-      height: 25px;
-      background-size: 12px 12px;
-    }
-  }
-
-  &__modal-title {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 130%;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--color-mine-shaft);
-
-    @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 12px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      margin-bottom: 12px;
-    }
-  }
-
-  &__modal-info {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    text-align: center;
-    color: var(--color-black);
-
-    @include mixins.respond-to(mobileOnly) {
-      margin-bottom: 12px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      margin-bottom: 12px;
-    }
+    display: none;
   }
 
   &__modal-date {}

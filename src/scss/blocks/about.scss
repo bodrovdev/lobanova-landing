@@ -16,9 +16,9 @@
     @include mixins.respond-to(desktopS) {
       display: grid;
       grid-template: repeat(2, auto) / 450px auto;
-      grid-template-areas: 
-      "slider tabs"
-      "motto motto";
+      grid-template-areas:
+        "slider tabs"
+        "motto motto";
       align-items: start;
 
       grid-gap: 50px;
@@ -26,9 +26,9 @@
 
     @include mixins.respond-to(desktopD) {
       grid-template: repeat(2, auto) / 650px auto;
-      grid-template-areas: 
-      "slider tabs"
-      "motto motto";
+      grid-template-areas:
+        "slider tabs"
+        "motto motto";
     }
   }
 
@@ -65,7 +65,9 @@
     }
   }
 
-  &__info-slider {
+  &__slider-container {
+    position: relative;
+
     max-width: 100%;
 
     margin-bottom: 30px;
@@ -144,6 +146,8 @@
   }
 
   &__slider-button {
+    position: absolute;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,6 +159,42 @@
     background-color: var(--color-scooter);
 
     transition: 0.2s;
+
+    &--prev {
+      top: 50%;
+      left: -18px;
+
+      transform: rotate(180deg);
+
+      @include mixins.respond-to(mobileOnly) {
+        left: 0;
+
+        width: 25px;
+        height: 25px;
+
+        & .about__slider-icon {
+          width: 6px;
+          height: 10px;
+        }
+      }
+    }
+
+    &--next {
+      top: 50%;
+      right: -18px;
+
+      @include mixins.respond-to(mobileOnly) {
+        right: 0;
+
+        width: 25px;
+        height: 25px;
+
+        & .about__slider-icon {
+          width: 6px;
+          height: 10px;
+        }
+      }
+    }
   }
 
   &__slider-icon {

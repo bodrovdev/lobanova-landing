@@ -5,7 +5,7 @@
   @include mixins.respond-to(mobileOnly) {
     margin-bottom: 50px;
   }
-  
+
   @include mixins.respond-to(tablet) {
     margin-bottom: 50px;
   }
@@ -81,7 +81,7 @@
     @include mixins.respond-to(desktopS) {
       top: 30px;
       left: 0;
-      
+
       width: 100px;
       height: 100px;
     }
