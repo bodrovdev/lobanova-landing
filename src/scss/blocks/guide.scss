@@ -67,8 +67,18 @@
       padding-bottom: 0;
     }
 
-    @include mixins.respond-to(desktopS) {
+    @include mixins.respond-to(desktopD) {
       background-position: center 80px;
+      background-size: auto auto
+    }
+
+    @include mixins.respond-to(desktopL) {
+      background-position: center 60px;
+      background-size: 1300px auto
+    }
+
+    @include mixins.respond-to(desktopXL) {
+      background-position: 180px 90px;
       background-size: auto auto
     }
   }

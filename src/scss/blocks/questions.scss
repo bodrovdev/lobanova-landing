@@ -10,6 +10,10 @@
     margin-bottom: 50px;
   }
 
+  @include mixins.respond-to(desktopS) {
+    margin-bottom: 90px;
+  }
+
   &__container {
     position: relative;
 
@@ -83,7 +87,7 @@
     }
 
     @include mixins.respond-to(tablet) {
-      margin-bottom: 40px;
+      margin-bottom: 55px;
     }
   }
 
@@ -135,9 +139,6 @@
     height: auto;
 
     @include mixins.respond-to(mobileOnly) {
-      position: relative;
-      // left: -13px;
-
       width: 260px;
 
       margin: 0 auto;
@@ -180,7 +181,7 @@
     }
 
     @include mixins.respond-to(desktopM) {
-      bottom: 35px;
+      bottom: 50px;
       top: auto;
       left: -73px;
       right: auto;

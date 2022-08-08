@@ -14,12 +14,26 @@
       grid-template: 1fr / repeat(3, 1fr);
       grid-column-gap: 30px;
     }
+
+    @include mixins.respond-to(desktopS) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+
+      padding: 21px 0 18px 0;
+    }
   }
 
   &__logo-block {
     @include mixins.respond-to(mobileOnly) {
       margin-bottom: 30px;
     }
+
+    @include mixins.respond-to(desktopD) {
+      margin-right: 44px;
+    }
+
   }
 
   &__desc {
@@ -29,7 +43,11 @@
     @include mixins.respond-to(mobileOnly) {
       margin-bottom: 30px;
     }
-    
+
+    @include mixins.respond-to(desktopD) {
+      margin-right: 185px;
+    }
+
     &-top {
       font-weight: 400;
       font-size: 30px;
@@ -62,6 +80,14 @@
       @include mixins.respond-to(mobileOnly) {
         font-size: 15px;
       }
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-left: auto;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin-left: 0;
     }
   }
 

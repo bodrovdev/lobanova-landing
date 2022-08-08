@@ -345,7 +345,11 @@
       width: 500px;
     }
 
-    @include mixins.respond-to(desktopM) {
+    @include mixins.respond-to(desktopL) {
+      width: 535px;
+    }
+
+    @include mixins.respond-to(desktopXL) {
       width: 635px;
     }
   }
@@ -388,7 +392,7 @@
 
     @include mixins.respond-to(desktopM) {
       top: 150px;
-      left: -90px;
+      left: -135px;
     }
 
     @include mixins.respond-to(desktopL) {
@@ -464,6 +468,7 @@
 
     @include mixins.respond-to(desktopM) {
       bottom: 0;
+      left: 0;
     }
 
     @include mixins.respond-to(desktopL) {

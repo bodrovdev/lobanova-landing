@@ -34,11 +34,11 @@ body {
 }
 
 .swiper-button-disabled {
-	background-color: var(--color-white);
+	background-color: var(--color-white) !important;
 
-	opacity: 0.5;
+	opacity: 0.5 !important;
 
-	transition: background-color 0.2s;
+	transition: all 0.2s !important;
 }
 
 .swiper-button-disabled .slider-icon {
