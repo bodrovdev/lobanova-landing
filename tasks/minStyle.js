@@ -18,7 +18,7 @@ module.exports = function minStyle(browserSync) {
 		autoprefixer(),
 	];
 
-	return src('src/scss/**/*.scss')
+	return src('src/scss/style.scss')
 		.pipe(plumber())
 		.pipe(scss({ outputStyle: 'compressed' }))
 		.pipe(postcss(plugins))
