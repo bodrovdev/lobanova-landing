@@ -106,6 +106,16 @@
     background-color: var(--color-white);
     box-shadow: 0px 3.9051px 21.4781px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
+
+    @include mixins.respond-to(desktopS) {
+      &:hover {
+        box-shadow: 0 0 0 1px var(--color-monza);
+      }
+    }
+
+    &:focus-within {
+      box-shadow: 0 0 0 1px var(--color-monza);
+    }
   }
 
   &__type-label {
@@ -114,6 +124,8 @@
     display: flex;
 
     height: 100%;
+    pointer-events: auto;
+    cursor: pointer;
 
     padding: 20px 60px 20px 60px;
   }
@@ -222,10 +234,14 @@
   }
 
   &__info-label {
+    cursor: pointer;
+
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var(--color-black);
+
+    transition: 0.2s;
 
     margin-bottom: 15px;
   }
@@ -245,6 +261,10 @@
     color: var(--color-black);
 
     padding-left: 20px;
+
+    &:hover {
+      box-shadow: 0 0 0 1px var(--color-monza);
+    }
 
     &:focus {
       box-shadow: 0 0 0 1px var(--color-monza);
@@ -291,6 +311,7 @@
     background-color: var(--color-white);
     border: 1px solid var(--color-ghost);
     border-radius: 5px;
+    cursor: pointer;
 
     transition: 0.1s;
 
@@ -303,9 +324,28 @@
       margin: 0 65px 20px 0;
     }
 
+    @include mixins.respond-to(desktopS) {
+      &:hover:not(:active) {
+        border: 1px solid var(--color-monza);
+
+        transition: all 0.1s;
+      }
+
+      &:hover .appointment__button-caption {
+        color: var(--color-monza);
+
+        transition: all 0.1s;
+      }
+
+      &:hover .appointment__button-icon {
+        stroke: var(--color-monza);
+
+        transition: all 0.1s;
+      }
+    }
+
     &:active {
       background-color: var(--color-blue-dianne);
-      border: 1px solid var(--color-white);
 
       transition: all 0.1s;
     }
@@ -320,6 +360,10 @@
       stroke: var(--color-white);
 
       transition: all 0.1s;
+    }
+
+    &:focus {
+      outline: 1px solid var(--color-monza);
     }
   }
 
@@ -397,6 +441,13 @@
 
     width: 315px;
     height: 60px;
+    cursor: pointer;
+    background: var(--color-monza);
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    -webkit-tap-highlight-color: transparent;
+
+    transition: 0.1s;
 
     @include mixins.respond-to(mobileOnly) {
       width: 215px;
@@ -408,15 +459,14 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: var(--color-dark-burgundy);
+        
+        transition: all 0.1s;
+      }
     }
-
-    background: var(--color-monza);
-    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    -webkit-tap-highlight-color: transparent;
-
-    transition: 0.1s;
 
     &:active {
       background-color: var(--color-white);
@@ -427,6 +477,12 @@
 
     &:active .appointment__order-caption {
       color: var(--color-monza);
+
+      transition: all 0.1s;
+    }
+
+    &:focus {
+      outline: thick double var(--color-monza);
 
       transition: all 0.1s;
     }
@@ -446,8 +502,15 @@
 
   &__terms {
 
+    &-hidden:focus + label .appointment__terms-shown {
+      outline: solid var(--color-monza);
+
+      transition: all 0.1s;
+    }
+
     &-label {
       display: flex;
+      align-items: center;
     }
 
     &-hidden:checked+label svg {
@@ -489,14 +552,148 @@
 
     &-link {
       color: var(--color-scooter);
+      text-decoration: underline;
+
+      transition: all 0.1s;
+
+      @include mixins.respond-to(desktopS) {
+        &:hover {
+          color: var(--color-monza);
+
+          transition: all 0.1s;
+        }
+      }
+
+      &:focus {
+        outline: thick double var(--color-monza);
+
+        transition: all 0.1s;
+      }
     }
   }
 
   &__modal {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+
+    transition: 0.2s;
+
+    padding: 20px;
+
+    z-index: 50;
+
+    @include mixins.respond-to(mobileOnly) {
+      background-color: var(--color-white);
+
+      padding: 10px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      background-color: rgb(0, 0, 0, 0.8);
+    }
   }
 
-  &__modal-date {}
+  &__modal--opened {
+    opacity: 1;
+    visibility: visible;
+
+    transition: all 0.2s;
+  }
+
+  &__modal-wrapper {
+    position: relative;
+    
+    background-color: var(--color-selago);
+    border-radius: 15px;
+
+    padding: 30px;
+
+    @include mixins.respond-to(mobileOnly) {
+      height: fit-content;
+
+      padding: 10px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      max-width: 365px;
+      border: 30px solid var(--color-white);
+
+      margin: auto;
+    }
+  }
+
+  &__modal-close {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+    background: url('../img/image/design/cross.svg') var(--color-white);
+    background-size: 17px 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+    z-index: 51;
+
+    @include mixins.respond-to(mobileOnly) {
+      top: -5px;
+      right: -5px;
+
+      width: 25px;
+      height: 25px;
+
+      background-size: 10px 10px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      top: -15px;
+      right: -15px;
+    }
+  }
+
+  &__modal-title {
+    display: inline-block;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-mine-shaft);
+
+    margin: 0 auto 13px auto;
+  }
+
+  &__modal-info {
+    display: inline-block;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--color-black);
+
+    margin: 0 auto 10px auto;
+  }
+
+  &__modal-date {
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 13px;
+  }
 
   &__modal-date .datepicker-picker {
     border-radius: 20px !important;
@@ -652,7 +849,7 @@
     margin: 12px 0 15px 0;
 
     @include mixins.respond-to(mobileOnly) {
-      grid-gap: 20px 10px;
+      grid-gap: 10px 20px;
     }
   }
 
@@ -675,13 +872,17 @@
   }
 
   &__pricetag {
+    display: inline-block;
+
+    width: 100%;
+
     font-weight: 500;
     font-size: 18px;
     line-height: 130%;
     text-align: center;
     color: var(--color-monza);
 
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 
   &__form-submit {
@@ -703,7 +904,7 @@
     transition: 0.1s;
 
     padding: 10px 70px 10px 70px;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
 
     &:active {
       background-color: var(--color-white);
@@ -732,5 +933,6 @@
     color: var(--color-mine-shaft);
 
     padding: 10px 70px 10px 70px;
+    margin: 0 auto;
   }
 }

@@ -240,15 +240,33 @@
     justify-content: center;
 
     width: 270px;
+    height: 60px;
     box-sizing: content-box;
-    border: 10px solid var(--color-white);
+    border: 15px solid var(--color-white);
+    border-radius: 8px;
+    background-color: var(--color-monza);
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
 
     transition: 0.1s;
 
     z-index: 10;
 
     &:active {
-      border: 10px solid var(--color-monza) !important;
+      background-color: var(--color-white);
+
+      transition: 0.1s;
+    }
+
+    &:active .order-link__caption {
+      color: var(--color-monza);
+
+      transition: 0.1s;
+    }
+
+    &:focus:not(:hover:active) {
+      outline: thick double var(--color-monza);
 
       transition: all 0.1s;
     }
@@ -264,15 +282,13 @@
     }
 
     @include mixins.respond-to (desktopS) {
-      border: 13px solid var(--color-white);
+      &:hover {
+        background-color: var(--color-dark-burgundy);
+
+         transition: all 0.1s;
+      }
 
       margin: 0 25px 0 0;
-
-      &:active {
-        border: 13px solid var(--color-monza) !important;
-
-        transition: all 0.1s;
-      }
     }
   }
 

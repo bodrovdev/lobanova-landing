@@ -143,7 +143,7 @@
             </span>
             <ul class="appointment__attach-list base-list" id="attach-list">
               <input class="appointment__attach-hidden visually-hidden" type="file" multiple accept=".jpg,.jpeg,.png"
-                id="attach-input">
+                id="attach-input" tabindex="-1">
               <button class="appointment__attach-button base-button" type="button" id="attach-button">
                 <svg class="appointment__button-icon check-icon" width="28" height="24">
                   <use href="img/icon/sprite.svg#camera-icon"></use>
@@ -155,14 +155,15 @@
           <button class="appointment__order-button base-button" type="button" id="appointment-modal-open">
             <span class="appointment__order-caption">Выбрать дату и оплатить</span>
           </button>
-          <div class="appointment__modal" id="appointment-modal-popup">
+
+          <div class="appointment__modal" id="appointment-modal">
             <div class="appointment__modal-wrapper">
               <button class="appointment__modal-close base-button" type="button" id="appointment-modal-close"></button>
               <span class="appointment__modal-title">Запись на первичный прием</span>
               <span class="appointment__modal-info">Консультация ведется в онлайн форме по воскресеньям по
                 WhatsApp</span>
               <div class="appointment__modal-date" id="appointment-modal-date">
-                <input class="appointment__hidden-date visually-hidden" type="date" id="appointment-date-input">
+                <input class="appointment__hidden-date visually-hidden" type="date" id="appointment-date-input" tabindex="-1">
               </div>
               <div class="appointment__modal-time">
                 <div class="appointment__time-item">
@@ -216,17 +217,18 @@
                   <label for="appointment-time-radio-20" class="appointment__time-radio">20:00</label>
                 </div>
               </div>
-              <span class="appointment__pricetag">К оплате <span class="appointment__pricetag-result"
-                  id="appointment-pricetag-result">4000</span> ₽</span>
+              <span class="appointment__pricetag">К оплате <span id="appointment-price">4000</span> ₽</span>
+                  <input class="appointment__price-input visually-hidden" type="number" id="appointment-price-result">
               <input class="appointment__form-submit base-button" type="submit" value="Оплатить"
                 id="appointment-form-submit"></input>
               <input class="appointment__form-reset base-button" type="reset" value="Отменить"
                 id="appointment-form-reset"></input>
             </div>
           </div>
+
           <div class="appointment__terms">
             <input class="appointment__terms-hidden visually-hidden" type="checkbox" id="appointment-terms-of-use"
-              value="terms-checked" value="terms-checked" checked>
+              value="terms-checked" checked>
             <label class="appointment__terms-label" for="appointment-terms-of-use">
               <span class="appointment__terms-shown">
                 <svg class="appointment__terms-check check-icon" width="15" height="15">

@@ -13,7 +13,9 @@ burger.addEventListener('click', () => {
   if (burger.classList.contains('headline__burger--opened')) {
     disableBodyScroll(navigation);
   }
-  enableBodyScroll(navigation);
+  else {
+    enableBodyScroll(navigation);
+  }
 })
 
 navigationLinks.forEach((element) => {

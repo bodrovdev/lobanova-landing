@@ -6,6 +6,7 @@
   box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 
   transition: 0.1s;
 
@@ -17,6 +18,14 @@
     color: var(--color-white);
   }
 
+  @include mixins.respond-to(desktopS) {
+    &:hover {
+      background-color: var(--color-dark-burgundy);
+      
+      transition: all 0.1s;
+    }
+  }
+
   &:active {
     background-color: var(--color-white);
     border: 1px solid var(--color-monza);
@@ -26,6 +35,12 @@
 
   &:active .order-link__caption {
     color: var(--color-monza);
+
+    transition: all 0.1s;
+  }
+
+  &:focus:not(:hover:active) {
+    outline: thick double var(--color-monza);
 
     transition: all 0.1s;
   }
@@ -51,6 +66,14 @@
     color: var(--color-white);
   }
 
+  @include mixins.respond-to(desktopS) {
+    &:hover {
+      background-color: var(--color-genoa);
+
+      transition: all 0.1s;
+    }
+  }
+
   &:active {
     background-color: var(--color-white);
     border: 1px solid var(--color-scooter);
@@ -60,6 +83,18 @@
 
   &:active .whatsup-link__caption {
     color: var(--color-scooter);
+
+    transition: all 0.1s;
+  }
+
+  &:active .whatsup-link__icon {
+    fill: var(--color-scooter);
+
+    transition: all 0.1s;
+  }
+
+  &:focus:not(:hover:active) {
+    outline: thick double var(--color-monza);
 
     transition: all 0.1s;
   }
