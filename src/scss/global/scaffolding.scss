@@ -24,8 +24,37 @@ body {
 	margin: 0 auto;
 }
 
+.swiper-pagination-bullet {
+	&:focus:not(:hover:active) {
+		outline: solid var(--color-monza);
+
+		transition: 0.1s;
+	}
+}
+
 .swiper-button-prev,
 .swiper-button-next {
+
+	@include mixins.respond-to(desktopS) {
+		&:hover {
+			background-color: var(--color-viking);
+
+			transition: 0.2s;
+		}
+	}
+
+	&:active {
+		background-color: var(--color-genoa);
+
+		transition: 0.2s;
+	}
+
+	&:focus:not(:hover:active) {
+		outline: solid var(--color-monza);
+
+		transition: 0.1s;
+	}
+
 	-webkit-tap-highlight-color: transparent;
 
 	&::after {

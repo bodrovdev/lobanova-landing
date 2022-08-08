@@ -248,13 +248,14 @@
     box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.1);
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    user-select: none;
 
     transition: 0.1s;
 
     z-index: 10;
 
     &:active {
-      background-color: var(--color-white);
+      background-color: var(--color-white) !important;
 
       transition: 0.1s;
     }
@@ -306,6 +307,8 @@
 
     order: 3;
 
+    user-select: none;
+
     margin: 0 auto;
 
     z-index: 2;
@@ -344,6 +347,7 @@
 
     max-width: 100%;
     height: auto;
+    user-select: none;
 
     @include mixins.respond-to(mobileOnly) {
       width: 290px;
@@ -437,6 +441,8 @@
     }
 
     &-img {
+      user-select: none;
+
       margin-right: 10px;
     }
 
@@ -514,10 +520,14 @@
       position: absolute;
       top: -23.5px;
 
+      user-select: none;
+
       margin: 0 auto;
     }
 
     &-img {
+      user-select: none;
+
       margin-bottom: 8px;
     }
 
@@ -546,6 +556,8 @@
     right: 0;
 
     display: none;
+
+    user-select: none;
 
     @include mixins.respond-to(desktopL) {
       display: block;

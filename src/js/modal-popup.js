@@ -14,6 +14,16 @@ modalClose.addEventListener('click', () => {
   enableBodyScroll(modal);
 })
 
+modal.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+  else {
+    modal.classList.remove('appointment__modal--opened');
+    enableBodyScroll(modal);
+  }
+})
+
 let appointmentTypes = document.querySelectorAll('.appointment__hidden-type');
 let appointmentPriceShown = document.getElementById('appointment-price');
 let appointmentPriceInput = document.getElementById('appointment-price-result');

@@ -127,8 +127,10 @@
 
   &__item-img {
     display: block;
+
     max-width: 100%;
     height: auto;
+    user-select: none;
   }
 
   &__item-title {
@@ -157,6 +159,7 @@
     display: none;
 
     pointer-events: none;
+    user-select: none;
 
     z-index: 1;
 
@@ -191,6 +194,7 @@
     display: none;
 
     pointer-events: none;
+    user-select: none;
 
     z-index: 1;
 
@@ -226,6 +230,7 @@
     display: none;
 
     pointer-events: none;
+    user-select: none;
 
     z-index: 0;
 

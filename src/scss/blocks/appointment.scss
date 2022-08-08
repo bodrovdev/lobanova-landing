@@ -481,7 +481,7 @@
       transition: all 0.1s;
     }
 
-    &:focus {
+    &:focus:not(:hover:active) {
       outline: thick double var(--color-monza);
 
       transition: all 0.1s;
@@ -502,7 +502,7 @@
 
   &__terms {
 
-    &-hidden:focus + label .appointment__terms-shown {
+    &-hidden:focus:not(:hover:active) + label .appointment__terms-shown {
       outline: solid var(--color-monza);
 
       transition: all 0.1s;
@@ -564,7 +564,7 @@
         }
       }
 
-      &:focus {
+      &:focus:not(:hover:active) {
         outline: thick double var(--color-monza);
 
         transition: all 0.1s;
@@ -645,6 +645,8 @@
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 
+    transition: 0.1s;
+
     z-index: 51;
 
     @include mixins.respond-to(mobileOnly) {
@@ -660,6 +662,17 @@
     @include mixins.respond-to(tablet) {
       top: -15px;
       right: -15px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      &:hover {
+        background: url('../img/image/design/cross.svg') var(--color-viking);
+        background-size: 17px 17px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        transition: 0.1s;
+      }
     }
   }
 

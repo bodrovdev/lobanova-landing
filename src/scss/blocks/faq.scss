@@ -204,6 +204,7 @@
     }
 
     &-content {
+
       display: none;
 
       max-width: 100%;
@@ -226,6 +227,18 @@
   &__check-hidden:checked+.faq__spoilers-button .faq__spoilers-cross::after {
     transform: translateY(-1px) rotate(180deg);
     transition: rotate, 0.2s;
+  }
+
+  &__check-hidden:focus:not(:hover:active) + .faq__spoilers-button {
+    outline: thick double var(--color-monza);
+  }
+
+  &__check-hidden:focus:not(:hover:active) + .faq__spoilers-button .faq__spoilers-cross::before{
+    background-color: var(--color-scooter) !important;
+  }
+
+  &__check-hidden:focus:not(:hover:active) + .faq__spoilers-button .faq__spoilers-cross::after{
+    background-color: var(--color-scooter) !important;
   }
 
   &__order-link {
