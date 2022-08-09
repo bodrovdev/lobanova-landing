@@ -19,8 +19,8 @@
 
     display: flex;
 
-    background-image: -webkit-image-set(url('../img/image/design/X2-motto-background.png') 2x,
-        url('../img/image/design/motto-background.png') 1x);
+    background: -webkit-image-set(url('../img/image/design/X2-motto-background.png') 2x,
+        url('../img/image/design/motto-background.png') 1x) var(--color-scooter);
 
     background-repeat: no-repeat;
     background-position: center;
