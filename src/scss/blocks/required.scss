@@ -153,6 +153,10 @@
       margin: 0 0 40px 0;
     }
 
+    @include mixins.respond-to(desktopXL) {
+      white-space: nowrap;
+    }
+
     &::before {
       content: "";
       position: absolute;

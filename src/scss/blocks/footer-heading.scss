@@ -97,6 +97,8 @@
   }
 
   &__file-icon {
+    transition: 0.1s;
+
     margin-right: 20px;
 
     @include mixins.respond-to(mobileOnly) {
@@ -109,5 +111,29 @@
     font-size: 16px;
     line-height: 130%;
     color: var(--color-mine-shaft);
+
+    transition: 0.1s;
+  }
+
+  &__file-loader {
+    @include mixins.respond-to(desktopS) {
+      &:hover .footer-heading__file-caption {
+        color: var(--color-monza);
+
+        transition: 0.1s;
+      }
+
+      &:hover .footer-heading__file-icon {
+        fill: var(--color-monza);
+
+        transition: 0.1s;
+      }
+    }
+
+    &:focus-visible {
+      outline: thick double var(--color-monza);
+
+      transition: 0.1s;
+    }
   }
 }

@@ -20,27 +20,20 @@
 
   @include mixins.respond-to(desktopS) {
     &:hover {
-      background-color: var(--color-dark-burgundy);
-      
+      background-color: var(--color-milano-red);
+
       transition: all 0.1s;
     }
   }
 
   &:active {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-monza);
+    background-color: var(--color-totem-pole);
 
-    transition: all 0.1s;
+    transition: 0.1s;
   }
 
-  &:active .order-link__caption {
-    color: var(--color-monza);
-
-    transition: all 0.1s;
-  }
-
-  &:focus:not(:hover:active) {
-    outline: thick double var(--color-monza);
+  &:focus-visible {
+    outline: solid var(--color-monza);
 
     transition: all 0.1s;
   }
@@ -68,32 +61,19 @@
 
   @include mixins.respond-to(desktopS) {
     &:hover {
-      background-color: var(--color-genoa);
+      background-color: var(--color-eastern-blue);
 
       transition: all 0.1s;
     }
   }
 
   &:active {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-scooter);
+    background-color: var(--color-eastern-blue-2);
 
     transition: all 0.1s;
   }
 
-  &:active .whatsup-link__caption {
-    color: var(--color-scooter);
-
-    transition: all 0.1s;
-  }
-
-  &:active .whatsup-link__icon {
-    fill: var(--color-scooter);
-
-    transition: all 0.1s;
-  }
-
-  &:focus:not(:hover:active) {
+  &:focus-visible {
     outline: thick double var(--color-monza);
 
     transition: all 0.1s;

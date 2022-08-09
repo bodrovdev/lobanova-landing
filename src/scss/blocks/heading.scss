@@ -254,24 +254,6 @@
 
     z-index: 10;
 
-    &:active {
-      background-color: var(--color-white) !important;
-
-      transition: 0.1s;
-    }
-
-    &:active .order-link__caption {
-      color: var(--color-monza);
-
-      transition: 0.1s;
-    }
-
-    &:focus:not(:hover:active) {
-      outline: thick double var(--color-monza);
-
-      transition: all 0.1s;
-    }
-
     @include mixins.respond-to (mobileOnly) {
       width: 215px;
 
@@ -283,12 +265,6 @@
     }
 
     @include mixins.respond-to (desktopS) {
-      &:hover {
-        background-color: var(--color-dark-burgundy);
-
-         transition: all 0.1s;
-      }
-
       margin: 0 25px 0 0;
     }
   }

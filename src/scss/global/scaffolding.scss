@@ -4,6 +4,8 @@ html {
 	box-sizing: border-box;
 
 	scroll-behavior: smooth;
+
+	-webkit-tap-highlight-color: transparent;
 }
 
 *,
@@ -16,7 +18,6 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	max-width: 1920px;
 	min-height: 100vh;
 
 	font-family: var(--font-family-default);
@@ -25,37 +26,41 @@ body {
 }
 
 .swiper-pagination-bullet {
-	&:focus:not(:hover:active) {
-		outline: solid var(--color-monza);
+
+	transition: 0.1s;
+
+	&:focus-visible {
+		outline: thick double var(--color-monza);
 
 		transition: 0.1s;
 	}
+
 }
 
 .swiper-button-prev,
 .swiper-button-next {
 
+	transition: 0.1s;
+
 	@include mixins.respond-to(desktopS) {
 		&:hover {
-			background-color: var(--color-viking);
+			background-color: var(--color-eastern-blue);
 
-			transition: 0.2s;
+			transition: 0.1s;
 		}
 	}
 
 	&:active {
-		background-color: var(--color-genoa);
-
-		transition: 0.2s;
-	}
-
-	&:focus:not(:hover:active) {
-		outline: solid var(--color-monza);
+		background-color: var(--color-eastern-blue-2);
 
 		transition: 0.1s;
 	}
 
-	-webkit-tap-highlight-color: transparent;
+	&:focus-visible {
+		outline: thick double var(--color-monza);
+
+		transition: 0.1s;
+	}
 
 	&::after {
 		content: "";
@@ -63,11 +68,9 @@ body {
 }
 
 .swiper-button-disabled {
-	background-color: var(--color-white) !important;
-
-	opacity: 0.5 !important;
-
-	transition: all 0.2s !important;
+	background: linear-gradient(133.16deg, rgba(154, 208, 255, 0.1065) 0%, rgba(111, 188, 255, 0.1005) 112.21%) !important;
+	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07) !important;
+	border-radius: 5px !important;
 }
 
 .swiper-button-disabled .slider-icon {

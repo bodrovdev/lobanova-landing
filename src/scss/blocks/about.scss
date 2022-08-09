@@ -75,7 +75,18 @@
     @include mixins.respond-to(desktopS) {
       margin-bottom: 36px;
     }
+
+    & .swiper-button-disabled {
+      background-color: var(--color-white) !important;
+
+      opacity: 1 !important;
+      border-radius: 50% !important;
+
+      transition: all 0.2s !important;
+    }
   }
+
+
 
   &__slider-img {
     display: block;
@@ -214,7 +225,7 @@
     transition: fill 0.2s;
   }
 
-  &__radio-hidden:focus:not(:hover:active) + label {
+  &__radio-hidden:focus-visible+label {
     outline: thick double var(--color-monza);
 
     transition: 0.1s;
@@ -249,7 +260,7 @@
       box-shadow: 0px 4px 22px rgba(228, 245, 252, 0.3);
       border-radius: 8px;
 
-      transition: 0.2s;
+      transition: 0.1s;
 
       padding: 10px 0 10px 0;
       margin: 0 5px 20px 0;
@@ -263,6 +274,22 @@
         display: block;
         padding: 10px 30px 10px 30px;
       }
+
+      @include mixins.respond-to(desktopS) {
+        &:hover {
+          background-color: var(--color-scooter);
+          color: var(--color-white);
+
+          transition: 0.1s;
+        }
+      }
+
+      &:active {
+        background-color: var(--color-eastern-blue-2);
+
+        transition: 0.1s;
+      }
+
 
       @include mixins.respond-to(desktopD) {
         margin: 0 24px 24px 0;

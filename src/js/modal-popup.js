@@ -3,6 +3,8 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 let modal = document.getElementById('appointment-modal');
 let modalOpen = document.getElementById('appointment-modal-open');
 let modalClose = document.getElementById('appointment-modal-close');
+let appointmentFormSubmit = document.getElementById('appointment-form-submit');
+let appointmentFormReset = document.getElementById('appointment-form-reset');
 
 modalOpen.addEventListener('click', () => {
   modal.classList.add('appointment__modal--opened');
@@ -22,6 +24,11 @@ modal.addEventListener('click', (e) => {
     modal.classList.remove('appointment__modal--opened');
     enableBodyScroll(modal);
   }
+})
+
+appointmentFormReset.addEventListener('click', () => {
+  modal.classList.remove('appointment__modal--opened');
+  enableBodyScroll(modal);
 })
 
 let appointmentTypes = document.querySelectorAll('.appointment__hidden-type');

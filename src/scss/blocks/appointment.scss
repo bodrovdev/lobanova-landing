@@ -362,7 +362,7 @@
       transition: all 0.1s;
     }
 
-    &:focus {
+    &:focus-visible {
       outline: 1px solid var(--color-monza);
     }
   }
@@ -432,6 +432,16 @@
     border: 1px solid var(--color-mine-shaft);
     color: black;
     border-radius: 50%;
+
+    transition: 0.1s;
+
+    @include mixins.respond-to(desktopS) {
+      &:hover {
+        background-color: var(--color-scooter);
+
+        transition: 0.1s;
+      }
+    }
   }
 
   &__order-button {
@@ -462,26 +472,19 @@
       margin-bottom: 20px;
 
       &:hover {
-        background-color: var(--color-dark-burgundy);
-        
+        background-color: var(--color-milano-red);
+
         transition: all 0.1s;
       }
     }
 
     &:active {
-      background-color: var(--color-white);
-      border: 1px solid var(--color-monza);
+      background-color: var(--color-totem-pole);
 
       transition: all 0.1s;
     }
 
-    &:active .appointment__order-caption {
-      color: var(--color-monza);
-
-      transition: all 0.1s;
-    }
-
-    &:focus:not(:hover:active) {
+    &:focus-visible {
       outline: thick double var(--color-monza);
 
       transition: all 0.1s;
@@ -502,8 +505,8 @@
 
   &__terms {
 
-    &-hidden:focus:not(:hover:active) + label .appointment__terms-shown {
-      outline: solid var(--color-monza);
+    &-hidden:focus-visible+label .appointment__terms-shown {
+      outline: thick double var(--color-monza);
 
       transition: all 0.1s;
     }
@@ -551,6 +554,7 @@
     }
 
     &-link {
+      color: black;
       color: var(--color-scooter);
       text-decoration: underline;
 
@@ -558,13 +562,13 @@
 
       @include mixins.respond-to(desktopS) {
         &:hover {
-          color: var(--color-monza);
+          color: var(--color-milano-red);
 
           transition: all 0.1s;
         }
       }
 
-      &:focus:not(:hover:active) {
+      &:focus-visible {
         outline: thick double var(--color-monza);
 
         transition: all 0.1s;
@@ -594,7 +598,7 @@
     z-index: 50;
 
     @include mixins.respond-to(mobileOnly) {
-      background-color: var(--color-white);
+      background-color: rgb(0, 0, 0, 0.8);
 
       padding: 10px;
     }
@@ -613,11 +617,12 @@
 
   &__modal-wrapper {
     position: relative;
-    
+
     background-color: var(--color-selago);
     border-radius: 15px;
 
     padding: 30px;
+    margin: auto;
 
     @include mixins.respond-to(mobileOnly) {
       height: fit-content;
@@ -628,8 +633,6 @@
     @include mixins.respond-to(tablet) {
       max-width: 365px;
       border: 30px solid var(--color-white);
-
-      margin: auto;
     }
   }
 
@@ -704,7 +707,7 @@
   &__modal-date {
     display: flex;
     justify-content: center;
-    
+
     margin-bottom: 13px;
   }
 

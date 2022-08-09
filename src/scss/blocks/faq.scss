@@ -144,6 +144,9 @@
       grid-column-gap: 20px;
       align-items: center;
 
+      pointer-events: auto;
+      cursor: pointer;
+
       padding: 10px;
 
       @include mixins.respond-to(mobileOnly) {
@@ -152,6 +155,14 @@
 
       @include mixins.respond-to(tablet) {
         padding: 15px 25px 15px 25px;
+
+        &:hover .faq__spoilers-cross::before {
+          background-color: var(--color-scooter);
+        }
+
+        &:hover .faq__spoilers-cross::after {
+          background-color: var(--color-scooter);
+        }
       }
 
       @include mixins.respond-to(desktopD) {
@@ -185,6 +196,8 @@
         height: 2px;
         background-color: var(--color-ghost);
         border-radius: 2px;
+
+        transition: 0.1s;
       }
 
       &::after {
@@ -199,7 +212,7 @@
         background-color: var(--color-ghost);
         border-radius: 2px;
 
-        transition: 0.2s;
+        transition: 0.1s;
       }
     }
 
@@ -229,16 +242,22 @@
     transition: rotate, 0.2s;
   }
 
-  &__check-hidden:focus:not(:hover:active) + .faq__spoilers-button {
+  &__check-hidden:focus-visible+.faq__spoilers-button {
     outline: thick double var(--color-monza);
+
+    transition: 0.1s;
   }
 
-  &__check-hidden:focus:not(:hover:active) + .faq__spoilers-button .faq__spoilers-cross::before{
+  &__check-hidden:focus-visible+.faq__spoilers-button .faq__spoilers-cross::before {
     background-color: var(--color-scooter) !important;
+
+    transition: 0.1s;
   }
 
-  &__check-hidden:focus:not(:hover:active) + .faq__spoilers-button .faq__spoilers-cross::after{
+  &__check-hidden:focus-visible+.faq__spoilers-button .faq__spoilers-cross::after {
     background-color: var(--color-scooter) !important;
+
+    transition: 0.1s;
   }
 
   &__order-link {
