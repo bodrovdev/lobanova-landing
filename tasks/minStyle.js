@@ -20,9 +20,11 @@ module.exports = function minStyle(browserSync) {
 
 	return src('src/scss/style.scss')
 		.pipe(plumber())
-		.pipe(scss({ outputStyle: 'compressed' }))
+		.pipe(scss())
 		.pipe(postcss(plugins))
-		.pipe(clean({ level: {
+		.pipe(clean({ 
+			format: 'beautify',
+			level: {
 			1: {
 				all: true,
 				normalizeUrls: false
