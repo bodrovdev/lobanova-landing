@@ -173,7 +173,7 @@
           transition: all 0.2s;
         }
 
-        &:focus:not(:hover:active) {
+        &:focus-visible {
           outline: thick double var(--color-monza);
 
           transition: all 0.1s;
