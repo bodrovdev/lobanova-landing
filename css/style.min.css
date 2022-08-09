@@ -2860,7 +2860,7 @@ body {
   left: 0;
   width: 81px;
   height: 15px;
-  background-image: url(img/image/design/title-graphic.svg);
+  background-image: url(../img/image/design/title-graphic.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2906,7 +2906,7 @@ body {
   display: flex;
   width: 100%;
   overflow-x: auto;
-  background-image: url(../../img/image/design/trail.svg);
+  background-image: url(../img/image/design/trail.svg);
   background-repeat: no-repeat;
   padding-bottom: 50px
 }
@@ -4042,7 +4042,7 @@ body {
   left: 0;
   width: 81px;
   height: 15px;
-  background-image: url(img/image/design/title-graphic.svg)
+  background-image: url(../img/image/design/title-graphic.svg)
 }
 .about__info-text {
   font-weight: 400;
@@ -4306,7 +4306,7 @@ body {
   position: absolute;
   top: 8px;
   left: 10px;
-  background: url(../../img/image/design/quotes.svg) no-repeat
+  background: url(../img/image/design/quotes.svg) no-repeat
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .about__motto-title::before {
@@ -4516,7 +4516,7 @@ body {
   left: 0;
   width: 81px;
   height: 15px;
-  background-image: url(img/image/design/title-graphic.svg)
+  background-image: url(../img/image/design/title-graphic.svg)
 }
 .required__info {
   font-weight: 700;
@@ -4577,8 +4577,8 @@ body {
   content: "";
   left: 0;
   width: 81px;
-  background-image: url(img/image/design/title-graphic.svg);
-  bottom: 0
+  bottom: 0;
+  background-image: url(../img/image/design/title-graphic.svg)
 }
 .required__order-link {
   display: flex;
