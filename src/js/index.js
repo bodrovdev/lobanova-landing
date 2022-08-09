@@ -25,3 +25,13 @@ navigationLinks.forEach((element) => {
     enableBodyScroll(navigation);
   });
 });
+
+var more = $('.faq__check-hidden');
+
+more.click(function() {
+  //$(this).toggle(); //скрыть кнопку подробнее
+  $(".faq__spoilers-item .faq__spoilers-content", this.parentNode).toggle('faq__spoilers-content--opened');
+  
+  //more.toggleClass('more__none');
+  //$("ul li:nth-child(n + 5)", this.parentNode).toggleClass('li_on');
+});

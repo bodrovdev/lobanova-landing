@@ -109,12 +109,12 @@
 
     @include mixins.respond-to(desktopS) {
       &:hover {
-        box-shadow: 0 0 0 1px var(--color-monza);
+        box-shadow: 0 0 0 2px var(--color-scooter);
       }
     }
 
     &:focus-within {
-      box-shadow: 0 0 0 1px var(--color-monza);
+      box-shadow: 0 0 0 2px var(--color-scooter);
     }
   }
 
@@ -186,7 +186,7 @@
   }
 
   &__hidden-type:checked~.appointment__type-caption .appointment__type-price {
-    color: var(--color-monza);
+    color: var(--color-scooter);
 
     transition: color 0.1s;
   }
@@ -262,16 +262,16 @@
 
     padding-left: 20px;
 
-    &:hover {
-      box-shadow: 0 0 0 1px var(--color-monza);
-    }
-
     &:focus {
-      box-shadow: 0 0 0 1px var(--color-monza);
+      box-shadow: 0 0 0 2px var(--color-scooter);
     }
 
     @include mixins.respond-to(desktopS) {
       width: 300px;
+
+      &:hover {
+        box-shadow: 0 0 0 2px var(--color-scooter);
+      }
     }
   }
 
@@ -325,20 +325,20 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      &:hover:not(:active) {
-        border: 1px solid var(--color-monza);
+      &:hover {
+        border: 1px solid var(--color-scooter);
 
         transition: all 0.1s;
       }
 
       &:hover .appointment__button-caption {
-        color: var(--color-monza);
+        color: var(--color-scooter);
 
         transition: all 0.1s;
       }
 
       &:hover .appointment__button-icon {
-        stroke: var(--color-monza);
+        stroke: var(--color-scooter);
 
         transition: all 0.1s;
       }
@@ -363,7 +363,7 @@
     }
 
     &:focus-visible {
-      outline: 1px solid var(--color-monza);
+      outline: 2px solid var(--color-scooter);
     }
   }
 

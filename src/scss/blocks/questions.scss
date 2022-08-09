@@ -97,13 +97,28 @@
     justify-content: center;
 
     width: 290px;
-
     background-color: var(--color-monza);
+
+    transition: 0.1s;
 
     @include mixins.respond-to(mobileOnly) {
       width: 220px;
 
       margin: 0 auto;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      &:hover {
+        background-color: var(--color-milano-red);
+
+        transition: 0.1s;
+      }
+    }
+
+    &:active {
+      background-color: var(--color-totem-pole);
+
+      transition: 0.1s;
     }
   }
 
