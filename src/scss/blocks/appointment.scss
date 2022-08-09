@@ -485,7 +485,8 @@
     }
 
     &:focus-visible {
-      outline: thick double var(--color-monza);
+      outline: solid var(--color-monza);
+      outline-offset: 5px;
 
       transition: all 0.1s;
     }
@@ -506,7 +507,8 @@
   &__terms {
 
     &-hidden:focus-visible+label .appointment__terms-shown {
-      outline: thick double var(--color-monza);
+      outline: solid var(--color-monza);
+      outline-offset: 5px;
 
       transition: all 0.1s;
     }
@@ -570,7 +572,8 @@
       }
 
       &:focus-visible {
-        outline: thick double var(--color-monza);
+        outline: solid var(--color-monza);
+        outline-offset: 5px;
 
         transition: all 0.1s;
       }
@@ -690,7 +693,10 @@
     }
 
     &:focus-visible {
-      outline: thick double var(--color-monza);
+      outline: solid var(--color-monza);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
     }
   }
 
@@ -925,10 +931,11 @@
     pointer-events: none;
   }
 
-  &__time-hidden:focus-visible + .appointment__time-radio {
-    outline: thick double var(--color-monza);
+  &__time-hidden:focus-visible+.appointment__time-radio {
+    outline: solid var(--color-monza);
+    outline-offset: 5px;
 
-    transition: 0.1s;
+    transition: all 0.1s;
   }
 
   &__pricetag {
@@ -981,9 +988,10 @@
     }
 
     &:focus-visible {
-      outline: thick double var(--color-monza);
+      outline: solid var(--color-monza);
+      outline-offset: 5px;
 
-      transition: 0.1s;
+      transition: all 0.1s;
     }
   }
 
@@ -1026,9 +1034,10 @@
     }
 
     &:focus-visible {
-      outline: thick double var(--color-monza);
+      outline: solid var(--color-monza);
+      outline-offset: 5px;
 
-      transition: 0.1s;
+      transition: all 0.1s;
     }
   }
 }

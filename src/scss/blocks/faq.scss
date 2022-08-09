@@ -245,9 +245,10 @@
   }
 
   &__check-hidden:focus-visible+.faq__spoilers-button {
-    outline: thick double var(--color-monza);
+    outline: solid var(--color-monza);
+    outline-offset: 5px;
 
-    transition: 0.1s;
+    transition: all 0.1s;
   }
 
   &__check-hidden:focus-visible+.faq__spoilers-button .faq__spoilers-cross::before {

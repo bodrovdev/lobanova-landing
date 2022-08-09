@@ -32,9 +32,10 @@ body {
 	transition: 0.1s;
 
 	&:focus-visible {
-		outline: thick double var(--color-monza);
+		outline: solid var(--color-monza);
+		outline-offset: 5px;
 
-		transition: 0.1s;
+		transition: all 0.1s;
 	}
 
 }
@@ -60,9 +61,10 @@ body {
 	}
 
 	&:focus-visible {
-		outline: thick double var(--color-monza);
+		outline: solid var(--color-monza);
+		outline-offset: 5px;
 
-		transition: 0.1s;
+		transition: all 0.1s;
 	}
 
 	&::after {
@@ -102,7 +104,7 @@ body {
 	height: 12px;
 	background-color: var(--color-scooter);
 	cursor: pointer;
-	
+
 	transition: 0.2s;
 }
 
@@ -309,7 +311,7 @@ body {
 	&--13 {
 		right: 0;
 		bottom: 0;
-		
+
 		background: linear-gradient(180deg, rgba(255, 128, 230, 0.5) 0%, rgba(255, 166, 237, 0) 100%);
 		opacity: 0.3;
 		filter: blur(444px);
@@ -319,7 +321,7 @@ body {
 	&--14 {
 		left: 0;
 		bottom: 0;
-	
+
 		background: #1DA1F2;
 		opacity: 0.3;
 		filter: blur(697.344px);

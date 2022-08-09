@@ -226,9 +226,10 @@
   }
 
   &__radio-hidden:focus-visible+label {
-    outline: thick double var(--color-monza);
+    outline: solid var(--color-monza);
+    outline-offset: 5px;
 
-    transition: 0.1s;
+    transition: all 0.1s;
   }
 
   &__tabs {
