@@ -3907,12 +3907,6 @@ body {
   color: var(--color-mine-shaft);
   margin: 0 auto
 }
-.about__info-title::before,
-.about__motto {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover
-}
 @media only screen and (min-width:1024px) {
   .appointment__form-reset:hover {
     background-color: var(--color-eastern-blue);
@@ -4042,7 +4036,10 @@ body {
   left: 0;
   width: 81px;
   height: 15px;
-  background-image: url(../img/image/design/title-graphic.svg)
+  background-image: url(../img/image/design/title-graphic.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 .about__info-text {
   font-weight: 400;
@@ -4271,14 +4268,17 @@ body {
 .about__motto {
   display: flex;
   flex-direction: column;
-  background-image: url(../img/image/design/motto-background.png);
-  background-image: -webkit-image-set(url("../img/image/design/X2-motto-background.png") 2x, url("../img/image/design/motto-background.png") 1x);
+  background: url(../img/image/design/motto-background.png) var(--color-scooter);
+  background: -webkit-image-set(url("../img/image/design/X2-motto-background.png") 2x, url("../img/image/design/motto-background.png") 1x) var(--color-scooter);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 15px
 }
 @media (-webkit-min-device-pixel-ratio:2),
 (min-resolution:192dpi) {
   .about__motto {
-    background-image: url(../img/image/design/X2-motto-background.png)
+    background: url(../img/image/design/X2-motto-background.png) var(--color-scooter)
   }
 }
 @media only screen and (min-width:0) and (max-width:767px) {
@@ -4335,12 +4335,6 @@ body {
     height: 38px;
     background-size: 37px 38px
   }
-}
-.diplomas__title::before,
-.required__title::before {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .about__motto-title {
@@ -4429,9 +4423,6 @@ body {
 .required__image {
   position: relative
 }
-.diplomas__title::before,
-.required__phone-ball,
-.required__title::before,
 .required__whatsup-ball {
   position: absolute
 }
@@ -4483,6 +4474,21 @@ body {
   width: 20px;
   height: 20px
 }
+@media only screen and (min-width:1024px) {
+  .required .whatsup-ball__icon {
+    width: 36px;
+    height: 36px
+  }
+}
+.diplomas__title::before,
+.required__list-item::before,
+.required__title::before {
+  position: absolute;
+  height: 15px
+}
+.required__phone-ball {
+  position: absolute
+}
 .diplomas__container,
 .diplomas__slider-container,
 .diplomas__title,
@@ -4498,10 +4504,6 @@ body {
   margin: 0 0 30px
 }
 @media only screen and (min-width:1024px) {
-  .required .whatsup-ball__icon {
-    width: 36px;
-    height: 36px
-  }
   .required__phone-ball {
     bottom: 165px;
     right: 24px
@@ -4515,8 +4517,10 @@ body {
   bottom: 0;
   left: 0;
   width: 81px;
-  height: 15px;
-  background-image: url(../img/image/design/title-graphic.svg)
+  background-image: url(../img/image/design/title-graphic.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 .required__info {
   font-weight: 700;
@@ -4562,11 +4566,9 @@ body {
 }
 .required__list-item::before {
   content: "";
-  position: absolute;
   top: 2px;
   left: 0;
   width: 15px;
-  height: 15px;
   box-sizing: border-box;
   background-color: var(--color-tangerine);
   border-radius: 50%;
@@ -4578,7 +4580,10 @@ body {
   left: 0;
   width: 81px;
   bottom: 0;
-  background-image: url(../img/image/design/title-graphic.svg)
+  background-image: url(../img/image/design/title-graphic.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 .required__order-link {
   display: flex;
@@ -4620,9 +4625,6 @@ body {
   padding-bottom: 20px;
   margin: 0 0 30px
 }
-.diplomas__title::before {
-  height: 15px
-}
 @media only screen and (min-width:768px) {
   .diplomas__title {
     display: inline-block;
@@ -4661,13 +4663,6 @@ body {
   border: 2px solid var(--color-mystic);
   border-radius: 5px;
   padding: 22px 20px
-}
-.faq__title::before,
-.questions__container,
-.reviews__title::before {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover
 }
 .diplomas__slider-item:hover {
   border: 2px solid var(--color-scooter)
@@ -5093,7 +5088,10 @@ body {
   left: 0;
   width: 81px;
   height: 15px;
-  background-image: url(../img/image/design/title-graphic.svg)
+  background-image: url(../img/image/design/title-graphic.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
 }
 @media only screen and (min-width:768px) {
   .reviews__title {
@@ -5264,15 +5262,18 @@ body {
 .questions__container {
   position: relative;
   display: flex;
-  background-image: url(../img/image/design/motto-background.png);
-  background-image: -webkit-image-set(url("../img/image/design/X2-motto-background.png") 2x, url("../img/image/design/motto-background.png") 1x);
+  background: url(../img/image/design/motto-background.png) var(--color-scooter);
+  background: -webkit-image-set(url("../img/image/design/X2-motto-background.png") 2x, url("../img/image/design/motto-background.png") 1x) var(--color-scooter);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 15px;
   box-sizing: border-box
 }
 @media (-webkit-min-device-pixel-ratio:2),
 (min-resolution:192dpi) {
   .questions__container {
-    background-image: url(../img/image/design/X2-motto-background.png)
+    background: url(../img/image/design/X2-motto-background.png) var(--color-scooter)
   }
 }
 @media only screen and (min-width:768px) {
