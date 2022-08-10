@@ -2621,6 +2621,12 @@ body {
     width: 290px
   }
 }
+@media only screen and (min-width:1920px) {
+  .heading__image-block {
+    top: -37px;
+    right: calc(16.5% - 75px)
+  }
+}
 .heading__image-inner {
   position: relative
 }
@@ -2649,9 +2655,11 @@ body {
     width: 290px
   }
   .heading__experience {
+    right: 0;
+    left: 0;
+    top: auto;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%)
+    margin: auto
   }
 }
 @media only screen and (min-width:1024px) {
@@ -2670,10 +2678,6 @@ body {
   }
 }
 @media only screen and (min-width:1920px) {
-  .heading__image-block {
-    top: -37px;
-    right: calc(16.5% - 75px)
-  }
   .heading__photo-img {
     width: 635px
   }
@@ -2692,16 +2696,25 @@ body {
 }
 @media only screen and (min-width:768px) {
   .heading__experience {
+    right: 0;
+    left: 0;
+    top: auto;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%)
+    margin: auto
+  }
+}
+@media only screen and (min-width:1024px) {
+  .heading__experience {
+    bottom: 50px
   }
 }
 @media only screen and (min-width:1280px) {
   .heading__experience {
     top: 95px;
+    bottom: auto;
     left: -110px;
-    transform: none
+    right: auto;
+    margin: auto
   }
 }
 @media only screen and (min-width:1366px) {
@@ -2758,38 +2771,48 @@ body {
 }
 @media only screen and (min-width:768px) {
   .heading__patients {
-    bottom: -190px;
-    left: 50%;
-    transform: translateX(-50%) scale(.9);
-    display: block
-  }
-  .guide__inner {
-    background-position: center 50px
+    right: 0;
+    left: 0;
+    top: auto;
+    bottom: -200px;
+    transform: scale(.9);
+    display: block;
+    margin: auto
   }
 }
 @media only screen and (min-width:1024px) {
   .heading__patients {
-    transform: translateX(-50%) scale(.8)
+    right: 0;
+    left: 0;
+    top: auto;
+    bottom: -150px;
+    margin: auto
   }
 }
 @media only screen and (min-width:1280px) {
   .heading__patients {
+    right: 0;
+    left: 0;
+    top: auto;
     bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%) scale(1)
+    margin: auto
   }
 }
 @media only screen and (min-width:1366px) {
   .heading__patients {
+    left: -130px;
+    right: auto;
+    top: auto;
     bottom: 0;
-    left: 0
+    margin: 0
   }
 }
 @media only screen and (min-width:1600px) {
   .heading__patients {
-    bottom: 95px;
+    top: auto;
+    bottom: 0;
     left: -100px;
-    transform: none
+    right: auto
   }
 }
 @media only screen and (min-width:1920px) {
@@ -2845,16 +2868,18 @@ body {
   display: none;
   user-select: none
 }
-@media only screen and (min-width:1600px) {
+.guide__graphic--left,
+.guide__item-img {
+  -webkit-user-select: none;
+  -moz-user-select: none
+}
+@media only screen and (min-width:1920px) {
   .heading__graphic {
     display: block
   }
 }
 .heading__whatsup-ball {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
   width: 65px;
   height: 65px;
   box-shadow: 0 4px 4px rgba(0,0,0,.25)
@@ -2863,6 +2888,39 @@ body {
 .guide__inner,
 .guide__title {
   position: relative
+}
+@media only screen and (min-width:0) and (max-width:767px) {
+  .heading__whatsup-ball {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    margin: auto
+  }
+  .guide__inner-item {
+    min-width: 100%
+  }
+}
+@media only screen and (min-width:768px) {
+  .heading__whatsup-ball {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    margin: auto
+  }
+  .guide__inner {
+    background-position: center 50px
+  }
+}
+@media only screen and (min-width:1280px) {
+  .heading__whatsup-ball {
+    top: 140px;
+    bottom: auto;
+    right: 25px;
+    left: auto;
+    margin: 0
+  }
 }
 .heading .whatsup-ball__inner {
   width: 35px;
@@ -2936,12 +2994,6 @@ body {
   }
 }
 @media only screen and (min-width:1280px) {
-  .heading__whatsup-ball {
-    top: 140px;
-    bottom: auto;
-    right: 25px;
-    left: auto
-  }
   .guide__inner {
     background-position: center 80px;
     background-size: auto auto
@@ -2959,11 +3011,6 @@ body {
   align-items: center;
   transition: .3s;
   text-align: center
-}
-@media only screen and (min-width:0) and (max-width:767px) {
-  .guide__inner-item {
-    min-width: 100%
-  }
 }
 @media only screen and (min-width:768px) and (max-width:1023px) {
   .guide__inner-item {
@@ -2995,8 +3042,6 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none
 }
 .guide__item-title {
@@ -3005,17 +3050,19 @@ body {
 .guide__item-info {
   font-weight: 400
 }
-.guide__graphic--left,
-.guide__graphic--right {
+.guide__graphic--left {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1
+}
+.guide__graphic--right,
+.guide__graphic--top {
   -webkit-user-select: none;
   -moz-user-select: none;
-  z-index: 1;
   position: absolute;
   pointer-events: none
-}
-.guide__graphic--left {
-  display: none;
-  user-select: none
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .guide__graphic--left {
@@ -3046,7 +3093,8 @@ body {
 }
 .guide__graphic--right {
   display: none;
-  user-select: none
+  user-select: none;
+  z-index: 1
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .guide__graphic--right {
@@ -3073,11 +3121,7 @@ body {
   }
 }
 .guide__graphic--top {
-  position: absolute;
   display: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   z-index: 0
 }
@@ -3524,6 +3568,11 @@ body {
   -moz-user-select: none;
   user-select: none;
   transition: .1s
+}
+.faq__spoilers-caption,
+.required__img {
+  -webkit-user-select: none;
+  -moz-user-select: none
 }
 .appointment__terms-hidden.focus-visible + label .appointment__terms-shown {
   outline: solid var(--color-monza);
@@ -3977,18 +4026,14 @@ body {
   margin-bottom: 100px;
   z-index: 4
 }
-.about__container,
 .diplomas,
-.faq,
-.faq__aside-img,
-.reviews,
-.reviews__container,
-.reviews__slider {
+.faq {
   z-index: 5
 }
 .about__container {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  z-index: 5
 }
 @media only screen and (min-width:768px) {
   .appointment__modal-close {
@@ -4477,7 +4522,8 @@ body {
   position: relative
 }
 .required__img {
-  display: block
+  display: block;
+  user-select: none
 }
 .required__whatsup-ball {
   position: absolute
@@ -4937,9 +4983,13 @@ body {
   }
 }
 .faq__spoilers-caption {
+  user-select: none
+}
+.faq__aside-img,
+.reviews__slider-item {
   -webkit-user-select: none;
   -moz-user-select: none;
-  user-select: none
+  z-index: 5
 }
 .faq__spoilers-cross {
   position: relative;
@@ -5027,7 +5077,8 @@ body {
 .faq__aside-img {
   display: block;
   max-width: 100%;
-  height: auto
+  height: auto;
+  user-select: none
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .faq__aside-inner {
@@ -5121,6 +5172,9 @@ body {
     left: 54px
   }
 }
+.reviews {
+  z-index: 5
+}
 @media only screen and (min-width:0) and (max-width:767px) {
   .reviews {
     margin-bottom: 50px
@@ -5135,6 +5189,9 @@ body {
   .reviews {
     margin-bottom: 135px
   }
+}
+.reviews__container {
+  z-index: 5
 }
 .reviews__title {
   position: relative;
@@ -5183,6 +5240,7 @@ body {
   padding: 0 30px
 }
 .reviews__slider {
+  z-index: 5;
   padding: 30px 20px 20px;
   margin: 0 -20px
 }
@@ -5195,11 +5253,8 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
-  transition: .3s;
-  z-index: 5
+  transition: .3s
 }
 .reviews__slider-item::before {
   content: "";
@@ -5435,7 +5490,10 @@ body {
 }
 .questions__aside-img {
   display: block;
-  height: auto
+  height: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none
 }
 @media only screen and (min-width:768px) {
   .questions__aside-img {
