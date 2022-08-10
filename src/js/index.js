@@ -25,5 +25,4 @@ navigationLinks.forEach((element) => {
     enableBodyScroll(navigation);
   });
 });
-
-let spoilerItems = document.querySelectorAll('.faq__check-hidden');
+  

@@ -366,7 +366,9 @@
     border-radius: 20px;
     box-shadow: 0px 5.54897px 33.2938px rgba(0, 0, 0, 0.1);
 
-    z-index: 2;
+    transition: 0.2s;
+
+    z-index: 2; 
 
     @include mixins.respond-to(mobileOnly) {
       bottom: 0;
@@ -443,6 +445,8 @@
     box-shadow: 0px 3.9051px 21.4781px rgba(0, 0, 0, 0.04);
     border-radius: 19.5255px;
     background-color: var(--color-white);
+
+    transition: 0.2s;
 
     z-index: 2;
 

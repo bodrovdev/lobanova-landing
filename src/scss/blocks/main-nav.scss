@@ -1,7 +1,7 @@
 @use "../mixins";
 
 .main-nav {
-  z-index: 3;
+  z-index: 6;
 
   @include mixins.respond-to(mobileOnly) {
     position: absolute;
