@@ -371,21 +371,32 @@
     z-index: 2; 
 
     @include mixins.respond-to(mobileOnly) {
+      right: 0;
+      left: 0;
+      top: auto;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: auto;
     }
 
     @include mixins.respond-to(tablet) {
+      right: 0;
+      left: 0;
+      top: auto;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: auto;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      bottom: 50px;
     }
 
     @include mixins.respond-to(desktopD) {
       top: 95px;
+      bottom: auto;
       left: -110px;
-      transform: none;
+      right: auto;
+      
+      margin: auto;
     }
 
     @include mixins.respond-to(desktopM) {
@@ -451,32 +462,49 @@
     z-index: 2;
 
     @include mixins.respond-to(tablet) {
-      bottom: -190px;
-      left: 50%;
-      transform: translateX(-50%) scale(0.9);
+      right: 0;
+      left: 0;
+      top: auto;
+      bottom: -200px;
+      transform: scale(0.9);
 
       display: block;
+
+      margin: auto;
     }
 
     @include mixins.respond-to(desktopS) {
-      transform: translateX(-50%) scale(0.8);
+      right: 0;
+      left: 0;
+      top: auto;
+      bottom: -150px;
+
+      margin: auto;
     }
 
     @include mixins.respond-to(desktopD) {
+      right: 0;
+      left: 0;
+      top: auto;
       bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%) scale(1);
+
+      margin: auto;
     }
 
     @include mixins.respond-to(desktopM) {
+      left: -130px;
+      right: auto;
+      top: auto;
       bottom: 0;
-      left: 0;
+
+      margin: 0;
     }
 
     @include mixins.respond-to(desktopL) {
-      bottom: 95px;
+      top: auto;
+      bottom: 0;
       left: -100px;
-      transform: none;
+      right: auto;
     }
 
     @include mixins.respond-to(desktopXL) {
@@ -539,26 +567,43 @@
 
     user-select: none;
 
-    @include mixins.respond-to(desktopL) {
+    @include mixins.respond-to(desktopXL) {
       display: block;
     }
   }
 
   &__whatsup-ball {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
 
     width: 65px;
     height: 65px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include mixins.respond-to(mobileOnly) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+
+      margin: auto;
+    }
+
+    @include mixins.respond-to(tablet) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+
+      margin: auto;
+    }
 
     @include mixins.respond-to(desktopD) {
       top: 140px;
       bottom: auto;
       right: 25px;
       left: auto;
+
+      margin: 0;
     }
   }
 

@@ -48,6 +48,8 @@
 
   &__img {
     display: block;
+    
+    user-select: none;
 
     @include mixins.respond-to(mobileOnly) {
       width: 290px;
