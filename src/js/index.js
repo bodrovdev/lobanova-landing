@@ -27,15 +27,3 @@ navigationLinks.forEach((element) => {
 });
 
 let spoilerItems = document.querySelectorAll('.faq__check-hidden');
-
-let whatsupBalls = document.querySelectorAll('.whatsup-ball')
-let telephoneBalls = document.querySelectorAll('.phone-ball')
-
-// whatsupBalls.forEach((element) => {
-//   window.addEventListener('mousemove', (e) => {
-//     let x = e.clientX / window.innerWidth;
-//     let y = e.clientY / window.innerHeight;
-//     element.style.transform = 'translate(-' + x * 5 + 'px, -' + y * 5 + 'px)';
-//   });
-// })
-

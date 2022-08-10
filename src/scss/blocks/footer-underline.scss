@@ -3,6 +3,8 @@
 .footer-underline {
   min-height: 90px;
 
+  z-index: 5;
+
   @include mixins.respond-to(mobileOnly) {
     padding: 20px 0 20px 0;
   }

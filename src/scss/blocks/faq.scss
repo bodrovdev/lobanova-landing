@@ -2,6 +2,8 @@
 
 .faq {
 
+  z-index: 5;
+
   @include mixins.respond-to(mobileOnly) {
     margin-bottom: 50px;
   }
