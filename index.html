@@ -121,14 +121,14 @@
         <figure class="heading__graphic base-figure">
           <img class="heading__graphic-img" src=img/image/design/heading-graphic.svg" alt="">
         </figure>
-        <span class="heading__whatsup-ball whatsup-ball base-link">
+        <span class="heading__whatsup-ball whatsup-ball base-link" id="whatsup-ball">
           <span class="whatsup-ball__inner">
             <svg class="whatsup-ball__icon" width="23" height="22">
               <use href="img/icon/sprite.svg#whatsup-icon"></use>
             </svg>
           </span>
         </span>
-        <div class="heading__experience">
+        <div class="heading__experience" id="experience-block">
           <div class="heading__experience-headline">
             <span class="heading__experience-title">9+ лет</span>
             <picture>
@@ -138,7 +138,7 @@
           </div>
           <span class="heading__experience-info">Стаж врача гематолога</span>
         </div>
-        <div class="heading__patients">
+        <div class="heading__patients" id='patients-block'>
           <div class="heading__patients-inner">
             <img class="heading__patients-love" src="img/image/design/heading-love.svg" width="47" height="47" alt="">
             <picture>
@@ -657,8 +657,7 @@
           <h2 class="faq__title section-title base-title">О чём часто спрашивают</h2>
           <div class="faq__spoilers">
             <div class="faq__spoilers-item">
-              <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-1"
-                name="about-spoilers">
+              <input class="faq__check-hidden visually-hidden" type="radio" id="spoilers-check-1" name="about-spoilers">
               <label class="faq__spoilers-button" for="spoilers-check-1">
                 <span class="faq__spoilers-caption">Как будет проходить консультация?</span>
                 <div class="faq__spoilers-cross"></div>
@@ -672,8 +671,7 @@
               </div>
             </div>
             <div class="faq__spoilers-item">
-              <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-2"
-                name="about-spoilers">
+              <input class="faq__check-hidden visually-hidden" type="radio" id="spoilers-check-2" name="about-spoilers">
               <label class="faq__spoilers-button" for="spoilers-check-2">
                 <span class="faq__spoilers-caption">Можно ли записаться на консультацию если нет анализов?</span>
                 <div class="faq__spoilers-cross"></div>
@@ -685,8 +683,7 @@
               </div>
             </div>
             <div class="faq__spoilers-item">
-              <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-3"
-                name="about-spoilers">
+              <input class="faq__check-hidden visually-hidden" type="radio" id="spoilers-check-3" name="about-spoilers">
               <label class="faq__spoilers-button" for="spoilers-check-3">
                 <span class="faq__spoilers-caption">Есть ли особые рекомендации перед консультацией врача –<br>
                   гематолога</span>
@@ -702,8 +699,7 @@
               </div>
             </div>
             <div class="faq__spoilers-item">
-              <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-4"
-                name="about-spoilers">
+              <input class="faq__check-hidden visually-hidden" type="radio" id="spoilers-check-4" name="about-spoilers">
               <label class="faq__spoilers-button" for="spoilers-check-4">
                 <span class="faq__spoilers-caption">Может ли врач после консультации дать направление на лечение в
                   какую-либо клинику?</span>
@@ -714,8 +710,7 @@
               </div>
             </div>
             <div class="faq__spoilers-item">
-              <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-5"
-                name="about-spoilers">
+              <input class="faq__check-hidden visually-hidden" type="radio" id="spoilers-check-5" name="about-spoilers">
               <label class="faq__spoilers-button" for="spoilers-check-5">
                 <span class="faq__spoilers-caption">Можно ли получить консультация врача – гематолога во время
                   беременности</span>
@@ -727,8 +722,7 @@
               </div>
             </div>
             <div class="faq__spoilers-item">
-              <input class="faq__check-hidden visually-hidden" type="checkbox" id="spoilers-check-6"
-                name="about-spoilers">
+              <input class="faq__check-hidden visually-hidden" type="radio" id="spoilers-check-6" name="about-spoilers">
               <label class="faq__spoilers-button" for="spoilers-check-6">
                 <span class="faq__spoilers-caption">Как можно отменить уже оплаченную консультацию?</span>
                 <div class="faq__spoilers-cross"></div>
@@ -934,8 +928,7 @@
       <div class="questions__aside">
         <div class="questions__aside-inner">
           <figure class="questions__aside-image base-figure">
-            <img class="questions__aside-img" src="img/image/design/questions-graphic.png"
-              alt="Фотография врача">
+            <img class="questions__aside-img" src="img/image/design/questions-graphic.png" alt="Фотография врача">
           </figure>
         </div>
       </div>
