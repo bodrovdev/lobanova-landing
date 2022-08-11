@@ -367,12 +367,13 @@
     }
 
     @include mixins.respond-to(desktopD) {
-      left: 50%;
-      transform: translateX(-50%);
-      right: auto;
+      left: 0;
+      right: 0;
 
       width: 100px;
       height: 100px;
+
+      margin: auto;
     }
 
     @include mixins.respond-to(desktopM) {

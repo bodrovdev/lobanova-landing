@@ -35,7 +35,7 @@
   }
 
   &__policy-link {
-    font-family: var(--font-family-footer);
+    font-family: var(--font-family-footer) !important;
     font-weight: 400;
     color: var(--color-mid-gray);
 
@@ -73,7 +73,7 @@
   }
 
   &__copyright {
-    font-family: var(--font-family-footer);
+    font-family: var(--font-family-footer) !important;
     font-weight: 400;
     color: var(--color-mid-gray);
 
@@ -103,7 +103,7 @@
   }
 
   &__credits-caption {
-    font-family: var(--font-family-footer);
+    font-family: var(--font-family-footer) !important;
     font-weight: 400;
     color: var(--color-mid-gray);
 

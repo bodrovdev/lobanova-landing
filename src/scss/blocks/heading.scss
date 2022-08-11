@@ -382,9 +382,15 @@
     border-radius: 20px;
     box-shadow: 0px 5.54897px 33.2938px rgba(0, 0, 0, 0.1);
 
-    transition: 0.2s;
+    transition: 0.3s;
 
     z-index: 2; 
+
+    &:hover {
+      transform: translateY(-20px);
+
+      transition: 0.3s;
+    }
 
     @include mixins.respond-to(mobileOnly) {
       right: 0;
@@ -473,16 +479,21 @@
     border-radius: 19.5255px;
     background-color: var(--color-white);
 
-    transition: 0.2s;
+    transition: 0.3s;
 
     z-index: 2;
+
+    &:hover {
+      transform: translateY(-20px);
+
+      transition: 0.3s;
+    }
 
     @include mixins.respond-to(tablet) {
       right: 0;
       left: 0;
       top: auto;
       bottom: -200px;
-      transform: scale(0.9);
 
       display: block;
 

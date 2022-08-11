@@ -1,11 +1,5 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-import Rellax from 'rellax';
-
-var rellax = new Rellax('.rellax', {
-  center: true,
-});
-
 let burger = document.getElementById('burger');
 let navigation = document.getElementById('main-nav');
 let navigationLinks = document.querySelectorAll('.main-nav__link');

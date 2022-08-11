@@ -79,7 +79,7 @@
 
     @include mixins.respond-to(desktopL) {
       background-position: center 60px;
-      background-size: 1300px auto
+      background-size: 900px auto
     }
 
     @include mixins.respond-to(desktopXL) {

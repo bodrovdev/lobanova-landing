@@ -22,6 +22,14 @@
 
       padding: 43px 63px 55px 45px;
     }
+
+    @include mixins.respond-to(desktopL) {
+      padding: 35px;  
+    }
+    
+    @include mixins.respond-to(desktopXL) {
+      padding: 43px 63px 55px 45px; 
+    }
   }
 
   &__title {
@@ -88,7 +96,7 @@
 
   &__type-body {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
 
     @include mixins.respond-to(tablet) {
       grid-template-columns: repeat(auto-fill, calc(50% - 10px));
@@ -370,7 +378,7 @@
   }
 
   &__button-caption {
-    font-style: var(--font-family-loader);
+    font-style: var(--font-family-loader) !important;
     font-weight: 400;
     font-size: 11px;
     line-height: 130%;
@@ -493,7 +501,7 @@
   }
 
   &__order-caption {
-    font-family: var(--font-family-button);
+    font-family: var(--font-family-button) !important;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -780,7 +788,7 @@
     width: 100%;
     height: fit-content !important;
 
-    font-family: var(--font-family-date);
+    font-family: var(--font-family-date) !important;
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -830,7 +838,7 @@
     width: fit-content !important;
     height: fit-content !important;
 
-    font-family: var(--font-family-date);
+    font-family: var(--font-family-date) !important;
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
@@ -865,7 +873,7 @@
   }
 
   &__modal-date .day {
-    font-family: var(--font-family-date);
+    font-family: var(--font-family-date) !important;
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
@@ -956,7 +964,7 @@
     border-radius: 8px;
     cursor: pointer;
 
-    font-family: var(--font-family-button);
+    font-family: var(--font-family-button) !important;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -998,7 +1006,7 @@
     border-radius: 8px;
     cursor: pointer;
 
-    font-family: var(--font-family-button);
+    font-family: var(--font-family-button) !important;
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
