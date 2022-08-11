@@ -20,6 +20,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
+	width: 100%;
 	min-height: 100vh;
 
 	font-family: var(--font-family-default) !important;
@@ -178,7 +179,7 @@ body {
 
 	@include mixins.respond-to(desktopD) {
 		display: block;
-		
+
 		width: 500px;
 		height: 500px;
 	}
