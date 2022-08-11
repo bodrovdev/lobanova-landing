@@ -41,6 +41,19 @@
 
     transition: 0.1s;
 
+    &:hover {
+      color: var(--color-monza);
+
+      transition: 0.1s;
+    }
+
+    &:focus-visible {
+      outline: solid var(--color-monza);
+      outline-offset: 5px;
+
+      transition: all 0.1s;
+    }
+
     @include mixins.respond-to(mobileOnly) {
       font-size: 16px;
       line-height: 130%;
@@ -53,24 +66,9 @@
       line-height: 130%;
     }
 
-    @include mixins.respond-to(tablet) {
+    @include mixins.respond-to(desktopS) {
       font-size: 10px;
       line-height: 12px;
-    }
-
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        color: var(--color-monza);
-
-        transition: 0.1s;
-      }
-
-      &:focus-visible {
-        outline: solid var(--color-monza);
-        outline-offset: 5px;
-
-        transition: all 0.1s;
-      }
     }
   }
 
@@ -91,7 +89,7 @@
       line-height: 130%;
     }
 
-    @include mixins.respond-to(tablet) {
+    @include mixins.respond-to(desktopS) {
       font-size: 10px;
       line-height: 12px;
     }
@@ -132,18 +130,17 @@
   }
 
   &__credits-link {
-    @include mixins.respond-to(desktopS) {
-      &:hover .footer-underline__credits-caption {
-        color: var(--color-monza);
 
-        transition: 0.1s;
-      }
+    &:hover .footer-underline__credits-caption {
+      color: var(--color-monza);
 
-      &:hover .footer-underline__credits-icon {
-        fill: var(--color-monza);
+      transition: 0.1s;
+    }
 
-        transition: 0.1s;
-      }
+    &:hover .footer-underline__credits-icon {
+      fill: var(--color-monza);
+
+      transition: 0.1s;
     }
 
     &:focus-visible {

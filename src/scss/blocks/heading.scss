@@ -76,6 +76,14 @@
     flex-direction: column;
 
     width: fit-content;
+
+    @include mixins.respond-to(tablet) {
+      max-width: 281px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      max-width: 425px;
+    }
   }
 
   &__name {
@@ -156,10 +164,14 @@
     margin-bottom: 20px;
 
     @include mixins.respond-to(tablet) {
+      max-width: 375px;
+
       margin-bottom: 50px;
     }
 
     @include mixins.respond-to(desktopS) {
+      max-width: 450px;
+
       margin-bottom: 55px;
     }
   }
@@ -276,6 +288,10 @@
     color: var(--color-white);
 
     z-index: 10;
+
+    @include mixins.respond-to(tablet) {
+      max-width: 241px;
+    }
   }
 
   &__image-block {

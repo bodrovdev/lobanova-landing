@@ -120,10 +120,6 @@
     }
 
     @include mixins.respond-to(tablet) {
-      padding: 30px;
-    }
-
-    @include mixins.respond-to(desktopS) {
       padding: 38px 31px 40px 31px;
 
       &:hover {

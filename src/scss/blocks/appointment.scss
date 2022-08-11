@@ -109,10 +109,12 @@
     box-shadow: 0px 3.9051px 21.4781px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        box-shadow: 0 0 0 2px var(--color-scooter);
-      }
+    &:hover {
+      box-shadow: 0 0 0 2px var(--color-scooter);
+    }
+
+    @include mixins.respond-to(tablet) {
+      max-width: 315px;
     }
 
     &:focus-within {
@@ -264,16 +266,16 @@
 
     padding-left: 20px;
 
+    &:hover {
+      box-shadow: 0 0 0 2px var(--color-scooter);
+    }
+
     &:focus {
       box-shadow: 0 0 0 2px var(--color-scooter);
     }
 
     @include mixins.respond-to(desktopS) {
       width: 300px;
-
-      &:hover {
-        box-shadow: 0 0 0 2px var(--color-scooter);
-      }
     }
   }
 
@@ -317,6 +319,24 @@
 
     transition: 0.1s;
 
+    &:hover {
+      border: 1px solid var(--color-scooter);
+
+      transition: all 0.1s;
+    }
+
+    &:hover .appointment__button-caption {
+      color: var(--color-scooter);
+
+      transition: all 0.1s;
+    }
+
+    &:hover .appointment__button-icon {
+      stroke: var(--color-scooter);
+
+      transition: all 0.1s;
+    }
+
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
       height: 100px;
@@ -324,26 +344,6 @@
 
     @include mixins.respond-to(tablet) {
       margin: 0 65px 20px 0;
-    }
-
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        border: 1px solid var(--color-scooter);
-
-        transition: all 0.1s;
-      }
-
-      &:hover .appointment__button-caption {
-        color: var(--color-scooter);
-
-        transition: all 0.1s;
-      }
-
-      &:hover .appointment__button-icon {
-        stroke: var(--color-scooter);
-
-        transition: all 0.1s;
-      }
     }
 
     &:active {
@@ -437,12 +437,10 @@
 
     transition: 0.1s;
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        background-color: var(--color-scooter);
+    &:hover {
+      background-color: var(--color-scooter);
 
-        transition: 0.1s;
-      }
+      transition: 0.1s;
     }
   }
 
@@ -461,23 +459,10 @@
 
     transition: 0.1s;
 
-    @include mixins.respond-to(mobileOnly) {
-      width: 215px;
-      margin: 0 auto 30px auto;
-    }
+    &:hover {
+      background-color: var(--color-milano-red);
 
-    @include mixins.respond-to(tablet) {
-      margin-bottom: 30px;
-    }
-
-    @include mixins.respond-to(desktopS) {
-      margin-bottom: 20px;
-
-      &:hover {
-        background-color: var(--color-milano-red);
-
-        transition: all 0.1s;
-      }
+      transition: all 0.1s;
     }
 
     &:active {
@@ -491,6 +476,19 @@
       outline-offset: 5px;
 
       transition: all 0.1s;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 215px;
+      margin: 0 auto 30px auto;
+    }
+
+    @include mixins.respond-to(tablet) {
+      margin-bottom: 30px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      margin-bottom: 20px;
     }
   }
 
@@ -563,12 +561,10 @@
 
       transition: all 0.1s;
 
-      @include mixins.respond-to(desktopS) {
-        &:hover {
-          color: var(--color-milano-red);
+      &:hover {
+        color: var(--color-milano-red);
 
-          transition: all 0.1s;
-        }
+        transition: all 0.1s;
       }
 
       &:focus-visible {
@@ -657,30 +653,13 @@
 
     z-index: 51;
 
-    @include mixins.respond-to(mobileOnly) {
-      top: -5px;
-      right: -5px;
+    &:hover {
+      background: url('../img/image/design/cross.svg') var(--color-viking);
+      background-size: 17px 17px;
+      background-position: center;
+      background-repeat: no-repeat;
 
-      width: 25px;
-      height: 25px;
-
-      background-size: 10px 10px;
-    }
-
-    @include mixins.respond-to(tablet) {
-      top: -15px;
-      right: -15px;
-    }
-
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        background: url('../img/image/design/cross.svg') var(--color-viking);
-        background-size: 17px 17px;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        transition: 0.1s;
-      }
+      transition: 0.1s;
     }
 
     &:active {
@@ -701,6 +680,21 @@
       outline-offset: 5px;
 
       transition: all 0.1s;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      top: -5px;
+      right: -5px;
+
+      width: 25px;
+      height: 25px;
+
+      background-size: 10px 10px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      top: -15px;
+      right: -15px;
     }
   }
 
@@ -878,13 +872,11 @@
 
     transition: 0.1s;
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        background-color: var(--color-eastern-blue) !important;
-        color: var(--color-white) !important;
+    &:hover {
+      background-color: var(--color-eastern-blue) !important;
+      color: var(--color-white) !important;
 
-        transition: all 0.1s;
-      }
+      transition: all 0.1s;
     }
   }
 
@@ -917,12 +909,10 @@
 
     transition: 0.1s;
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        color: var(--color-milano-red);
+    &:hover {
+      color: var(--color-milano-red);
 
-        transition: 0.1s;
-      }
+      transition: 0.1s;
     }
   }
 
@@ -977,12 +967,10 @@
     padding: 10px 70px 10px 70px;
     margin: 0 auto 10px auto;
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        background-color: var(--color-milano-red);
+    &:hover {
+      background-color: var(--color-milano-red);
 
-        transition: 0.1s;
-      }
+      transition: 0.1s;
     }
 
     &:active {
@@ -1019,14 +1007,12 @@
     padding: 10px 70px 10px 70px;
     margin: 0 auto;
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        background-color: var(--color-eastern-blue);
+    &:hover {
+      background-color: var(--color-eastern-blue);
 
-        color: var(--color-white);
+      color: var(--color-white);
 
-        transition: all 0.1s;
-      }
+      transition: all 0.1s;
     }
 
     &:active {

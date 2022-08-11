@@ -109,12 +109,10 @@
       margin: 0 auto;
     }
 
-    @include mixins.respond-to(desktopS) {
-      &:hover {
-        background-color: var(--color-milano-red);
+    &:hover {
+      background-color: var(--color-milano-red);
 
-        transition: 0.1s;
-      }
+      transition: 0.1s;
     }
 
     &:active {

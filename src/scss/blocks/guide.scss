@@ -99,16 +99,19 @@
 
     @include mixins.respond-to(mobileOnly) {
       min-width: 100%;
+      max-width: 100%;
     }
 
     @include mixins.respond-to(tabletOnly) {
       min-width: 50%;
+      max-width: 50%;
     }
 
     @include mixins.respond-to(desktopS) {
       justify-content: flex-start;
 
       width: fit-content;
+      max-width: 220px;
 
       &:hover {
         transform: translateY(-20px);

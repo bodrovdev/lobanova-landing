@@ -118,18 +118,17 @@
   }
 
   &__file-loader {
-    @include mixins.respond-to(desktopS) {
-      &:hover .footer-heading__file-caption {
-        color: var(--color-monza);
 
-        transition: 0.1s;
-      }
+    &:hover .footer-heading__file-caption {
+      color: var(--color-monza);
 
-      &:hover .footer-heading__file-icon {
-        fill: var(--color-monza);
+      transition: 0.1s;
+    }
 
-        transition: 0.1s;
-      }
+    &:hover .footer-heading__file-icon {
+      fill: var(--color-monza);
+
+      transition: 0.1s;
     }
 
     &:focus-visible {
