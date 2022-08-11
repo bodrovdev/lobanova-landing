@@ -1531,6 +1531,11 @@ body {
   margin: 0;
   padding: 0
 }
+.swiper-pagination,
+body {
+  margin: 0 auto;
+  width: 100%
+}
 .base-container {
   width: 90%;
   margin: 0 auto
@@ -1556,7 +1561,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: var(--font-family-default)!important;
-  margin: 0 auto;
   z-index: 1
 }
 .swiper-pagination-bullet.focus-visible {
@@ -1613,9 +1617,7 @@ body {
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto
+  justify-content: center
 }
 .swiper-pagination-bullet {
   width: 12px;
@@ -2146,17 +2148,19 @@ body {
     display: block
   }
   .main-nav {
-    position: absolute;
+    position: fixed;
     top: 90px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100% - 90px);
     background-color: rgba(255,255,255,.9);
     transition-property: left;
     transition-duration: .3s;
     transition-timing-function: ease-in-out
   }
   .main-nav__container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%
   }
@@ -2185,12 +2189,10 @@ body {
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .main-nav__list {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     display: block;
     width: 100%;
-    margin: 0 auto
+    margin: auto;
+    padding: 40px 0
   }
   .main-nav__list .main-nav__list-item {
     position: relative;
