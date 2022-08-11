@@ -1346,6 +1346,8 @@ body {
   white-space: nowrap
 }
 .appointment__info-input:focus,
+.appointment__info-input:hover,
+.appointment__type-item:hover,
 .appointment__type-item[focus-within] {
   box-shadow: 0 0 0 2px var(--color-scooter)
 }
@@ -1572,12 +1574,10 @@ body {
   cursor: pointer;
   transition: .1s
 }
-@media only screen and (min-width:1024px) {
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background-color: var(--color-eastern-blue);
-    transition: .1s
-  }
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: var(--color-eastern-blue);
+  transition: .1s
 }
 .swiper-button-next:active,
 .swiper-button-prev:active {
@@ -1676,31 +1676,17 @@ body {
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .body-gradient {
-    display: none;
-    width: 100px;
-    height: 100px
+    display: none
   }
 }
 @media only screen and (min-width:768px) {
   .body-gradient {
-    display: none;
-    width: 300px;
-    height: 300px
-  }
-}
-@media only screen and (min-width:1024px) {
-  .body-gradient {
-    display: block;
-    width: 400px;
-    height: 400px
-  }
-  .order-link:hover {
-    background-color: var(--color-milano-red);
-    transition: .1s
+    display: none
   }
 }
 @media only screen and (min-width:1280px) {
   .body-gradient {
+    display: block;
     width: 500px;
     height: 500px
   }
@@ -1860,9 +1846,9 @@ body {
   background: var(--color-monza);
   cursor: pointer
 }
-.order-link__caption {
-  line-height: 24px;
-  text-align: center
+.order-link:hover {
+  background-color: var(--color-milano-red);
+  transition: .1s
 }
 .order-link:active {
   background-color: var(--color-totem-pole);
@@ -1878,6 +1864,10 @@ body {
   outline-offset: 5px;
   transition: .1s
 }
+.order-link__caption {
+  line-height: 24px;
+  text-align: center
+}
 .whatsup-link {
   height: 50px;
   background: var(--color-scooter)
@@ -1888,14 +1878,9 @@ body {
   display: flex;
   border-radius: 50%
 }
-.whatsup-link__caption {
-  line-height: 120%
-}
-@media only screen and (min-width:1024px) {
-  .whatsup-link:hover {
-    background-color: var(--color-eastern-blue);
-    transition: .1s
-  }
+.whatsup-link:hover {
+  background-color: var(--color-eastern-blue);
+  transition: .1s
 }
 .whatsup-link:active {
   background-color: var(--color-eastern-blue-2);
@@ -1910,6 +1895,9 @@ body {
   outline: solid var(--color-monza);
   outline-offset: 5px;
   transition: .1s
+}
+.whatsup-link__caption {
+  line-height: 120%
 }
 .section-title {
   font-size: 35px;
@@ -2251,6 +2239,37 @@ body {
     background-color: var(--color-scooter);
     border-radius: 50%
   }
+  .main-nav__list .main-nav__list-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-monza);
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s
+  }
+  .main-nav__list .main-nav__list-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transition: .2s
+  }
+  .main-nav__list .main-nav__list-link:active {
+    color: var(--color-monza);
+    transition: .2s
+  }
+  .main-nav__list .main-nav__list-link.focus-visible {
+    outline: solid var(--color-monza);
+    outline-offset: 5px;
+    transition: .1s
+  }
+  .main-nav__list .main-nav__list-link:focus-visible {
+    outline: solid var(--color-monza);
+    outline-offset: 5px;
+    transition: .1s
+  }
 }
 @media only screen and (min-width:1024px) {
   .main-nav__list {
@@ -2267,37 +2286,6 @@ body {
   .main-nav__list .main-nav__list-link::before {
     width: 10px;
     height: 10px
-  }
-  .main-nav__list .main-nav__list-link::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-monza);
-    opacity: 0;
-    visibility: hidden;
-    transition: .2s
-  }
-  .main-nav__list .main-nav__list-link:active {
-    color: var(--color-monza);
-    transition: .2s
-  }
-  .main-nav__list .main-nav__list-link:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transition: .2s
-  }
-  .main-nav__list .main-nav__list-link.focus-visible {
-    outline: solid var(--color-monza);
-    outline-offset: 5px;
-    transition: .1s
-  }
-  .main-nav__list .main-nav__list-link:focus-visible {
-    outline: solid var(--color-monza);
-    outline-offset: 5px;
-    transition: .1s
   }
 }
 .main-nav__order-item {
@@ -2388,6 +2376,9 @@ body {
   .heading__top {
     margin-bottom: 15px
   }
+  .heading__top-info {
+    max-width: 281px
+  }
 }
 @media only screen and (min-width:1024px) {
   .heading__top {
@@ -2428,16 +2419,19 @@ body {
     margin: 30px 0
   }
 }
+.heading__top-info {
+  align-items: flex-start;
+  flex-direction: column;
+  width: fit-content
+}
 @media only screen and (min-width:1024px) {
   .heading__title {
     font-size: 56px;
     margin-bottom: 30px
   }
-}
-.heading__top-info {
-  align-items: flex-start;
-  flex-direction: column;
-  width: fit-content
+  .heading__top-info {
+    max-width: 425px
+  }
 }
 .heading__name {
   font-weight: 700;
@@ -2489,6 +2483,7 @@ body {
 }
 @media only screen and (min-width:768px) {
   .heading__bottom-list {
+    max-width: 375px;
     margin-bottom: 50px
   }
 }
@@ -2500,6 +2495,7 @@ body {
     padding: 52px 0 35px
   }
   .heading__bottom-list {
+    max-width: 450px;
     margin-bottom: 55px
   }
 }
@@ -2593,6 +2589,9 @@ body {
 @media only screen and (min-width:768px) {
   .heading__order-link {
     margin-bottom: 20px
+  }
+  .heading__bottom-description {
+    max-width: 241px
   }
 }
 @media only screen and (min-width:1024px) {
@@ -2901,7 +2900,8 @@ body {
     margin: auto
   }
   .guide__inner-item {
-    min-width: 100%
+    min-width: 100%;
+    max-width: 100%
   }
 }
 @media only screen and (min-width:768px) {
@@ -3017,7 +3017,8 @@ body {
 }
 @media only screen and (min-width:768px) and (max-width:1023px) {
   .guide__inner-item {
-    min-width: 50%
+    min-width: 50%;
+    max-width: 50%
   }
 }
 @media only screen and (min-width:1024px) {
@@ -3025,7 +3026,8 @@ body {
     justify-content: flex-start;
     width: -webkit-fit-content;
     width: -moz-fit-content;
-    width: fit-content
+    width: fit-content;
+    max-width: 220px
   }
   .guide__inner-item:hover {
     transform: translateY(-20px);
@@ -3153,10 +3155,6 @@ body {
     white-space: nowrap
   }
 }
-.diplomas__slider-button--prev,
-.reviews__slider-button--prev {
-  transform: rotate(180deg)
-}
 .appointment {
   margin: 50px 0;
   z-index: 5
@@ -3241,9 +3239,6 @@ body {
 @media only screen and (min-width:1024px) {
   .appointment__type-body {
     grid-template-columns: repeat(3,1fr)
-  }
-  .appointment__type-item:hover {
-    box-shadow: 0 0 0 2px var(--color-scooter)
   }
 }
 @media only screen and (min-width:1366px) {
@@ -3330,6 +3325,9 @@ body {
   }
 }
 @media only screen and (min-width:768px) {
+  .appointment__type-item {
+    max-width: 315px
+  }
   .appointment__info {
     justify-content: space-between
   }
@@ -3372,9 +3370,6 @@ body {
   .appointment__info-input {
     width: 300px
   }
-  .appointment__info-input:hover {
-    box-shadow: 0 0 0 2px var(--color-scooter)
-  }
 }
 .appointment__attach {
   margin-bottom: 30px
@@ -3406,23 +3401,21 @@ body {
   cursor: pointer;
   transition: .1s
 }
+.appointment__attach-button:hover {
+  border: 1px solid var(--color-scooter);
+  transition: .1s
+}
+.appointment__attach-button:hover .appointment__button-caption {
+  color: var(--color-scooter);
+  transition: .1s
+}
+.appointment__attach-button:hover .appointment__button-icon {
+  stroke: var(--color-scooter);
+  transition: .1s
+}
 @media only screen and (min-width:768px) {
   .appointment__attach-button {
     margin: 0 65px 20px 0
-  }
-}
-@media only screen and (min-width:1024px) {
-  .appointment__attach-button:hover {
-    border: 1px solid var(--color-scooter);
-    transition: .1s
-  }
-  .appointment__attach-button:hover .appointment__button-caption {
-    color: var(--color-scooter);
-    transition: .1s
-  }
-  .appointment__attach-button:hover .appointment__button-icon {
-    stroke: var(--color-scooter);
-    transition: .1s
   }
 }
 .appointment__attach-button:active {
@@ -3509,6 +3502,10 @@ body {
   border-radius: 50%;
   transition: .1s
 }
+.appointment__attach-cancel:hover {
+  background-color: var(--color-scooter);
+  transition: .1s
+}
 .appointment__order-button {
   display: flex;
   align-items: center;
@@ -3522,29 +3519,9 @@ body {
   -webkit-tap-highlight-color: transparent;
   transition: .1s
 }
-@media only screen and (min-width:0) and (max-width:767px) {
-  .appointment__order-button {
-    width: 215px;
-    margin: 0 auto 30px
-  }
-}
-@media only screen and (min-width:768px) {
-  .appointment__order-button {
-    margin-bottom: 30px
-  }
-}
-@media only screen and (min-width:1024px) {
-  .appointment__attach-cancel:hover {
-    background-color: var(--color-scooter);
-    transition: .1s
-  }
-  .appointment__order-button {
-    margin-bottom: 20px
-  }
-  .appointment__order-button:hover {
-    background-color: var(--color-milano-red);
-    transition: .1s
-  }
+.appointment__order-button:hover {
+  background-color: var(--color-milano-red);
+  transition: .1s
 }
 .appointment__order-button:active {
   background-color: var(--color-totem-pole);
@@ -3559,6 +3536,17 @@ body {
   outline: solid var(--color-monza);
   outline-offset: 5px;
   transition: .1s
+}
+@media only screen and (min-width:0) and (max-width:767px) {
+  .appointment__order-button {
+    width: 215px;
+    margin: 0 auto 30px
+  }
+}
+@media only screen and (min-width:768px) {
+  .appointment__order-button {
+    margin-bottom: 30px
+  }
 }
 .appointment__order-caption {
   font-family: var(--font-family-button);
@@ -3614,29 +3602,25 @@ body {
   line-height: 150%;
   color: var(--color-black)
 }
-.appointment__terms-link {
-  color: var(--color-scooter);
-  text-decoration: underline;
-  transition: .1s
-}
 @media only screen and (min-width:1024px) {
+  .appointment__order-button {
+    margin-bottom: 20px
+  }
   .appointment__terms-shown {
     margin-right: 20px
   }
   .appointment__terms-title {
     font-size: 12px
   }
-  .appointment__terms-link:hover {
-    color: var(--color-milano-red);
-    transition: .1s
-  }
-  .appointment__modal-close:hover {
-    background: url(../img/image/design/cross.svg) var(--color-viking);
-    background-size: 17px 17px;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: .1s
-  }
+}
+.appointment__terms-link {
+  color: var(--color-scooter);
+  text-decoration: underline;
+  transition: .1s
+}
+.appointment__terms-link:hover {
+  color: var(--color-milano-red);
+  transition: .1s
 }
 .appointment__terms-link.focus-visible {
   outline: solid var(--color-monza);
@@ -3715,6 +3699,13 @@ body {
   transition: .1s;
   z-index: 51
 }
+.appointment__modal-close:hover {
+  background: url(../img/image/design/cross.svg) var(--color-viking);
+  background-size: 17px 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: .1s
+}
 .appointment__modal-close:active {
   background: url(../img/image/design/cross.svg) var(--color-scooter);
   background-size: 17px 17px;
@@ -3777,14 +3768,14 @@ body {
   margin-bottom: 10px
 }
 @media only screen and (min-width:0) and (max-width:767px) {
+  .appointment__modal-close:active {
+    background-size: 10px 10px
+  }
   .appointment__modal-close {
     top: -5px;
     right: -5px;
     width: 25px;
     height: 25px;
-    background-size: 10px 10px
-  }
-  .appointment__modal-close:active {
     background-size: 10px 10px
   }
   .appointment__modal-date .datepicker-header {
@@ -3891,16 +3882,10 @@ body {
   font-weight: 400;
   transition: .1s
 }
-@media only screen and (min-width:1024px) {
-  .appointment__modal-date .day:hover {
-    background-color: var(--color-eastern-blue)!important;
-    color: var(--color-white)!important;
-    transition: .1s
-  }
-  .appointment__time-radio:hover {
-    color: var(--color-milano-red);
-    transition: .1s
-  }
+.appointment__modal-date .day:hover {
+  background-color: var(--color-eastern-blue)!important;
+  color: var(--color-white)!important;
+  transition: .1s
 }
 .appointment__modal-date .datepicker-footer {
   display: none
@@ -3930,6 +3915,10 @@ body {
 .appointment__pricetag,
 .appointment__time-hidden:checked + .appointment__time-radio {
   color: var(--color-monza)
+}
+.appointment__time-radio:hover {
+  color: var(--color-milano-red);
+  transition: .1s
 }
 .appointment__time-hidden:disabled + .appointment__time-radio {
   color: var(--color-ghost);
@@ -3974,11 +3963,9 @@ body {
   transition: .1s;
   margin: 0 auto 10px
 }
-@media only screen and (min-width:1024px) {
-  .appointment__form-submit:hover {
-    background-color: var(--color-milano-red);
-    transition: .1s
-  }
+.appointment__form-submit:hover {
+  background-color: var(--color-milano-red);
+  transition: .1s
 }
 .appointment__form-submit:active {
   background-color: var(--color-totem-pole);
@@ -4003,12 +3990,10 @@ body {
   color: var(--color-mine-shaft);
   margin: 0 auto
 }
-@media only screen and (min-width:1024px) {
-  .appointment__form-reset:hover {
-    background-color: var(--color-eastern-blue);
-    color: var(--color-white);
-    transition: .1s
-  }
+.appointment__form-reset:hover {
+  background-color: var(--color-eastern-blue);
+  color: var(--color-white);
+  transition: .1s
 }
 .appointment__form-reset:active {
   background-color: var(--color-eastern-blue-2);
@@ -4251,11 +4236,6 @@ body {
     grid-area: tabs;
     justify-content: flex-start
   }
-  .about__tabs-button:hover {
-    background-color: var(--color-scooter);
-    color: var(--color-white);
-    transition: .1s
-  }
 }
 .about__tabs-button {
   display: flex;
@@ -4274,13 +4254,18 @@ body {
   box-shadow: 0 0 20px rgba(0,0,0,.1);
   box-sizing: border-box
 }
-.about__tabs-button:last-of-type {
-  margin-right: 0;
-  margin-bottom: 20px
+.about__tabs-button:hover {
+  background-color: var(--color-scooter);
+  color: var(--color-white);
+  transition: .1s
 }
 .about__tabs-button:active {
   background-color: var(--color-eastern-blue-2);
   transition: .1s
+}
+.about__tabs-button:last-of-type {
+  margin-right: 0;
+  margin-bottom: 20px
 }
 @media only screen and (min-width:1280px) {
   .about__tabs-button {
@@ -4801,6 +4786,9 @@ body {
     display: none
   }
 }
+.diplomas__slider-button--prev {
+  transform: rotate(180deg)
+}
 @media only screen and (min-width:1024px) {
   .diplomas__slider-button {
     display: flex
@@ -5135,14 +5123,23 @@ body {
 }
 @media only screen and (min-width:1280px) {
   .faq__whatsup-ball {
-    bottom: 23px;
-    right: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
     width: 100px;
     height: 100px
   }
   .faq .whatsup-ball__inner {
     width: 55px;
     height: 55px
+  }
+}
+@media only screen and (min-width:1366px) {
+  .faq__whatsup-ball {
+    bottom: 23px;
+    right: 56px;
+    transform: none;
+    left: auto
   }
 }
 @media only screen and (min-width:0) and (max-width:767px) {
@@ -5280,11 +5277,6 @@ body {
 }
 @media only screen and (min-width:768px) {
   .reviews__slider-item {
-    padding: 30px
-  }
-}
-@media only screen and (min-width:1024px) {
-  .reviews__slider-item {
     padding: 38px 31px 40px
   }
   .reviews__slider-item:hover {
@@ -5353,6 +5345,9 @@ body {
     display: none
   }
 }
+.reviews__slider-button--prev {
+  transform: rotate(180deg)
+}
 .questions {
   z-index: 5
 }
@@ -5382,10 +5377,6 @@ body {
   }
   .questions {
     margin-bottom: 90px
-  }
-  .questions__whatsup-button:hover {
-    background-color: var(--color-milano-red);
-    transition: .1s
   }
 }
 .questions__container {
@@ -5455,6 +5446,10 @@ body {
   justify-content: center;
   width: 290px;
   background-color: var(--color-monza);
+  transition: .1s
+}
+.questions__whatsup-button:hover {
+  background-color: var(--color-milano-red);
   transition: .1s
 }
 .questions__whatsup-button:active {
@@ -5688,6 +5683,14 @@ body {
   font-weight: 400;
   color: var(--color-mid-gray)
 }
+.footer-heading__file-loader:hover .footer-heading__file-caption {
+  color: var(--color-monza);
+  transition: .1s
+}
+.footer-heading__file-loader:hover .footer-heading__file-icon {
+  fill: var(--color-monza);
+  transition: .1s
+}
 .footer-heading__file-loader.focus-visible {
   outline: solid var(--color-monza);
   outline-offset: 5px;
@@ -5716,6 +5719,20 @@ body {
 .footer-underline__policy-link {
   transition: .1s
 }
+.footer-underline__policy-link:hover {
+  color: var(--color-monza);
+  transition: .1s
+}
+.footer-underline__policy-link.focus-visible {
+  outline: solid var(--color-monza);
+  outline-offset: 5px;
+  transition: .1s
+}
+.footer-underline__policy-link:focus-visible {
+  outline: solid var(--color-monza);
+  outline-offset: 5px;
+  transition: .1s
+}
 @media only screen and (min-width:0) and (max-width:767px) {
   .footer-underline__container {
     flex-direction: column
@@ -5732,12 +5749,17 @@ body {
     justify-content: space-between
   }
   .footer-underline__policy-link {
-    font-size: 10px;
-    line-height: 12px
-  }
-  .footer-underline__copyright {
     font-size: 16px;
     line-height: 130%
+  }
+}
+@media only screen and (min-width:1024px) {
+  .footer-underline__container {
+    padding: 0 50px
+  }
+  .footer-underline__policy-link {
+    font-size: 10px;
+    line-height: 12px
   }
 }
 @media only screen and (min-width:0) and (max-width:767px) {
@@ -5749,12 +5771,14 @@ body {
 }
 @media only screen and (min-width:768px) {
   .footer-underline__copyright {
-    font-size: 10px;
-    line-height: 12px
-  }
-  .footer-underline__credits-caption {
     font-size: 16px;
     line-height: 130%
+  }
+}
+@media only screen and (min-width:1024px) {
+  .footer-underline__copyright {
+    font-size: 10px;
+    line-height: 12px
   }
 }
 .footer-underline__credits-link {
@@ -5768,49 +5792,30 @@ body {
     line-height: 130%
   }
 }
-.footer-underline__credits-icon {
-  fill: var(--color-mid-gray);
-  transition: .1s
+@media only screen and (min-width:768px) {
+  .footer-underline__credits-caption {
+    font-size: 16px;
+    line-height: 130%
+  }
 }
 @media only screen and (min-width:1024px) {
-  .footer-heading__file-loader:hover .footer-heading__file-caption {
-    color: var(--color-monza);
-    transition: .1s
-  }
-  .footer-heading__file-loader:hover .footer-heading__file-icon {
-    fill: var(--color-monza);
-    transition: .1s
-  }
-  .footer-underline__container {
-    padding: 0 50px
-  }
-  .footer-underline__policy-link:hover {
-    color: var(--color-monza);
-    transition: .1s
-  }
-  .footer-underline__policy-link.focus-visible {
-    outline: solid var(--color-monza);
-    outline-offset: 5px;
-    transition: .1s
-  }
-  .footer-underline__policy-link:focus-visible {
-    outline: solid var(--color-monza);
-    outline-offset: 5px;
-    transition: .1s
-  }
   .footer-underline__credits-caption {
     font-size: 10px;
     line-height: 12px;
     margin-right: 10px
   }
-  .footer-underline__credits-link:hover .footer-underline__credits-caption {
-    color: var(--color-monza);
-    transition: .1s
-  }
-  .footer-underline__credits-link:hover .footer-underline__credits-icon {
-    fill: var(--color-monza);
-    transition: .1s
-  }
+}
+.footer-underline__credits-icon {
+  fill: var(--color-mid-gray);
+  transition: .1s
+}
+.footer-underline__credits-link:hover .footer-underline__credits-caption {
+  color: var(--color-monza);
+  transition: .1s
+}
+.footer-underline__credits-link:hover .footer-underline__credits-icon {
+  fill: var(--color-monza);
+  transition: .1s
 }
 .footer-underline__credits-link.focus-visible {
   outline: solid var(--color-monza);
