@@ -1535,7 +1535,7 @@ body {
   width: 90%;
   margin: 0 auto
 }
-@media only screen and (min-width:1920px) {
+@media only screen and (min-width:1600px) {
   .base-container {
     width: 66.6%;
     max-width: 1280px
@@ -1555,7 +1555,7 @@ body {
   position: relative;
   flex-direction: column;
   min-height: 100vh;
-  font-family: var(--font-family-default);
+  font-family: var(--font-family-default)!important;
   margin: 0 auto;
   z-index: 1
 }
@@ -1942,6 +1942,10 @@ body {
   opacity: .7;
   transition: .3s
 }
+.whatsup-ball:hover {
+  transform: translateY(-20px);
+  transition: .3s
+}
 .whatsup-ball__inner {
   align-items: center;
   justify-content: center;
@@ -1961,6 +1965,10 @@ body {
 .page-header {
   flex-direction: column;
   display: flex
+}
+.phone-ball:hover {
+  transform: translateY(-20px);
+  transition: .3s
 }
 .visually-hidden {
   position: absolute;
@@ -2635,8 +2643,8 @@ body {
 .heading__experience,
 .heading__patients {
   position: absolute;
-  transition: .2s;
-  z-index: 2
+  z-index: 2;
+  transition: .3s
 }
 .heading__photo-img {
   display: block;
@@ -2695,6 +2703,10 @@ body {
   background: var(--color-white);
   border-radius: 20px;
   box-shadow: 0 5.54897px 33.2938px rgba(0,0,0,.1)
+}
+.heading__experience:hover {
+  transform: translateY(-20px);
+  transition: .3s
 }
 @media only screen and (min-width:768px) {
   .heading__experience {
@@ -2771,13 +2783,16 @@ body {
   border-radius: 19.5255px;
   background-color: var(--color-white)
 }
+.heading__patients:hover {
+  transform: translateY(-20px);
+  transition: .3s
+}
 @media only screen and (min-width:768px) {
   .heading__patients {
     right: 0;
     left: 0;
     top: auto;
     bottom: -200px;
-    transform: scale(.9);
     display: block;
     margin: auto
   }
@@ -3005,7 +3020,7 @@ body {
 @media only screen and (min-width:1600px) {
   .guide__inner {
     background-position: center 60px;
-    background-size: 1300px auto
+    background-size: 900px auto
   }
 }
 .guide__inner-item {
@@ -3143,18 +3158,6 @@ body {
     grid-template-columns: repeat(auto-fill,calc(50% - 10px))
   }
 }
-@media only screen and (min-width:1920px) {
-  .guide__graphic--top {
-    top: -120px;
-    right: 290px;
-    transform: none;
-    left: auto;
-    width: 414px
-  }
-  .required__title {
-    white-space: nowrap
-  }
-}
 .appointment {
   margin: 50px 0;
   z-index: 5
@@ -3173,6 +3176,26 @@ body {
   .appointment__inner {
     border: 9px solid var(--color-white);
     padding: 43px 63px 55px 45px
+  }
+}
+@media only screen and (min-width:1600px) {
+  .appointment__inner {
+    padding: 35px
+  }
+}
+@media only screen and (min-width:1920px) {
+  .guide__graphic--top {
+    top: -120px;
+    right: 290px;
+    transform: none;
+    left: auto;
+    width: 414px
+  }
+  .appointment__inner {
+    padding: 43px 63px 55px 45px
+  }
+  .required__title {
+    white-space: nowrap
   }
 }
 .appointment__title {
@@ -3234,7 +3257,7 @@ body {
 }
 .appointment__type-body {
   display: grid;
-  grid-gap: 20px
+  grid-gap: 10px
 }
 @media only screen and (min-width:1024px) {
   .appointment__type-body {
@@ -3437,7 +3460,7 @@ body {
   outline: 2px solid var(--color-scooter)
 }
 .appointment__button-caption {
-  font-style: var(--font-family-loader);
+  font-style: var(--font-family-loader)!important;
   font-weight: 400;
   font-size: 11px;
   line-height: 130%;
@@ -3549,7 +3572,7 @@ body {
   }
 }
 .appointment__order-caption {
-  font-family: var(--font-family-button);
+  font-family: var(--font-family-button)!important;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -3811,7 +3834,7 @@ body {
   display: inline-block!important;
   max-height: fit-content!important;
   height: fit-content!important;
-  font-family: var(--font-family-date);
+  font-family: var(--font-family-date)!important;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -3821,7 +3844,7 @@ body {
 }
 .appointment__modal-date .day,
 .appointment__modal-date .dow {
-  font-family: var(--font-family-date);
+  font-family: var(--font-family-date)!important;
   font-size: 14px;
   line-height: 140%
 }
@@ -3946,11 +3969,11 @@ body {
 .appointment__form-reset,
 .appointment__form-submit {
   box-shadow: inset 0 0 15px rgba(0,0,0,.1);
+  font-family: var(--font-family-button)!important;
   font-size: 14px;
   line-height: 24px;
   padding: 10px 70px;
   display: flex;
-  font-family: var(--font-family-button);
   font-weight: 600;
   cursor: pointer
 }
@@ -5123,11 +5146,11 @@ body {
 }
 @media only screen and (min-width:1280px) {
   .faq__whatsup-ball {
-    left: 50%;
-    transform: translateX(-50%);
-    right: auto;
+    left: 0;
+    right: 0;
     width: 100px;
-    height: 100px
+    height: 100px;
+    margin: auto
   }
   .faq .whatsup-ball__inner {
     width: 55px;
@@ -5679,7 +5702,7 @@ body {
 .footer-underline__copyright,
 .footer-underline__credits-caption,
 .footer-underline__policy-link {
-  font-family: var(--font-family-footer);
+  font-family: var(--font-family-footer)!important;
   font-weight: 400;
   color: var(--color-mid-gray)
 }
