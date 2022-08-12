@@ -378,7 +378,7 @@
   }
 
   &__button-caption {
-    font-style: var(--font-family-loader) !important;
+    font-style: var(--font-family-loader);
     font-weight: 400;
     font-size: 11px;
     line-height: 130%;
@@ -501,7 +501,7 @@
   }
 
   &__order-caption {
-    font-family: var(--font-family-button) !important;
+    font-family: var(--font-family-button);
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -788,7 +788,7 @@
     width: 100%;
     height: fit-content !important;
 
-    font-family: var(--font-family-date) !important;
+    font-family: var(--font-family-date);
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -838,7 +838,7 @@
     width: fit-content !important;
     height: fit-content !important;
 
-    font-family: var(--font-family-date) !important;
+    font-family: var(--font-family-date);
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
@@ -873,7 +873,7 @@
   }
 
   &__modal-date .day {
-    font-family: var(--font-family-date) !important;
+    font-family: var(--font-family-date);
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
@@ -964,7 +964,7 @@
     border-radius: 8px;
     cursor: pointer;
 
-    font-family: var(--font-family-button) !important;
+    font-family: var(--font-family-button);
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -1006,7 +1006,7 @@
     border-radius: 8px;
     cursor: pointer;
 
-    font-family: var(--font-family-button) !important;
+    font-family: var(--font-family-button);
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;

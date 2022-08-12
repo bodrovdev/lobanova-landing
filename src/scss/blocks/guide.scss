@@ -3,14 +3,16 @@
 .guide {
   position: relative;
 
-  overflow: hidden;
-
   padding-top: 50px;
 
   z-index: 5;
 
   @include mixins.respond-to(desktopS) {
     padding-top: 89px;
+  }
+
+  @include mixins.respond-to(desktopL) {
+    overflow: hidden;
   }
 
   &__title {
@@ -195,7 +197,7 @@
       height: auto;
     }
 
-    @include mixins.respond-to(desktopXL) {
+    @include mixins.respond-to(desktopL) {
       width: 282px;
     }
   }
@@ -231,7 +233,7 @@
       height: auto;
     }
 
-    @include mixins.respond-to(desktopXL) {
+    @include mixins.respond-to(desktopL) {
       width: 226px;
     }
   }
@@ -244,7 +246,7 @@
     pointer-events: none;
     user-select: none;
 
-    z-index: 0;
+    z-index: -1;
 
     @include mixins.respond-to(tablet) {
       top: -20px;
@@ -257,13 +259,14 @@
       height: auto;
     }
 
-    @include mixins.respond-to(desktopXL) {
+    @include mixins.respond-to(desktopL) {
       top: -120px;
       right: 290px;
       transform: none;
       left: auto;
 
       width: 414px;
+      height: 267px;
     }
   }
 }

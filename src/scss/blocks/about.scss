@@ -32,6 +32,22 @@
         "slider tabs"
         "motto motto";
     }
+
+    @include mixins.respond-to(desktopL) {
+      grid-template: repeat(2, auto) / 500px auto;
+      grid-template-areas:
+        "slider tabs"
+        "motto motto";
+    }
+  }
+
+  @media (min-width: 1800px) {
+    &__container {
+      grid-template: repeat(2, auto) / 655px auto;
+      grid-template-areas:
+        "slider tabs"
+        "motto motto";
+    }
   }
 
   &__info-block {
@@ -62,7 +78,17 @@
       margin-bottom: 0;
     }
 
-    @include mixins.respond-to(desktopD) {
+    @include mixins.respond-to(desktopS) {
+      width: 655px;
+    }
+
+    @include mixins.respond-to(desktopL) {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    &__info-block {
       width: 655px;
     }
   }

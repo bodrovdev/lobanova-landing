@@ -95,6 +95,12 @@
     }
   }
 
+  &__item-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
   &__slider-button {
     position: absolute;
     top: 43%;
