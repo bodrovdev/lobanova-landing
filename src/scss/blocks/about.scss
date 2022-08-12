@@ -27,7 +27,7 @@
     }
 
     @include mixins.respond-to(desktopD) {
-      grid-template: repeat(2, auto) / 650px auto;
+      grid-template: repeat(2, auto) / 655px auto;
       grid-template-areas:
         "slider tabs"
         "motto motto";
@@ -78,7 +78,7 @@
       margin-bottom: 0;
     }
 
-    @include mixins.respond-to(desktopS) {
+    @include mixins.respond-to(desktopD) {
       width: 655px;
     }
 
