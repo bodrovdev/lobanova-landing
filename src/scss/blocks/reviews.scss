@@ -148,6 +148,13 @@
     margin-right: 15px;
   }
 
+  &__item-img {
+    width: 61px;
+    height: 61px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
   &__item-title {
     font-weight: 700;
     font-size: 16px;

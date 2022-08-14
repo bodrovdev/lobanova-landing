@@ -5,6 +5,7 @@ const about_slider = new Swiper('.about__slider', {
 
   direction: 'horizontal',
 
+
   navigation: {
     nextEl: '.about__slider-button--next',
     prevEl: '.about__slider-button--prev',
@@ -40,7 +41,15 @@ const diplomas_slider = new Swiper('.diplomas__slider', {
 
     1366: {
       slidesPerView: 4,
-    }
+    },
+
+    1600: {
+      slidesPerView: 3,
+    },
+
+    1800: {
+      slidesPerView: 4,
+    },
   }
 });
 
