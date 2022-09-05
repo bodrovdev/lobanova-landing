@@ -37,4 +37,3 @@ spoilers.forEach((element) => {
     }
   })
 })
-  
