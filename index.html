@@ -216,16 +216,41 @@
 
   <section class="appointment" id="appointment-block">
     <div class="appointment__container base-container">
+      <!-- construction-site -->
+      <form class="appointment__pay-form visually-hidden" id="appointment-pay-form" method="post" action="https://yoomoney.ru/quickpay/confirm.xml">
+        <input type="hidden" name="receiver" value="4100117958187659"/>
+        <input type="hidden" name="formcomment" value="Оплата консультации гематолога"/>
+        <input type="hidden" name="short-dest" value="Оплата консультации гематолога"/>
+        <input type="hidden" name="quickpay-form" value="shop"/>
+        <input id="appointment-pay-target" type="hidden" name="targets" value="Первичная консультация"/>
+        <input id="appointment-pay-sum" type="hidden" name="sum" value="4000" data-type="number"/>
+        <input type="hidden" name="need-fio" value="true"/>
+        <input type="hidden" name="need-email" value="true"/>
+        <input type="hidden" name="need-phone" value="true"/>
+        <input type="hidden" name="need-address" value="false"/>
+        <input type="hidden" name="successURL" value="https://hemdoc-online.com#success">
+        <input id="appointment-pay-submit" type="submit" value="Оплатить"/>
+      </form>
+      <div class="appointment__success-modal appointment__success-modal" id="success">
+        <div class="appointment__success-wrapper">
+          <button class="appointment__success-close base-button" type="button" id="appointment-success-close"></button>
+          <div class="appointment__success-inner">
+            <h3 class="appointment__success-title base-title">Спасибо за оплату!</h3>
+            <span class="appointment__success-body">В течение дня ожидайте подтверждение записи от врача.</span>
+          </div>
+        </div>
+      </div>
+      <!-- construction-site -->
       <div class="appointment__inner">
         <h2 class="appointment__title section-title base-title">Запишись на консультацию сейчас</h2>
-        <form action="http://foo.com" method="post" class="appointment__form">
+        <form class="appointment__form" id="appointment-form">
           <div class="appointment__type">
             <span class="appointment__type-title">Выберите вид консультации на которую вы хотите записаться</span>
             <div class="appointment__type-body">
               <div class="appointment__type-item">
                 <label class="appointment__type-label" for="appointment-type-radio-1">
                   <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-1"
-                    value="4000" name="appointment-type-radio" checked>
+                    value="4000" data-typename="Первичный приём" name="appointment-type-radio" checked>
                   <span class="appointment__type-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
                       <use href="img/icon/sprite.svg#check-icon"></use>
@@ -240,7 +265,7 @@
               <div class="appointment__type-item">
                 <label class="appointment__type-label" for="appointment-type-radio-2">
                   <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-2"
-                    value="3000" name="appointment-type-radio">
+                    value="3000" data-typename="Вторичный приём"  name="appointment-type-radio">
                   <span class="appointment__type-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
                       <use href="img/icon/sprite.svg#check-icon"></use>
@@ -255,7 +280,7 @@
               <div class="appointment__type-item">
                 <label class="appointment__type-label" for="appointment-type-radio-3">
                   <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-3"
-                    value="6000" name="appointment-type-radio">
+                    value="6000" data-typename="English speaking patient consultation"  name="appointment-type-radio">
                   <span class="appointment__type-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
                       <use href="img/icon/sprite.svg#check-icon"></use>
@@ -313,12 +338,12 @@
                 WhatsApp</span>
               <div class="appointment__modal-date" id="appointment-modal-date">
                 <input class="appointment__hidden-date visually-hidden" type="date" id="appointment-date-input"
-                  tabindex="-1">
+                  tabindex="-1" required>
               </div>
               <div class="appointment__modal-time">
                 <div class="appointment__time-item">
                   <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-10" value="10:00">
+                    id="appointment-time-radio-10" value="10:00" required>
                   <label for="appointment-time-radio-10" class="appointment__time-radio">10:00</label>
                 </div>
                 <div class="appointment__time-item">
@@ -369,8 +394,9 @@
               </div>
               <span class="appointment__pricetag">К оплате <span id="appointment-price">4000</span> ₽</span>
               <input class="appointment__price-input visually-hidden" type="number" id="appointment-price-result">
-              <input class="appointment__form-submit base-button" type="submit" value="Оплатить"
-                id="appointment-form-submit">
+              <input class="appointment__form-submit visually-hidden" type="submit" id="appointment-form-submit">
+              <input class="appointment__form-pay base-button" type="button" value="Оплатить"
+                id="appointment-form-pay">
               <input class="appointment__form-reset base-button" type="reset" value="Отменить"
                 id="appointment-form-reset">
             </div>
