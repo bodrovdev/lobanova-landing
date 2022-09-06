@@ -43,27 +43,61 @@ appointmentTypes.forEach((element) => {
   })
 })
 
-//Изменение модального окна при отправке формы
+//Отправка формы и переход на страницу оплаты
 let appointmentForm = document.getElementById('appointment-form');
 
-let appointmentPayButton = document.getElementById('appointment-form-pay');
+let appointmentFormSubmitShown = document.getElementById('appointment-form-pay');
 let appointmentFormSubmit = document.getElementById('appointment-form-submit');
-
-let appointmentModalMain = document.getElementById('appointment-modal-main');
-let appointmentModalSuccess = document.getElementById('appointment-modal-success');
+let appointmentPayFormSubmit = document.getElementById('appointment-pay-submit');
 
 appointmentForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  appointmentModalMain.classList.add('appointment__modal-main--disabled');
-  appointmentModalSuccess.classList.add('appointment__modal-success--active');
+  console.log('Успех');
 })
 
-appointmentPayButton.addEventListener('click', () => {
+appointmentFormSubmitShown.addEventListener('click', () => {
   appointmentFormSubmit.click();
+
+    setTimeout(appointmentPayFormSubmit.click(), 5000);
 })
 
-//Скрытие и показ необходимой кнопки оплаты после отправки формы
+//Изменение данных в форме оплаты при смене параметров главной формы
+let appointmentPayTarget = document.getElementById('appointment-pay-target');
+let appointmentPaySum = document.getElementById('appointment-pay-sum');
 
+appointmentTypes.forEach((element) => {
+  element.addEventListener('change', () => {
+    if (element.checked) {
+      appointmentPayTarget.value = element.dataset.typename;
+      appointmentPaySum.value = element.value;
+    }
+  })
+})
 
+//Открытие и закрытие модального окна с подтверждением после удачной оплаты
+let successModal = document.getElementById('success');
+let successModalClose = document.getElementById('appointment-success-close');
+
+window.addEventListener('load', () => {
+  if (window.location.hash === '#success') {
+    successModal.classList.add('appointment__success-modal--opened');
+    disableBodyScroll(successModal);
+  };
+})
+
+successModalClose.addEventListener('click', () => {
+  successModal.classList.remove('appointment__success-modal--opened');
+  enableBodyScroll(successModal);
+})
+
+successModal.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+  else {
+    successModal.classList.remove('appointment__success-modal--opened');
+    enableBodyScroll(successModal);
+  }
+})
 
