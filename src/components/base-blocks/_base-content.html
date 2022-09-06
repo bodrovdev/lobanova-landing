@@ -58,6 +58,32 @@
 
   <section class="appointment" id="appointment-block">
     <div class="appointment__container base-container">
+      <!-- construction-site -->
+      <form class="appointment__pay-form" method="post" action="https://yoomoney.ru/quickpay/confirm.xml">
+        <input type="hidden" name="receiver" value="4100117958187659"/>
+        <input type="hidden" name="formcomment" value="Оплата консультации гематолога"/>
+        <input type="hidden" name="short-dest" value="Оплата консультации гематолога"/>
+        <input type="hidden" name="quickpay-form" value="shop"/>
+        <input id="appointment-pay-target" type="hidden" name="targets" value="Первичная консультация"/>
+        <input id="appointment-pay-sum" type="hidden" name="sum" value="4000" data-type="number"/>
+        <input type="hidden" name="need-fio" value="true"/>
+        <input type="hidden" name="need-email" value="true"/>
+        <input type="hidden" name="need-phone" value="true"/>
+        <input type="hidden" name="need-address" value="false"/>
+        <input type="hidden" name="successURL" value="https://hemdoc-online.com#success">
+        <input id="appointment-pay-submit" type="submit" value="Оплатить"/>
+      </form>
+
+      <div class="appointment__success-modal appointment__success-modal--opened" id="success">
+        <div class="appointment__success-wrapper">
+          <button class="appointment__success-close base-button" type="button" id="appointment-success-close"></button>
+          <div class="appointment__success-inner">
+            <h3 class="appointment__success-title base-title">Успех</h3>
+            <span class="appointment__success-body">Спасибо за деньги, дуралей</span>
+          </div>
+        </div>
+      </div>
+      <!-- construction-site -->
       <div class="appointment__inner">
         <h2 class="appointment__title section-title base-title">Запишись на консультацию сейчас</h2>
         <form class="appointment__form" id="appointment-form">
@@ -149,83 +175,73 @@
 
           <div class="appointment__modal" id="appointment-modal">
             <div class="appointment__modal-wrapper">
-              <!-- 05.09.2022 -->
-              <div class="appointment__modal-main" id="appointment-modal-main">
-                <button class="appointment__modal-close base-button" type="button" id="appointment-modal-close"></button>
-                <span class="appointment__modal-title">Запись на первичный прием</span>
-                <span class="appointment__modal-info">Консультация ведется в онлайн форме по воскресеньям по
-                  WhatsApp</span>
-                <div class="appointment__modal-date" id="appointment-modal-date">
-                  <input class="appointment__hidden-date visually-hidden" type="date" id="appointment-date-input"
-                    tabindex="-1">
-                </div>
-                <div class="appointment__modal-time">
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-10" value="10:00">
-                    <label for="appointment-time-radio-10" class="appointment__time-radio">10:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-11" value="11:00">
-                    <label for="appointment-time-radio-11" class="appointment__time-radio">11:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-12" value="12:00">
-                    <label for="appointment-time-radio-12" class="appointment__time-radio">12:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-13" value="13:00">
-                    <label for="appointment-time-radio-13" class="appointment__time-radio">13:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-15" value="15:00">
-                    <label for="appointment-time-radio-15" class="appointment__time-radio">15:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-16" value="16:00">
-                    <label for="appointment-time-radio-16" class="appointment__time-radio">16:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-17" value="17:00">
-                    <label for="appointment-time-radio-17" class="appointment__time-radio">17:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-18" value="18:00">
-                    <label for="appointment-time-radio-18" class="appointment__time-radio">18:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-19" value="19:00">
-                    <label for="appointment-time-radio-19" class="appointment__time-radio">19:00</label>
-                  </div>
-                  <div class="appointment__time-item">
-                    <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                      id="appointment-time-radio-20" value="20:00">
-                    <label for="appointment-time-radio-20" class="appointment__time-radio">20:00</label>
-                  </div>
-                </div>
-                <span class="appointment__pricetag">К оплате <span id="appointment-price">4000</span> ₽</span>
-                <input class="appointment__price-input visually-hidden" type="number" id="appointment-price-result">
-                <input class="appointment__form-submit visually-hidden" type="submit" id="appointment-form-submit">
-                <input class="appointment__form-pay base-button" type="button" value="Отправить форму"
-                  id="appointment-form-pay">
-                <input class="appointment__form-reset base-button" type="reset" value="Отменить"
-                  id="appointment-form-reset">
-                </div>
-              <div class="appointment__modal-success" id="appointment-modal-success">
-                <span class="appointment__success-body">Пожалуйста, перейдите на страницу оплаты.</span>
-                <div class="appointment__success-button">Перейти к оплате</div>
-                <iframe id="appointment-pay-4000" class="appointment__money-button" src="https://yoomoney.ru/quickpay/button-widget?targets=%D0%9F%D0%B5%D1%80%D0%B2%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80%D0%B8%D0%B5%D0%BC&default-sum=4000&button-text=11&any-card-payment-type=on&button-size=m&button-color=orange&fio=on&phone=on&mail=on&successURL=https%3A%2F%2Fhemdoc-online.com%2F&quickpay=small&account=4100117957357945&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-                <iframe id="appointment-pay-3000" class="appointment__money-button" src="https://yoomoney.ru/quickpay/button-widget?targets=%D0%92%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80%D0%B8%D0%B5%D0%BC&default-sum=3000&button-text=11&any-card-payment-type=on&button-size=m&button-color=orange&fio=on&phone=on&mail=on&successURL=https%3A%2F%2Fhemdoc-online.com%2F&quickpay=small&account=4100117957357945&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
-                <iframe id="appointment-pay-6000" class="appointment__money-button" src="https://yoomoney.ru/quickpay/button-widget?targets=English%20speaking%20patient%20consultation&default-sum=2&button-text=11&any-card-payment-type=on&button-size=m&button-color=orange&successURL=&quickpay=small&account=4100117957357945&" width="184" height="36" frameborder="0" allowtransparency="true" scrolling="no"></iframe>         
+              <button class="appointment__modal-close base-button" type="button" id="appointment-modal-close"></button>
+              <span class="appointment__modal-title">Запись на первичный прием</span>
+              <span class="appointment__modal-info">Консультация ведется в онлайн форме по воскресеньям по
+                WhatsApp</span>
+              <div class="appointment__modal-date" id="appointment-modal-date">
+                <input class="appointment__hidden-date visually-hidden" type="date" id="appointment-date-input"
+                  tabindex="-1" required>
               </div>
+              <div class="appointment__modal-time">
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-10" value="10:00" required>
+                  <label for="appointment-time-radio-10" class="appointment__time-radio">10:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-11" value="11:00">
+                  <label for="appointment-time-radio-11" class="appointment__time-radio">11:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-12" value="12:00">
+                  <label for="appointment-time-radio-12" class="appointment__time-radio">12:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-13" value="13:00">
+                  <label for="appointment-time-radio-13" class="appointment__time-radio">13:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-15" value="15:00">
+                  <label for="appointment-time-radio-15" class="appointment__time-radio">15:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-16" value="16:00">
+                  <label for="appointment-time-radio-16" class="appointment__time-radio">16:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-17" value="17:00">
+                  <label for="appointment-time-radio-17" class="appointment__time-radio">17:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-18" value="18:00">
+                  <label for="appointment-time-radio-18" class="appointment__time-radio">18:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-19" value="19:00">
+                  <label for="appointment-time-radio-19" class="appointment__time-radio">19:00</label>
+                </div>
+                <div class="appointment__time-item">
+                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
+                    id="appointment-time-radio-20" value="20:00">
+                  <label for="appointment-time-radio-20" class="appointment__time-radio">20:00</label>
+                </div>
+              </div>
+              <span class="appointment__pricetag">К оплате <span id="appointment-price">4000</span> ₽</span>
+              <input class="appointment__price-input visually-hidden" type="number" id="appointment-price-result">
+              <input class="appointment__form-submit visually-hidden" type="submit" id="appointment-form-submit--data">
+              <input class="appointment__form-pay base-button" type="button" value="Оплатить"
+                id="appointment-form-pay">
+              <input class="appointment__form-reset base-button" type="reset" value="Отменить"
+                id="appointment-form-reset">
             </div>
           </div>
 

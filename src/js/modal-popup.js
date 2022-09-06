@@ -64,29 +64,6 @@ appointmentPayButton.addEventListener('click', () => {
 })
 
 //Скрытие и показ необходимой кнопки оплаты после отправки формы
-let appointmentMoneyButtons = document.querySelectorAll('.appointment__money-button');
-
-let appointmentModalFirstTime = document.getElementById('appointment-pay-4000');
-let appointmentModalSecondTime = document.getElementById('appointment-pay-3000');
-let appointmentModalEnglish = document.getElementById('appointment-pay-6000');
-
-appointmentTypes.forEach((element) => {
-  element.addEventListener('change', () => {
-    appointmentMoneyButtons.forEach((item) => {
-      item.classList.remove('appointment__money-button--active')
-    })
-
-    if (element.value === '4000') {
-      appointmentModalFirstTime.classList.add('appointment__money-button--active');
-    }
-    else if (element.value === '3000') {
-      appointmentModalSecondTime.classList.add('appointment__money-button--active');
-    }
-    else if (element.value === '6000') {
-      appointmentModalEnglish.classList.add('appointment__money-button--active');
-    }
-  })
-})
 
 
 
