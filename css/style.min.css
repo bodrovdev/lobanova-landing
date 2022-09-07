@@ -5325,6 +5325,8 @@ body {
   margin: 0 -20px
 }
 .reviews__slider-inner {
+  display: flex!important;
+  align-items: stretch;
   margin-bottom: 50px
 }
 .reviews__slider-item {
@@ -5332,6 +5334,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto;
   border-radius: 15px;
   user-select: none;
   transition: .3s
