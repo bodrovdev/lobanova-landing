@@ -1,4 +1,4 @@
-let attachInput = document.getElementById('attach-input');
+let attachInput = document.getElementById('attachInput');
 let attachButton = document.getElementById('attach-button');
 let attachList = document.getElementById('attach-list');
 

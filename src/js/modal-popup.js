@@ -31,7 +31,7 @@ appointmentFormReset.addEventListener('click', () => {
   enableBodyScroll(modal);
 })
 
-//Изменение цены заказа в модальном окне при переключении элементов типов заказа
+//Изменение цены заказа в модальном окне при переключении элементов блока тип заказа
 let appointmentTypes = document.querySelectorAll('.appointment__hidden-type');
 let appointmentPriceShown = document.getElementById('appointment-price');
 let appointmentPriceInput = document.getElementById('appointment-price-result');
@@ -41,25 +41,6 @@ appointmentTypes.forEach((element) => {
     appointmentPriceShown.textContent = element.value;
     appointmentPriceInput.value = element.value;
   })
-})
-
-//Отправка формы и переход на страницу оплаты
-let appointmentForm = document.getElementById('appointment-form');
-
-let appointmentFormSubmitShown = document.getElementById('appointment-form-pay');
-let appointmentFormSubmit = document.getElementById('appointment-form-submit');
-let appointmentPayFormSubmit = document.getElementById('appointment-pay-submit');
-
-appointmentForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  console.log('Успех');
-})
-
-appointmentFormSubmitShown.addEventListener('click', () => {
-  appointmentFormSubmit.click();
-
-    setTimeout(appointmentPayFormSubmit.click(), 5000);
 })
 
 //Изменение данных в форме оплаты при смене параметров главной формы
@@ -100,4 +81,3 @@ successModal.addEventListener('click', (e) => {
     enableBodyScroll(successModal);
   }
 })
-
