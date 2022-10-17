@@ -60,18 +60,18 @@
     <div class="appointment__container base-container">
       <!-- construction-site -->
       <form class="appointment__pay-form visually-hidden" id="appointment-pay-form" method="post" action="#">
-        <input type="hidden" name="receiver" value="XXXXXXXXXXXXXXXX"/>
-        <input type="hidden" name="formcomment" value="Оплата консультации гематолога"/>
-        <input type="hidden" name="short-dest" value="Оплата консультации гематолога"/>
-        <input type="hidden" name="quickpay-form" value="shop"/>
-        <input id="appointment-pay-target" type="hidden" name="targets" value="Первичная консультация"/>
-        <input id="appointment-pay-sum" type="hidden" name="sum" value="4000" data-type="number"/>
-        <input type="hidden" name="need-fio" value="true"/>
-        <input type="hidden" name="need-email" value="true"/>
-        <input type="hidden" name="need-phone" value="true"/>
-        <input type="hidden" name="need-address" value="false"/>
+        <input type="hidden" name="receiver" value="XXXXXXXXXXXXXXXX" />
+        <input type="hidden" name="formcomment" value="Оплата консультации гематолога" />
+        <input type="hidden" name="short-dest" value="Оплата консультации гематолога" />
+        <input type="hidden" name="quickpay-form" value="shop" />
+        <input id="appointment-pay-target" type="hidden" name="targets" value="Первичная консультация" />
+        <input id="appointment-pay-sum" type="hidden" name="sum" value="4000" data-type="number" />
+        <input type="hidden" name="need-fio" value="true" />
+        <input type="hidden" name="need-email" value="true" />
+        <input type="hidden" name="need-phone" value="true" />
+        <input type="hidden" name="need-address" value="false" />
         <input type="hidden" name="successURL" value="#success">
-        <input id="appointment-pay-submit" type="submit" value="Оплатить"/>
+        <input id="appointment-pay-submit" type="submit" value="Оплатить" />
       </form>
       <div class="appointment__success-modal appointment__success-modal" id="success">
         <div class="appointment__success-wrapper">
@@ -107,7 +107,7 @@
               <div class="appointment__type-item">
                 <label class="appointment__type-label" for="appointment-type-radio-2">
                   <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-2"
-                    value="3000" data-typename="Вторичный приём"  name="appointment-type-radio">
+                    value="3000" data-typename="Вторичный приём" name="appointment-type-radio">
                   <span class="appointment__type-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
                       <use href="img/icon/sprite.svg#check-icon"></use>
@@ -122,7 +122,7 @@
               <div class="appointment__type-item">
                 <label class="appointment__type-label" for="appointment-type-radio-3">
                   <input type="radio" class="appointment__hidden-type visually-hidden" id="appointment-type-radio-3"
-                    value="6000" data-typename="English speaking patient consultation"  name="appointment-type-radio">
+                    value="6000" data-typename="English speaking patient consultation" name="appointment-type-radio">
                   <span class="appointment__type-radio">
                     <svg class="appointment__check-icon check-icon" width="12" height="12">
                       <use href="img/icon/sprite.svg#check-icon"></use>
@@ -180,65 +180,36 @@
                 WhatsApp</span>
               <div class="appointment__modal-date" id="appointment-modal-date">
                 <input class="appointment__hidden-date visually-hidden" type="date" id="appointment-date-input"
-                  tabindex="-1" required>
+                  tabindex="-1" name="appointment_date_input" required>
+
+                <input class="appointment__hidden-time visually-hidden" type="text" id="appointment-time-input"
+                  tabindex="-1" name="appointment_time_input" required>
               </div>
-              <div class="appointment__modal-time">
+
+              <div class="appointment__modal-time appointment__modal-time--disabled appointment__modal-time--monday"
+                id="monday-times">
                 <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-10" value="10:00" required>
-                  <label for="appointment-time-radio-10" class="appointment__time-radio">10:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-11" value="11:00">
-                  <label for="appointment-time-radio-11" class="appointment__time-radio">11:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-12" value="12:00">
-                  <label for="appointment-time-radio-12" class="appointment__time-radio">12:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-13" value="13:00">
-                  <label for="appointment-time-radio-13" class="appointment__time-radio">13:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-15" value="15:00">
-                  <label for="appointment-time-radio-15" class="appointment__time-radio">15:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-16" value="16:00">
-                  <label for="appointment-time-radio-16" class="appointment__time-radio">16:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-17" value="17:00">
-                  <label for="appointment-time-radio-17" class="appointment__time-radio">17:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-18" value="18:00">
-                  <label for="appointment-time-radio-18" class="appointment__time-radio">18:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-19" value="19:00">
-                  <label for="appointment-time-radio-19" class="appointment__time-radio">19:00</label>
-                </div>
-                <div class="appointment__time-item">
-                  <input class="appointment__time-hidden visually-hidden" type="radio" name="appointment-time-radio"
-                    id="appointment-time-radio-20" value="20:00">
-                  <label for="appointment-time-radio-20" class="appointment__time-radio">20:00</label>
+                  <label class="appointment__time-radio">10:00
+                    <input class="appointment__time-hidden visually-hidden" type="radio" name="radio-time-monday"
+                      value="10:00" required>
+                  </label>
                 </div>
               </div>
+
+              <div class="appointment__modal-time appointment__modal-time--disabled appointment__modal-time--sunday"
+                id="sunday-times">
+                <div class="appointment__time-item">
+                  <label class="appointment__time-radio">12:00
+                    <input class="appointment__time-hidden visually-hidden" type="radio" name="radio-time-sunday"
+                      value="12:00" required>
+                  </label>
+                </div>
+              </div>
+
               <span class="appointment__pricetag">К оплате <span id="appointment-price">4000</span> ₽</span>
               <input class="appointment__price-input visually-hidden" type="number" id="appointment-price-result">
               <input class="appointment__form-submit visually-hidden" type="submit" id="appointment-form-submit">
-              <input class="appointment__form-pay base-button" type="button" value="Оплатить"
-                id="appointment-form-pay">
+              <input class="appointment__form-pay base-button" type="button" value="Оплатить" id="appointment-form-pay">
               <input class="appointment__form-reset base-button" type="reset" value="Отменить"
                 id="appointment-form-reset">
             </div>
@@ -442,6 +413,27 @@
                 </figure>
               </a>
             </div>
+            <div class="diplomas__slider-item swiper-slide">
+              <a href="img/image/content/diplomas-item-5.jpg" class="glightbox" zoomable: true>
+                <figure class="diplomas__item-image base-figure">
+                  <img class="diplomas__item-img" src="img/image/content/diplomas-item-5.jpg" alt="">
+                </figure>
+              </a>
+            </div>
+            <div class="diplomas__slider-item swiper-slide">
+              <a href="img/image/content/diplomas-item-6.jpg" class="glightbox" zoomable: true>
+                <figure class="diplomas__item-image base-figure">
+                  <img class="diplomas__item-img" src="img/image/content/diplomas-item-6.jpg" alt="">
+                </figure>
+              </a>
+            </div>
+            <div class="diplomas__slider-item swiper-slide">
+              <a href="img/image/content/diplomas-item-7.jpg" class="glightbox" zoomable: true>
+                <figure class="diplomas__item-image base-figure">
+                  <img class="diplomas__item-img" src="img/image/content/diplomas-item-7.jpg" alt="">
+                </figure>
+              </a>
+            </div>
           </div>
         </div>
         <div class="diplomas__slider-pagination swiper-pagination"></div>
@@ -571,7 +563,7 @@
                 рассказано, и я, не имея медицинского образования,
                 все понимала, что говорила мне врач.
                 После консультации я получила документы и рекомендации.
-                Я обязательно буду рекомендовать всем моим знакомым. 
+                Я обязательно буду рекомендовать всем моим знакомым.
               </p>
             </div>
             <div class="reviews__slider-item swiper-slide">

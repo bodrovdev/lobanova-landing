@@ -17,7 +17,6 @@ const about_slider = new Swiper('.about__slider', {
 const diplomas_slider = new Swiper('.diplomas__slider', {
 
   direction: 'horizontal',
-  slidesPerView: 1,
   spaceBetween: 25,
 
   navigation: {
@@ -31,24 +30,28 @@ const diplomas_slider = new Swiper('.diplomas__slider', {
   },
 
   breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+
     768: {
-      slidesPerView: 2,
+      slidesPerView: "auto",
     },
 
     1024: {
-      slidesPerView: 3,
+      slidesPerView: "auto",
     },
 
     1366: {
-      slidesPerView: 4,
+      slidesPerView: "auto",
     },
 
     1600: {
-      slidesPerView: 3,
+      slidesPerView: "auto",
     },
 
     1800: {
-      slidesPerView: 4,
+      slidesPerView: "auto",
     },
   }
 });

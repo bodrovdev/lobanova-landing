@@ -24,11 +24,11 @@
     }
 
     @include mixins.respond-to(desktopL) {
-      padding: 35px;  
+      padding: 35px;
     }
-    
+
     @include mixins.respond-to(desktopXL) {
-      padding: 43px 63px 55px 45px; 
+      padding: 43px 63px 55px 45px;
     }
   }
 
@@ -1026,6 +1026,13 @@
     @include mixins.respond-to(mobileOnly) {
       grid-gap: 10px 20px;
     }
+  }
+
+  &__modal-time--disabled {
+    display: none;
+    user-select: none;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   &__time-radio {

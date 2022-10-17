@@ -1,5 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
+//Мобильное меню
 let burger = document.getElementById('burger');
 let navigation = document.getElementById('main-nav');
 let navigationLinks = document.querySelectorAll('.main-nav__link');
@@ -26,11 +27,12 @@ navigationLinks.forEach((element) => {
   });
 });
 
+//Закрытие спойлерных блоков при открытии нового
 let spoilers = document.querySelectorAll('.faq__check-hidden');
 
 spoilers.forEach((element) => {
   element.addEventListener('click', (e) => {
-    for(let i = 0; i < spoilers.length; i++) {
+    for (let i = 0; i < spoilers.length; i++) {
       if (spoilers[i] !== e.target) {
         spoilers[i].checked = false;
       }

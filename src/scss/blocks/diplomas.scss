@@ -74,13 +74,16 @@
     padding-bottom: 70px;
   }
 
+  &__slider .swiper-slide {
+    width: fit-content;
+  }
+
   &__slider-item {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 283px;
-    height: 400px;
+    max-height: 400px;
     box-sizing: border-box;
 
     background: var(--color-white);
@@ -93,12 +96,20 @@
     &:hover {
       border: 2px solid var(--color-scooter);
     }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 280px;
+    }
   }
 
   &__item-img {
-    width: 245px;
-    height: 355px;
+    max-height: 355px;
     object-fit: cover;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 245px;
+      height: 355px;
+    }
   }
 
   &__slider-button {
