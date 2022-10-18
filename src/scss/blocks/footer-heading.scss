@@ -96,6 +96,12 @@
   &__file-loader {
     display: flex;
     align-items: center;
+
+    margin: 0 0 10px 0;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 
   &__file-icon {
