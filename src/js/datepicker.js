@@ -1,27 +1,34 @@
 import { Datepicker } from 'vanillajs-datepicker';
 import ru from 'vanillajs-datepicker/locales/ru';
-Object.assign(Datepicker.locales, ru);
 
+//Инициализация и настройки календаря-дейтпикера
+Object.assign(Datepicker.locales, ru);
 const elem = document.getElementById('appointment-modal-date');
 
 const datepicker = new Datepicker(elem, {
-
   daysOfWeekDisabled: [2, 3, 4, 5, 6],
-
   todayBtn: false,
-
   todayHighlight: false,
-
   weekStart: 1,
-
   language: 'ru',
-
   minDate: new Date(),
-
 });
 
-let dateInput = document.getElementById('appointment-date-input');
+//Передача значения выбранного времени консультации в переменную, отправляемую с формой
+let timeAll = document.querySelectorAll('.appointment__time-hidden');
+let timeInput = document.getElementById('appointment-time-input');
 
+timeAll.forEach((child) => {
+  child.addEventListener('change', (event) => {
+    timeInput.value = event.target.value;
+    console.log(timeInput.value);
+  })
+})
+
+//Передача значения выбранной даты консультации в переменную, отправляемую с формой
+//Смена отображения времени консультации в зависимости от выбранного дня недели
+//Очистка выбранного времени консультации при выборе другой даты консультации
+let dateInput = document.getElementById('appointment-date-input');
 let mondayTimes = document.getElementById('monday-times');
 let sundayTimes = document.getElementById('sunday-times');
 
@@ -52,14 +59,8 @@ elem.addEventListener('changeDate', function (evt) {
 
   dateInput.value = `${year}-${month}-${date}`;
   console.log(dateInput.value);
-});
 
-let timeAll = document.querySelectorAll('.appointment__time-hidden');
-let timeInput = document.getElementById('appointment-time-input');
-
-timeAll.forEach((child) => {
-  child.addEventListener('change', (event) => {
-    timeInput = event.target.value;
-    console.log(timeInput);
+  timeAll.forEach((child) => {
+    child.checked = false;
   })
-})
+});

@@ -1035,7 +1035,9 @@
     pointer-events: none;
   }
 
-  &__time-radio {
+  &__time-radio {}
+
+  &__time-text {
     vertical-align: top;
     cursor: pointer;
 
@@ -1053,11 +1055,12 @@
     }
   }
 
-  &__time-hidden:checked+.appointment__time-radio {
+  &__time-hidden:checked+.appointment__time-text {
+    font-size: 18px;
     color: var(--color-monza);
   }
 
-  &__time-hidden:disabled+.appointment__time-radio {
+  &__time-hidden:disabled+.appointment__time-text {
     color: var(--color-ghost);
     pointer-events: none;
   }
