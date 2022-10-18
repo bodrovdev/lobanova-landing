@@ -168,9 +168,38 @@
               </button>
             </ul>
           </div>
-          <button class="appointment__order-button base-button" type="button" id="appointment-modal-open">
-            <span class="appointment__order-caption">Выбрать дату и оплатить</span>
-          </button>
+          <div class="appointment__warning-block">
+            <button class="appointment__order-button base-button" type="button" id="appointment-modal-open">
+              <span class="appointment__order-caption">Выбрать дату и оплатить</span>
+            </button>
+            <div class="appointment__tooltip-container" id="warning-modal-open">
+              <div class="appointment__tooltip-ring"></div>
+              <span class="appointment__tooltip-sign">!</span>
+            </div>
+          </div>
+
+          <!-- <div class="appointment__modal-warning" id="warning-modal">
+            <div class="appointment__warning-text">
+              <h3>Уважаемый Пациент!</h3>
+              <p>
+                <br>
+                Запомните пожалуйста, что при любой дистанционной консультации не ставится окончательный диагноз и не
+                назначается лечение. На дистанционной консультации Пациенту могут быть даны советы общего характера, а
+                также может быть проведена предварительная оценка результатов анализов, и установлен предположительный
+                диагноз. Установление окончательного диагноза, назначение конкретного лечения и выписка специальных
+                медицинских препаратов возможны только при личном приеме!<br>
+                <br>
+                Пожалуйста, обратите внимание, что вы должны выйти на контакт для получения консультации строго в
+                указанные в Заявке дату и время (задержка – не более 5 минут). В случае отсутствия коммуникации от вас в
+                течение 15 минут после наступления времени консультации, а также в случае отклонения звонка либо запроса
+                от врача в назначенное для консультации время, консультация считается не состоявшейся по вине самого
+                Пациента, при этом уплаченные за консультацию денежные средства не подлежат возврату.<br>
+                <br>Денежные средства, оплаченные за консультацию, подлежат возврату только в случае тяжелой болезни
+                Пациента, которая не
+                позволила пациенту вовремя выйти на контакт с врачом для получения консультации.
+              </p>
+            </div>
+          </div> -->
 
           <div class="appointment__modal" id="appointment-modal">
             <div class="appointment__modal-wrapper">
