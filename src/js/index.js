@@ -41,3 +41,37 @@ spoilers.forEach((element) => {
 })
 
 //Открытие и закрытие модального окна с отказом от ответственности в блоке appointment
+let warningModalOpen = document.getElementById('warning-modal-open');
+let warningModalClose = document.getElementById('warning-modal-close');
+let warningModal = document.getElementById('warning-modal');
+
+warningModalOpen.addEventListener('click', () => {
+  warningModal.classList.add('appointment__warning-modal--active');
+  disableBodyScroll(warningModal);
+})
+
+warningModalClose.addEventListener('click', () => {
+  warningModal.classList.remove('appointment__warning-modal--active');
+  enableBodyScroll(warningModal);
+})
+
+warningModal.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+  else {
+    warningModal.classList.remove('appointment__warning-modal--active');
+    enableBodyScroll(warningModal);
+  }
+})
+
+//Проверка на появление скроллбара в модальном окне с предупреждением и добавление необходимых стилей
+let warningModalWrapper = document.getElementById('warning-modal-wrapper');
+
+function isOverflown(element) {
+  if (element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth) {
+    element.style.borderRadius = "22px 0 0 22px";
+  }
+}
+
+isOverflown(warningModalWrapper);
